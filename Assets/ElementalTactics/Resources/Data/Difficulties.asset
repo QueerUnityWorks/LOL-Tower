@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0592b16b97657534ca2bb511ab113b01, type: 3}
+  m_Name: Difficulties
+  m_EditorClassIdentifier: 
+  rows:
+  - id: DIFF_001
+    name: "\u666E\u901A\u906D\u9047"
+    itemPoolId: POOL_DIFF_LOW
+    characterPoolId: POOL_HERO01
+    minPower: 0
+    itemCandidates: 2
+    characterCandidates: 1
+    chooseCount: 1
+  - id: DIFF_002
+    name: "\u7CBE\u82F1\u6218\u6597"
+    itemPoolId: POOL_DIFF_MID
+    characterPoolId: POOL_HERO02
+    minPower: 2500
+    itemCandidates: 3
+    characterCandidates: 1
+    chooseCount: 2
+  - id: DIFF_003
+    name: "\u9AD8\u5371\u6218\u6597"
+    itemPoolId: POOL_DIFF_HIGH
+    characterPoolId: POOL_HERO03
+    minPower: 5500
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 2

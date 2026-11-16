@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a314adcf5c963b045be40dadac635c9e, type: 3}
+  m_Name: Endings
+  m_EditorClassIdentifier: 
+  rows:
+  - id: ENDING_001
+    name: "\u7B26\u6587\u4E4B\u5730\u7684\u9ECE\u660E"
+    requiredItemId: 
+    fragmentItemId: 
+    bossNodeId: NODE_B012
+    description: "\u672A\u6301\u6709\u5206\u652F\u9053\u5177\u65F6\uFF0C\u7B2C\u4E09\u5C42\u6311\u6218\u52A0\u91CC\u5965\u3002"
+    epilogue: "\u5DE8\u50CF\u6536\u8D77\u53CC\u7FFC\uFF0C\u8FDC\u5F81\u961F\u5E26\u7740\u80DC\u5229\u8FD4\u56DE\u91D1\u94F2\u94F2\u57CE\u90A6\u3002\u7B26\u6587\u4E4B\u5730\u8FCE\u6765\u65B0\u7684\u9ECE\u660E\u3002"
+    priority: 0
+    requiredWins: 0
+    extraFloor: 0
+  - id: ENDING_002
+    name: "\u9A71\u6563\u7834\u8D25\u9ED1\u96FE"
+    requiredItemId: ITEM_031
+    fragmentItemId: 
+    bossNodeId: NODE_B027
+    description: "\u6301\u6709\u7834\u8D25\u738B\u51A0\u65F6\uFF0C\u7B2C\u4E09\u5C42\u9996\u9886\u66FF\u6362\u4E3A\u7834\u8D25\u4E4B\u738B\xB7\u4F5B\u8036\u6208\u3002"
+    epilogue: "\u7834\u8D25\u738B\u51A0\u788E\u88C2\uFF0C\u4F5B\u8036\u6208\u7684\u9ED1\u96FE\u968F\u4E4B\u6563\u53BB\u3002\u82F1\u96C4\u4EEC\u7EC8\u4E8E\u8D70\u51FA\u6697\u5F71\u5C9B\u3002"
+    priority: 1
+    requiredWins: 0
+    extraFloor: 0
+  - id: ENDING_003
+    name: "\u4E0E\u94F8\u661F\u9F99\u738B\u7684\u7EA6\u5B9A"
+    requiredItemId: ITEM_032
+    fragmentItemId: ITEM_033
+    bossNodeId: NODE_B028
+    description: "\u6301\u5951\u7EA6\u80DC\u52293\u573A\u5404\u5F971\u679A\u5370\u8BB0\uFF1B\u96C6\u9F503\u679A\u540E\uFF0C\u51FB\u8D25\u7B2C\u4E09\u5C42\u5B88\u5173\u5373\u53EF\u524D\u5F80\u9690\u85CF\u7B2C\u56DB\u5C42\u3002\u7B2C\u4E09\u5C42\u9996\u9886\u4ECD\u7531\u7834\u8D25\u738B\u51A0\u51B3\u5B9A\uFF0C\u901A\u5173\u540E\u524D\u5F80\u7B2C\u56DB\u5C42\u3002"
+    epilogue: "\u661F\u754C\u91CD\u65B0\u5F52\u4E8E\u5E73\u9759\uFF0C\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14\u56DE\u5E94\u4E86\u5951\u7EA6\u3002\u82F1\u96C4\u4E0E\u7FA4\u661F\u5171\u540C\u89C1\u8BC1\u65B0\u7684\u65C5\u7A0B\u3002"
+    priority: 2
+    requiredWins: 3
+    extraFloor: 4

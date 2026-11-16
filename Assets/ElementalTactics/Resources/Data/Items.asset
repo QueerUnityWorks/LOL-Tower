@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a57aec392d36f94f9b62cc9b714911b, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  rows:
+  - id: ITEM_001
+    name: "\u5DE8\u4EBA\u8170\u5E26"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE01
+    imagePath: Items/ITEM_001
+    rarity: 0
+  - id: ITEM_002
+    name: "\u6676\u4F53\u62A4\u8155"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE02
+    imagePath: Items/ITEM_002
+    rarity: 1
+  - id: ITEM_003
+    name: "\u66B4\u98CE\u5927\u5251"
+    description: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE03
+    imagePath: Items/ITEM_003
+    rarity: 1
+  - id: ITEM_004
+    name: "\u53CD\u66F2\u4E4B\u5F13"
+    description: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +10\uFF0C\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE04
+    imagePath: Items/ITEM_004
+    rarity: 0
+  - id: ITEM_005
+    name: "\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+    description: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE05
+    imagePath: Items/ITEM_005
+    rarity: 2
+  - id: ITEM_006
+    name: "\u9501\u5B50\u7532"
+    description: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE06
+    imagePath: Items/ITEM_006
+    rarity: 0
+  - id: ITEM_007
+    name: "\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+    description: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97 140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE007
+    imagePath: Items/ITEM_007
+    rarity: 1
+  - id: ITEM_008
+    name: "\u6551\u8D4E"
+    description: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+      30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE008
+    imagePath: Items/ITEM_008
+    rarity: 1
+  - id: ITEM_009
+    name: "\u996E\u8840\u5251"
+    description: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE009
+    imagePath: Items/ITEM_009
+    rarity: 1
+  - id: ITEM_010
+    name: "\u957F\u5251"
+    description: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE010
+    imagePath: Items/ITEM_010
+    rarity: 1
+  - id: ITEM_011
+    name: "\u68D8\u523A\u80CC\u5FC3"
+    description: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +40\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE011
+    imagePath: Items/ITEM_011
+    rarity: 1
+  - id: ITEM_012
+    name: "\u75BE\u5C04\u706B\u70AE"
+    description: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB +30\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE012
+    imagePath: Items/ITEM_012
+    rarity: 0
+  - id: ITEM_013
+    name: "\u72C2\u5F92\u94E0\u7532"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE013
+    imagePath: Items/ITEM_013
+    rarity: 2
+  - id: ITEM_014
+    name: "\u65E0\u5C3D\u4E4B\u5203"
+    description: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +28\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE014
+    imagePath: Items/ITEM_014
+    rarity: 2
+  - id: ITEM_015
+    name: "\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+    description: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97 140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE015
+    imagePath: Items/ITEM_015
+    rarity: 2
+  - id: ITEM_016
+    name: "\u632F\u594B\u76D4\u7532"
+    description: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+      30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE016
+    imagePath: Items/ITEM_016
+    rarity: 2
+  - id: ITEM_017
+    name: "\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+    description: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 50% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE017
+    imagePath: Items/ITEM_017
+    rarity: 2
+  - id: ITEM_018
+    name: "\u7EA2\u6C34\u6676"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u88AB\u52A8"
+    effectId: FX_PASSIVE018
+    imagePath: Items/ITEM_018
+    rarity: 1
+  - id: ITEM_019
+    name: "\u81EA\u7136\u4E4B\u529B"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_19
+    imagePath: Items/ITEM_019
+    rarity: 2
+  - id: ITEM_020
+    name: "\u66B4\u98CE\u78E8\u783A\u77F3"
+    description: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_20
+    imagePath: Items/ITEM_020
+    rarity: 1
+  - id: ITEM_021
+    name: "\u5B88\u62A4\u8005\u4E4B\u76FE"
+    description: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_21
+    imagePath: Items/ITEM_021
+    rarity: 0
+  - id: ITEM_022
+    name: "\u8F7B\u7075\u4E4B\u9774"
+    description: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_22
+    imagePath: Items/ITEM_022
+    rarity: 0
+  - id: ITEM_023
+    name: "\u591C\u4E4B\u950B\u5203"
+    description: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97 140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_23
+    imagePath: Items/ITEM_023
+    rarity: 1
+  - id: ITEM_024
+    name: "\u518D\u751F\u5760\u9970"
+    description: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+      30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_24
+    imagePath: Items/ITEM_024
+    rarity: 1
+  - id: ITEM_025
+    name: "\u6B63\u4E49\u4E4B\u624B"
+    description: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_25
+    imagePath: Items/ITEM_025
+    rarity: 1
+  - id: ITEM_026
+    name: "\u6B7B\u4EA1\u4E4B\u5203"
+    description: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_26
+    imagePath: Items/ITEM_026
+    rarity: 2
+  - id: ITEM_027
+    name: "\u5DE8\u9F99\u4E4B\u722A"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +300\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+      100 \u4E07\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_27
+    imagePath: Items/ITEM_027
+    rarity: 2
+  - id: ITEM_028
+    name: "\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+    description: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97 220 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_28
+    imagePath: Items/ITEM_028
+    rarity: 2
+  - id: ITEM_029
+    name: "\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+    description: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_29
+    imagePath: Items/ITEM_029
+    rarity: 2
+  - id: ITEM_030
+    name: "\u661F\u754C\u8D50\u798F"
+    description: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+      30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+    kind: "\u9057\u7269"
+    effectId: FX_PASSIVE_30
+    imagePath: Items/ITEM_030
+    rarity: 2
+  - id: ITEM_031
+    name: "\u7834\u8D25\u738B\u51A0"
+    description: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D -70\uFF0C\u5728\u751F\u547D\u52A0\u6210\u540E\u6263\u9664\u3002\u6301\u6709\u65F6\u7B2C\u4E09\u5C42\u9996\u9886\u66FF\u6362\u4E3A\u7834\u8D25\u4E4B\u738B\xB7\u4F5B\u8036\u6208\uFF0C\u4EC5\u7531\u300C\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0\u300D\u4E8B\u4EF6\u83B7\u5F97\u3002"
+    kind: "\u5267\u60C5"
+    effectId: FX_CURSE_HEALTH
+    imagePath: Items/ITEM_031
+    rarity: 0
+  - id: ITEM_032
+    name: "\u94F8\u661F\u5951\u7EA6"
+    description: "\u5F00\u6218\u524D\u5DF2\u6301\u6709\u5951\u7EA6\u65F6\uFF0C\u6BCF\u6218\u80DC\u4E00\u4E2A\u65B0\u7684\u6218\u6597\u8282\u70B9\u83B7\u5F971\u679A\u661F\u754C\u5370\u8BB0\uFF0C\u6700\u591A\u6389\u52303\u679A\u3002\u6301\u5951\u7EA6\u4E14\u5370\u8BB0\u22653\uFF0C\u51FB\u8D25\u7B2C\u4E09\u5C42\u9996\u9886\u540E\u8FDB\u5165\u7B2C\u56DB\u5C42\u3002"
+    kind: "\u5267\u60C5"
+    effectId: 
+    imagePath: Items/ITEM_032
+    rarity: 0
+  - id: ITEM_033
+    name: "\u661F\u754C\u5370\u8BB0"
+    description: "\u7531\u6301\u5951\u7EA6\u540E\u76843\u4E2A\u4E0D\u540C\u6218\u6597\u8282\u70B9\u5404\u6389\u843D1\u679A\uFF0C\u4E0D\u5360\u53EF\u9009\u5956\u52B1\u6B21\u6570\u3002\u5FC5\u987B\u540C\u65F6\u6301\u6709\u94F8\u661F\u5951\u7EA6\u624D\u80FD\u89E3\u9501\u7B2C\u56DB\u5C42\uFF1B\u7B2C\u4E09\u5C42\u9996\u9886\u4ECD\u7531\u7834\u8D25\u738B\u51A0\u51B3\u5B9A\u3002"
+    kind: "\u5267\u60C5"
+    effectId: 
+    imagePath: Items/ITEM_033
+    rarity: 0

@@ -1,0 +1,740 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50a657257beeb9469411bc21e4a8e6c, type: 3}
+  m_Name: Events
+  m_EditorClassIdentifier: 
+  rows:
+  - id: EVENT_001
+    name: "\u6D77\u514B\u65AF\u9057\u8FF9"
+    cg: EventCG/cave
+    description: "\u6D77\u514B\u65AF\u9057\u8FF9\u91CC\u7684\u6C34\u6676\u4ECD\u5728\u53D1\u5149\u3002\u4E9A\u7D22\u5EFA\u8BAE\u5148\u6536\u96C6\u80FD\u5E26\u8D70\u7684\u7269\u8D44\uFF0C\u518D\u6CBF\u68CB\u76D8\u7EE7\u7EED\u8FDC\u5F81\u3002\n\u4F60\u53EF\u4EE5\u53D6\u8D70\u6676\u4F53\u62A4\u8155\uFF0C\u6216\u5C06\u6B8B\u7559\u6750\u6599\u6362\u6210\u91D1\u5E01\u3002"
+    options:
+    - id: OPTION_001
+      eventId: EVENT_001
+      text: "\u9886\u53D6\u6676\u4F53\u62A4\u8155"
+      order: 1
+      effectIds:
+      - FX_ITEM02
+    - id: OPTION_002
+      eventId: EVENT_001
+      text: "\u5151\u6362\u5EFA\u8BBE\u8D44\u91D1\uFF08\u91D1\u5E01\uFF0B40\uFF09"
+      order: 2
+      effectIds:
+      - FX_GOLD40
+  - id: EVENT_002
+    name: "\u5F17\u96F7\u5C14\u5353\u5FB7\u8425\u5730"
+    cg: EventCG/village
+    description: "\u5E03\u9686\u6B63\u5728\u5F17\u96F7\u5C14\u5353\u5FB7\u8425\u5730\u6574\u7406\u8865\u7ED9\u3002\u4ED6\u613F\u610F\u4E3E\u76FE\u540C\u884C\uFF0C\u4E5F\u9700\u8981\u6709\u4EBA\u534F\u52A9\u642C\u8FD0\u7269\u8D44\u3002\n\u9009\u62E9\u62DB\u52DF\u5E03\u9686\u3001\u8D5A\u53D6\u91D1\u5E01\uFF0C\u6216\u4E3A\u961F\u4F0D\u6DFB\u7F6E\u66B4\u98CE\u5927\u5251\u3002"
+    options:
+    - id: OPTION_003
+      eventId: EVENT_002
+      text: "\u9080\u8BF7\u5E03\u9686\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_HERO02
+    - id: OPTION_004
+      eventId: EVENT_002
+      text: "\u534F\u52A9\u642C\u8FD0\uFF08\u91D1\u5E01\uFF0B50\uFF09"
+      order: 2
+      effectIds:
+      - FX_GOLD50
+    - id: OPTION_005
+      eventId: EVENT_002
+      text: "\u652F\u63F4\u5DE5\u574A\uFF0820\u91D1\u5E01\u6362\u66B4\u98CE\u5927\u5251\uFF09"
+      order: 3
+      effectIds:
+      - FX_COST20
+      - FX_ITEM03
+  - id: EVENT_003
+    name: "\u91D1\u94F2\u94F2\u8BAE\u4E8B\u5385"
+    cg: EventCG/tempest
+    description: "\u91D1\u94F2\u94F2\u8BAE\u4E8B\u5385\u4EAE\u8D77\u6696\u91D1\u8272\u706F\u5149\u3002\u62C9\u514B\u4E1D\u4E0E\u827E\u5E0C\u7B49\u5F85\u65B0\u4E00\u8F6E\u8FDC\u5F81\u7684\u53EC\u96C6\u3002\n\u62DB\u52DF\u4E00\u4F4D\u82F1\u96C4\uFF0C\u6216\u9886\u53D6\u8865\u7ED9\u4E0E\u91D1\u5E01\u3002"
+    options:
+    - id: OPTION_006
+      eventId: EVENT_003
+      text: "\u9080\u8BF7\u62C9\u514B\u4E1D\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_HERO03
+    - id: OPTION_007
+      eventId: EVENT_003
+      text: "\u9080\u8BF7\u827E\u5E0C\u540C\u884C"
+      order: 2
+      effectIds:
+      - FX_HERO04
+    - id: OPTION_008
+      eventId: EVENT_003
+      text: "\u9886\u53D6\u5DE8\u4EBA\u8170\u5E26\u4E0E\u91D1\u5E01"
+      order: 3
+      effectIds:
+      - FX_ITEM01
+      - FX_GOLD40
+  - id: EVENT_004
+    name: "\u827E\u7FC1\u7684\u59D4\u6258"
+    cg: EventCG/grove
+    description: "\u827E\u7FC1\u8BF7\u4F60\u4FEE\u590D\u6797\u5730\u65C1\u7684\u7B26\u6587\u5C4F\u969C\u3002\u4FEE\u590D\u5B8C\u6210\u540E\uFF0C\u4ED6\u5E26\u6765\u6D77\u514B\u65AF\u62A4\u76FE\u3001\u56DE\u590D\u7269\u8D44\u4E0E\u7814\u4E60\u5FC3\u5F97\u3002\n\u9009\u62E9\u6700\u9002\u5408\u5F53\u524D\u9635\u5BB9\u7684\u5E2E\u52A9\u3002"
+    options:
+    - id: OPTION_EXP_004_1
+      eventId: EVENT_004
+      text: "\u6536\u4E0B\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      order: 1
+      effectIds:
+      - FX_ITEM007
+    - id: OPTION_EXP_004_2
+      eventId: EVENT_004
+      text: "\u4EA4\u6362\u6551\u8D4E\uFF0820\u91D1\u5E01\uFF09"
+      order: 2
+      effectIds:
+      - FX_COST20
+      - FX_ITEM008
+    - id: OPTION_EXP_004_3
+      eventId: EVENT_004
+      text: "\u8BB0\u5F55\u7ED3\u754C\u77E5\u8BC6"
+      order: 3
+      effectIds:
+      - FX_EXP40
+  - id: EVENT_005
+    name: "\u5965\u6069\u7684\u953B\u7089"
+    cg: EventCG/forge
+    description: "\u5965\u6069\u7684\u953B\u7089\u6B63\u5192\u51FA\u706B\u661F\u3002\u4F60\u53EF\u4EE5\u9886\u53D6\u957F\u5251\u3001\u652F\u4ED8\u6750\u6599\u8D39\u6362\u53D6\u68D8\u523A\u80CC\u5FC3\uFF0C\u6216\u5B66\u4E60\u953B\u9020\u7ECF\u9A8C\u3002"
+    options:
+    - id: OPTION_EXP_005_1
+      eventId: EVENT_005
+      text: "\u9886\u53D6\u957F\u5251"
+      order: 1
+      effectIds:
+      - FX_ITEM010
+    - id: OPTION_EXP_005_2
+      eventId: EVENT_005
+      text: "\u8BA2\u5236\u68D8\u523A\u80CC\u5FC3\uFF0835\u91D1\u5E01\uFF09"
+      order: 2
+      effectIds:
+      - FX_COST35
+      - FX_ITEM011
+    - id: OPTION_EXP_005_3
+      eventId: EVENT_005
+      text: "\u7814\u4E60\u953B\u9020\u7ECF\u9A8C"
+      order: 3
+      effectIds:
+      - FX_EXP75
+  - id: EVENT_006
+    name: "\u7956\u5B89\u6697\u5DF7"
+    cg: EventCG/wolves
+    description: "\u7956\u5B89\u6697\u5DF7\u4E2D\u4F20\u6765\u5F29\u5F26\u8F7B\u54CD\u3002\u56FE\u5947\u613F\u610F\u52A0\u5165\u8FDC\u5F81\uFF0C\u4E5F\u5E26\u6765\u4E86\u75BE\u5C04\u706B\u70AE\u4E0E\u6CBF\u9014\u641C\u96C6\u7684\u7269\u8D44\u3002"
+    options:
+    - id: OPTION_EXP_006_1
+      eventId: EVENT_006
+      text: "\u9080\u8BF7\u56FE\u5947\uFF0835\u91D1\u5E01\uFF09"
+      order: 1
+      effectIds:
+      - FX_COST35
+      - FX_RECRUIT_006
+    - id: OPTION_EXP_006_2
+      eventId: EVENT_006
+      text: "\u5E26\u8D70\u75BE\u5C04\u706B\u70AE"
+      order: 2
+      effectIds:
+      - FX_ITEM012
+    - id: OPTION_EXP_006_3
+      eventId: EVENT_006
+      text: "\u6536\u96C6\u9053\u8DEF\u7269\u8D44"
+      order: 3
+      effectIds:
+      - FX_ITEM018
+      - FX_GOLD40
+  - id: EVENT_007
+    name: "\u65E0\u6781\u5251\u9053\u8BD5\u70BC"
+    cg: EventCG/training
+    description: "\u6613\u6536\u5251\u800C\u7ACB\uFF0C\u9080\u8BF7\u961F\u4F0D\u4F53\u9A8C\u65E0\u6781\u5251\u9053\u7684\u8BAD\u7EC3\u3002\n\u4F60\u53EF\u4EE5\u79EF\u7D2F\u7ECF\u9A8C\u3001\u9080\u8BF7\u4ED6\u540C\u884C\uFF0C\u6216\u9886\u53D6\u8BAD\u7EC3\u7528\u7684\u62A4\u8155\u3002"
+    options:
+    - id: OPTION_EXP_007_1
+      eventId: EVENT_007
+      text: "\u63A5\u53D7\u8BAD\u7EC3"
+      order: 1
+      effectIds:
+      - FX_EXP75
+    - id: OPTION_EXP_007_2
+      eventId: EVENT_007
+      text: "\u9080\u8BF7\u6613\u6307\u5BFC\uFF0835\u91D1\u5E01\uFF09"
+      order: 2
+      effectIds:
+      - FX_COST35
+      - FX_RECRUIT_009
+    - id: OPTION_EXP_007_3
+      eventId: EVENT_007
+      text: "\u9886\u53D6\u8BAD\u7EC3\u7528\u62A4\u8155"
+      order: 3
+      effectIds:
+      - FX_ITEM02
+  - id: EVENT_008
+    name: "\u661F\u754C\u5B9D\u5E93"
+    cg: EventCG/hoard
+    description: "\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14\u6253\u5F00\u661F\u754C\u5B9D\u5E93\uFF0C\u661F\u5149\u7167\u4EAE\u5176\u4E2D\u7684\u88C5\u5907\u4E0E\u91D1\u5E01\u3002\n\u6BCF\u652F\u961F\u4F0D\u53EA\u80FD\u9009\u53D6\u4E00\u4EFD\u9988\u8D60\u3002"
+    options:
+    - id: OPTION_EXP_008_1
+      eventId: EVENT_008
+      text: "\u63A5\u53D7\u72C2\u5F92\u94E0\u7532"
+      order: 1
+      effectIds:
+      - FX_ITEM013
+    - id: OPTION_EXP_008_2
+      eventId: EVENT_008
+      text: "\u53D6\u8D70\u65E0\u5C3D\u4E4B\u5203"
+      order: 2
+      effectIds:
+      - FX_ITEM014
+    - id: OPTION_EXP_008_3
+      eventId: EVENT_008
+      text: "\u5151\u6362\u5EFA\u8BBE\u8D44\u91D1"
+      order: 3
+      effectIds:
+      - FX_GOLD70
+  - id: EVENT_009
+    name: "\u53D7\u56F0\u7684\u5546\u961F"
+    cg: EventCG/caravan
+    description: "\u857E\u6B27\u5A1C\u62A4\u9001\u7684\u5546\u961F\u53D7\u56F0\u4E8E\u65AD\u88C2\u7684\u9053\u8DEF\u3002\u534F\u52A9\u5546\u961F\u8131\u56F0\u540E\uFF0C\u4F60\u53EF\u4EE5\u9080\u8BF7\u5979\u540C\u884C\uFF0C\u6216\u9886\u53D6\u7269\u8D44\u4E0E\u916C\u91D1\u3002"
+    options:
+    - id: OPTION_EXP_009_1
+      eventId: EVENT_009
+      text: "\u9080\u8BF7\u857E\u6B27\u5A1C\uFF0820\u91D1\u5E01\uFF09"
+      order: 1
+      effectIds:
+      - FX_COST20
+      - FX_RECRUIT_005
+    - id: OPTION_EXP_009_2
+      eventId: EVENT_009
+      text: "\u9886\u53D6\u7EA2\u6C34\u6676"
+      order: 2
+      effectIds:
+      - FX_ITEM018
+    - id: OPTION_EXP_009_3
+      eventId: EVENT_009
+      text: "\u6536\u4E0B\u8FD0\u8F93\u62A5\u916C"
+      order: 3
+      effectIds:
+      - FX_GOLD50
+  - id: EVENT_010
+    name: "\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0"
+    cg: EventCG/grove
+    description: "\u827E\u7FC1\u9012\u6765\u4E00\u4EFD\u81EA\u7136\u4E4B\u529B\uFF0C\u4E5F\u6307\u51FA\u9ED1\u96FE\u4E2D\u7684\u7834\u8D25\u738B\u51A0\u3002\u63A5\u53D7\u795D\u798F\u80FD\u5F3A\u5316\u961F\u4F0D\uFF1B\u643A\u5E26\u738B\u51A0\u4F1A\u635F\u5931\u751F\u547D\uFF0C\u5374\u80FD\u8FFD\u8E2A\u7834\u8D25\u4E4B\u738B\u3002\n\u672C\u4E8B\u4EF6\u6BCF\u5C40\u4EC5\u53EF\u8FDB\u5165\u4E00\u6B21\u3002"
+    options:
+    - id: OPTION_10_1
+      eventId: EVENT_010
+      text: "\u63A5\u53D7\u81EA\u7136\u4E4B\u529B"
+      order: 1
+      effectIds:
+      - FX_GIVE_19
+    - id: OPTION_10_2
+      eventId: EVENT_010
+      text: "\u643A\u5E26\u7834\u8D25\u738B\u51A0 \xB7 \u8FFD\u67E5\u4F5B\u8036\u6208"
+      order: 2
+      effectIds:
+      - FX_GIVE_CURSE
+  - id: EVENT_011
+    name: "\u94F8\u661F\u9F99\u738B\u7684\u5951\u7EA6"
+    cg: EventCG/cave
+    description: "\u94F8\u661F\u9F99\u738B\u7684\u661F\u5149\u6620\u5165\u68CB\u76D8\u3002\u7F14\u7ED3\u94F8\u661F\u5951\u7EA6\u540E\uFF0C\u5728\u4E09\u4E2A\u4E0D\u540C\u6218\u6597\u8282\u70B9\u83B7\u80DC\uFF0C\u6536\u96C6\u4E09\u679A\u661F\u754C\u5370\u8BB0\uFF0C\u5373\u53EF\u524D\u5F80\u5DE8\u795E\u5CF0\u661F\u754C\u3002\n\u4F60\u4E5F\u53EF\u4EE5\u9886\u53D6\u8865\u7ED9\u79BB\u5F00\u3002\u672C\u4E8B\u4EF6\u6BCF\u5C40\u4EC5\u53EF\u8FDB\u5165\u4E00\u6B21\u3002"
+    options:
+    - id: OPTION_11_1
+      eventId: EVENT_011
+      text: "\u7ACB\u4E0B\u7EA6\u5B9A \xB7 \u6536\u96C63\u679A\u5370\u8BB0"
+      order: 1
+      effectIds:
+      - FX_GIVE_CONTRACT
+    - id: OPTION_11_2
+      eventId: EVENT_011
+      text: "\u53D6\u8D70\u8865\u7ED9 \xB7 \u7EE7\u7EED\u8FDC\u5F81"
+      order: 2
+      effectIds:
+      - FX_ENDING_SUPPLY
+  - id: EVENT_012
+    name: "\u6D77\u514B\u65AF\u5DE5\u574A"
+    cg: EventCG/forge
+    description: "\u6D77\u514B\u65AF\u5DE5\u574A\u4E3A\u8FDC\u5F81\u51C6\u5907\u4E86\u65B0\u88C5\u5907\u3002\u9009\u62E9\u4E00\u4EF6\u6B66\u5668\u6216\u9774\u5B50\uFF0C\u8BA9\u4E0B\u4E00\u573A\u6218\u6597\u66F4\u4ECE\u5BB9\u3002"
+    options:
+    - id: OPTION_12_1
+      eventId: EVENT_012
+      text: "\u5E26\u8D70\u66B4\u98CE\u78E8\u783A\u77F3"
+      order: 1
+      effectIds:
+      - FX_GIVE_20
+    - id: OPTION_12_2
+      eventId: EVENT_012
+      text: "\u5E26\u8D70\u8F7B\u7075\u4E4B\u9774"
+      order: 2
+      effectIds:
+      - FX_GIVE_22
+  - id: EVENT_013
+    name: "\u6218\u5730\u6551\u62A4\u7AD9"
+    cg: EventCG/caravan
+    description: "\u6551\u62A4\u7AD9\u5907\u597D\u4E86\u518D\u751F\u5760\u9970\u4E0E\u591C\u4E4B\u950B\u5203\u3002\u8865\u7ED9\u6709\u9650\uFF0C\u8FD9\u6B21\u53EA\u80FD\u5E26\u8D70\u4E00\u4EFD\u3002"
+    options:
+    - id: OPTION_13_1
+      eventId: EVENT_013
+      text: "\u9886\u53D6\u518D\u751F\u5760\u9970"
+      order: 1
+      effectIds:
+      - FX_GIVE_24
+    - id: OPTION_13_2
+      eventId: EVENT_013
+      text: "\u9886\u53D6\u591C\u4E4B\u950B\u5203"
+      order: 2
+      effectIds:
+      - FX_GIVE_23
+  - id: EVENT_014
+    name: "\u7834\u8D25\u9057\u85CF"
+    cg: EventCG/hoard
+    description: "\u9ED1\u96FE\u6563\u53BB\u540E\uFF0C\u5E9F\u5F03\u7684\u5B9D\u5E93\u663E\u9732\u51FA\u6765\u3002\u6B63\u4E49\u4E4B\u624B\u5E2E\u52A9\u6062\u590D\u751F\u547D\uFF0C\u6B7B\u4EA1\u4E4B\u5203\u5E26\u6765\u66F4\u5F3A\u7684\u653B\u52BF\u3002"
+    options:
+    - id: OPTION_14_1
+      eventId: EVENT_014
+      text: "\u53D6\u6B63\u4E49\u4E4B\u624B"
+      order: 1
+      effectIds:
+      - FX_GIVE_25
+    - id: OPTION_14_2
+      eventId: EVENT_014
+      text: "\u53D6\u6B7B\u4EA1\u4E4B\u5203"
+      order: 2
+      effectIds:
+      - FX_GIVE_26
+  - id: EVENT_015
+    name: "\u661F\u754C\u7684\u9988\u8D60"
+    cg: EventCG/tempest
+    description: "\u94F8\u661F\u5951\u7EA6\u6307\u5F15\u4F60\u62B5\u8FBE\u661F\u754C\u5B9D\u5E93\u3002\u661F\u754C\u8D50\u798F\u4E0E\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6\u95EA\u8000\u7740\u5FAE\u5149\uFF0C\u53EA\u80FD\u9009\u53D6\u4E00\u4EF6\u3002"
+    options:
+    - id: OPTION_15_1
+      eventId: EVENT_015
+      text: "\u63A5\u53D7\u661F\u754C\u8D50\u798F"
+      order: 1
+      effectIds:
+      - FX_GIVE_30
+    - id: OPTION_15_2
+      eventId: EVENT_015
+      text: "\u5E26\u8D70\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      order: 2
+      effectIds:
+      - FX_GIVE_28
+  - id: EVENT_HB_021
+    name: "\u98CE\u884C\u8005\u7684\u8DEF\u6807"
+    cg: EventCG/grove
+    description: "\u4E9A\u7D22\u5728\u5C94\u8DEF\u7559\u4E0B\u5251\u75D5\uFF0C\u9644\u8FD1\u7684\u65C5\u8005\u613F\u610F\u5206\u4EAB\u88C5\u5907\u4E0E\u4FEE\u884C\u5FC3\u5F97\u3002"
+    options:
+    - id: OPTION_V4_001_1
+      eventId: EVENT_HB_021
+      text: "\u9080\u8BF7\u4E9A\u7D22\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_001_1
+    - id: OPTION_V4_001_2
+      eventId: EVENT_HB_021
+      text: "\u9886\u53D6\u8F7B\u7075\u4E4B\u9774"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_001_2
+    - id: OPTION_V4_001_3
+      eventId: EVENT_HB_021
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B40\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_001_3
+  - id: EVENT_HB_022
+    name: "\u51B0\u5F13\u8BD5\u70BC"
+    cg: EventCG/training
+    description: "\u827E\u5E0C\u9080\u8BF7\u961F\u4F0D\u8BD5\u5C04\u51B0\u5F13\uFF1B\u4FEE\u884C\u3001\u540C\u884C\u4E0E\u5E26\u8D70\u5668\u6750\u53EA\u80FD\u62E9\u4E00\u3002"
+    options:
+    - id: OPTION_V4_002_1
+      eventId: EVENT_HB_022
+      text: "\u9080\u8BF7\u827E\u5E0C\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_002_1
+    - id: OPTION_V4_002_2
+      eventId: EVENT_HB_022
+      text: "\u9886\u53D6\u53CD\u66F2\u4E4B\u5F13"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_002_2
+    - id: OPTION_V4_002_3
+      eventId: EVENT_HB_022
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B40\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_002_3
+  - id: EVENT_HB_023
+    name: "\u6668\u5149\u9A7F\u7AD9"
+    cg: EventCG/village
+    description: "\u62C9\u514B\u4E1D\u4E3A\u8FF7\u8DEF\u7684\u5546\u961F\u70B9\u4EAE\u9053\u8DEF\uFF0C\u6E05\u70B9\u51FA\u7684\u8865\u7ED9\u53EF\u5206\u7ED9\u8FDC\u5F81\u961F\u3002"
+    options:
+    - id: OPTION_V4_003_1
+      eventId: EVENT_HB_023
+      text: "\u9080\u8BF7\u62C9\u514B\u4E1D\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_003_1
+    - id: OPTION_V4_003_2
+      eventId: EVENT_HB_023
+      text: "\u9886\u53D6\u7EA2\u6C34\u6676"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_003_2
+    - id: OPTION_V4_003_3
+      eventId: EVENT_HB_023
+      text: "\u6536\u4E0B\u8865\u7ED9\u91D1\uFF08\u91D1\u5E01\uFF0B40\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_003_3
+  - id: EVENT_HB_024
+    name: "\u575A\u76FE\u8425\u706B"
+    cg: EventCG/camp
+    description: "\u5E03\u9686\u5B88\u7740\u8425\u706B\u7B49\u5F85\u6362\u5C97\uFF0C\u76FE\u724C\u4E0E\u53E3\u7CAE\u90FD\u5DF2\u51C6\u5907\u59A5\u5F53\u3002"
+    options:
+    - id: OPTION_V4_004_1
+      eventId: EVENT_HB_024
+      text: "\u9080\u8BF7\u5E03\u9686\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_004_1
+    - id: OPTION_V4_004_2
+      eventId: EVENT_HB_024
+      text: "\u9886\u53D6\u5B88\u62A4\u8005\u4E4B\u76FE"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_004_2
+    - id: OPTION_V4_004_3
+      eventId: EVENT_HB_024
+      text: "\u9886\u53D6\u5DE8\u4EBA\u8170\u5E26"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_004_3
+  - id: EVENT_HB_025
+    name: "\u6797\u5730\u62FE\u8352"
+    cg: EventCG/hoard
+    description: "\u65E7\u6218\u573A\u7559\u4E0B\u4ECD\u80FD\u4F7F\u7528\u7684\u5200\u5203\u4E0E\u7532\u7247\uFF0C\u4F60\u53EA\u80FD\u5E26\u8D70\u4E00\u4EFD\u7269\u8D44\u3002"
+    options:
+    - id: OPTION_V4_005_1
+      eventId: EVENT_HB_025
+      text: "\u9886\u53D6\u957F\u5251"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_005_1
+    - id: OPTION_V4_005_2
+      eventId: EVENT_HB_025
+      text: "\u9886\u53D6\u9501\u5B50\u7532"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_005_2
+    - id: OPTION_V4_005_3
+      eventId: EVENT_HB_025
+      text: "\u6536\u4E0B\u8865\u7ED9\u91D1\uFF08\u91D1\u5E01\uFF0B35\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_005_3
+  - id: EVENT_HB_026
+    name: "\u65E0\u754F\u519B\u65D7"
+    cg: EventCG/camp
+    description: "\u76D6\u4F26\u5B88\u536B\u7684\u519B\u65D7\u5C79\u7ACB\u4E0D\u5012\uFF0C\u4ED6\u63D0\u51FA\u968F\u961F\u4F5C\u6218\u6216\u5206\u4EAB\u6574\u5907\u7ECF\u9A8C\u3002"
+    options:
+    - id: OPTION_V4_006_1
+      eventId: EVENT_HB_026
+      text: "\u9080\u8BF7\u76D6\u4F26\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_006_1
+    - id: OPTION_V4_006_2
+      eventId: EVENT_HB_026
+      text: "\u9886\u53D6\u68D8\u523A\u80CC\u5FC3"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_006_2
+    - id: OPTION_V4_006_3
+      eventId: EVENT_HB_026
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B75\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_006_3
+  - id: EVENT_HB_027
+    name: "\u51DB\u51AC\u8865\u7ED9\u8F66"
+    cg: EventCG/caravan
+    description: "\u745F\u5E84\u59AE\u5E26\u6765\u5317\u5730\u8865\u7ED9\uFF0C\u961F\u4F0D\u53EF\u4EE5\u9080\u8BF7\u5979\u51FA\u6218\uFF0C\u4E5F\u53EF\u4EE5\u5206\u8D70\u88C5\u5907\u3002"
+    options:
+    - id: OPTION_V4_007_1
+      eventId: EVENT_HB_027
+      text: "\u9080\u8BF7\u745F\u5E84\u59AE\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_007_1
+    - id: OPTION_V4_007_2
+      eventId: EVENT_HB_027
+      text: "\u9886\u53D6\u6676\u4F53\u62A4\u8155"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_007_2
+    - id: OPTION_V4_007_3
+      eventId: EVENT_HB_027
+      text: "\u9886\u53D6\u518D\u751F\u5760\u9970"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_007_3
+  - id: EVENT_HB_028
+    name: "\u65E5\u8F6E\u62A4\u9001"
+    cg: EventCG/bridge
+    description: "\u857E\u6B27\u5A1C\u62A4\u9001\u5B8C\u5546\u961F\u540E\u51C6\u5907\u8FD4\u56DE\u524D\u7EBF\uFF0C\u8FDC\u5F81\u961F\u53EF\u5411\u5979\u8BF7\u6C42\u4E00\u4EFD\u63F4\u52A9\u3002"
+    options:
+    - id: OPTION_V4_008_1
+      eventId: EVENT_HB_028
+      text: "\u9080\u8BF7\u857E\u6B27\u5A1C\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_008_1
+    - id: OPTION_V4_008_2
+      eventId: EVENT_HB_028
+      text: "\u9886\u53D6\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_008_2
+    - id: OPTION_V4_008_3
+      eventId: EVENT_HB_028
+      text: "\u6536\u4E0B\u8865\u7ED9\u91D1\uFF08\u91D1\u5E01\uFF0B60\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_008_3
+  - id: EVENT_HB_029
+    name: "\u6697\u5DF7\u4EA4\u6362"
+    cg: EventCG/village
+    description: "\u56FE\u5947\u5C55\u793A\u6CBF\u9014\u641C\u96C6\u7684\u88C5\u5907\uFF0C\u9080\u8BF7\u4F60\u5728\u7A81\u88AD\u4E0E\u7A33\u5B88\u4E4B\u95F4\u4F5C\u51FA\u9009\u62E9\u3002"
+    options:
+    - id: OPTION_V4_009_1
+      eventId: EVENT_HB_029
+      text: "\u9080\u8BF7\u56FE\u5947\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_009_1
+    - id: OPTION_V4_009_2
+      eventId: EVENT_HB_029
+      text: "\u9886\u53D6\u75BE\u5C04\u706B\u70AE"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_009_2
+    - id: OPTION_V4_009_3
+      eventId: EVENT_HB_029
+      text: "\u9886\u53D6\u591C\u4E4B\u950B\u5203"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_009_3
+  - id: EVENT_HB_030
+    name: "\u5251\u9053\u56DE\u54CD"
+    cg: EventCG/training
+    description: "\u6613\u6F14\u793A\u7834\u9635\u7684\u5251\u8DEF\uFF0C\u961F\u4F0D\u53EF\u4EE5\u9080\u8BF7\u5BFC\u5E08\uFF0C\u4E5F\u80FD\u9009\u62E9\u4E00\u6B21\u8BAD\u7EC3\u6216\u78E8\u5203\u3002"
+    options:
+    - id: OPTION_V4_010_1
+      eventId: EVENT_HB_030
+      text: "\u9080\u8BF7\u6613\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_010_1
+    - id: OPTION_V4_010_2
+      eventId: EVENT_HB_030
+      text: "\u9886\u53D6\u66B4\u98CE\u78E8\u783A\u77F3"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_010_2
+    - id: OPTION_V4_010_3
+      eventId: EVENT_HB_030
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B75\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_010_3
+  - id: EVENT_HB_031
+    name: "\u72D0\u706B\u5F15\u8DEF"
+    cg: EventCG/grove
+    description: "\u963F\u72F8\u5728\u9ED1\u96FE\u4E2D\u627E\u5230\u5B89\u5168\u7684\u8DEF\u53E3\uFF0C\u613F\u610F\u540C\u884C\u6216\u5C06\u6536\u96C6\u7684\u5B9D\u7269\u76F8\u8D60\u3002"
+    options:
+    - id: OPTION_V4_011_1
+      eventId: EVENT_HB_031
+      text: "\u9080\u8BF7\u963F\u72F8\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_011_1
+    - id: OPTION_V4_011_2
+      eventId: EVENT_HB_031
+      text: "\u9886\u53D6\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_011_2
+    - id: OPTION_V4_011_3
+      eventId: EVENT_HB_031
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B75\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_011_3
+  - id: EVENT_HB_032
+    name: "\u7206\u7834\u5DE5\u574A"
+    cg: EventCG/forge
+    description: "\u91D1\u514B\u4E1D\u6B63\u8C03\u8BD5\u8FDC\u5F81\u88C5\u5907\u3002\u4F60\u53EF\u4EE5\u9080\u8BF7\u5979\uFF0C\u4E5F\u53EF\u5E26\u8D70\u4E00\u4EF6\u5B8C\u6210\u7684\u6B66\u5668\u3002"
+    options:
+    - id: OPTION_V4_012_1
+      eventId: EVENT_HB_032
+      text: "\u9080\u8BF7\u91D1\u514B\u4E1D\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_012_1
+    - id: OPTION_V4_012_2
+      eventId: EVENT_HB_032
+      text: "\u9886\u53D6\u6B7B\u4EA1\u4E4B\u5203"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_012_2
+    - id: OPTION_V4_012_3
+      eventId: EVENT_HB_032
+      text: "\u9886\u53D6\u65E0\u5C3D\u4E4B\u5203"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_012_3
+  - id: EVENT_HB_033
+    name: "\u9ED1\u96FE\u6551\u63F4"
+    cg: EventCG/shrine
+    description: "\u5E9F\u5F03\u6551\u62A4\u7AD9\u4ECD\u6709\u5BC6\u5C01\u7269\u8D44\uFF0C\u9009\u53D6\u4E00\u4EFD\u6062\u590D\u88C5\u5907\u540E\u7EE7\u7EED\u524D\u8FDB\u3002"
+    options:
+    - id: OPTION_V4_013_1
+      eventId: EVENT_HB_033
+      text: "\u9886\u53D6\u6551\u8D4E"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_013_1
+    - id: OPTION_V4_013_2
+      eventId: EVENT_HB_033
+      text: "\u9886\u53D6\u6B63\u4E49\u4E4B\u624B"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_013_2
+    - id: OPTION_V4_013_3
+      eventId: EVENT_HB_033
+      text: "\u6536\u4E0B\u8865\u7ED9\u91D1\uFF08\u91D1\u5E01\uFF0B80\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_013_3
+  - id: EVENT_HB_034
+    name: "\u7194\u94F8\u519B\u68B0\u5E93"
+    cg: EventCG/forge
+    description: "\u5965\u6069\u7559\u4E0B\u4E24\u4EF6\u91CD\u7532\u548C\u4E00\u672C\u953B\u9020\u8BB0\u5F55\uFF0C\u6C89\u91CD\u7684\u8865\u7ED9\u53EA\u80FD\u5E26\u8D70\u4E00\u4EFD\u3002"
+    options:
+    - id: OPTION_V4_014_1
+      eventId: EVENT_HB_034
+      text: "\u9886\u53D6\u72C2\u5F92\u94E0\u7532"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_014_1
+    - id: OPTION_V4_014_2
+      eventId: EVENT_HB_034
+      text: "\u9886\u53D6\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_014_2
+    - id: OPTION_V4_014_3
+      eventId: EVENT_HB_034
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B75\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_014_3
+  - id: EVENT_HB_035
+    name: "\u7981\u9B54\u9057\u4EA7"
+    cg: EventCG/cave
+    description: "\u9057\u8FF9\u5185\u7684\u88C5\u5907\u9488\u5BF9\u4E0D\u540C\u5A01\u80C1\u800C\u9020\uFF1A\u62B5\u6321\u51B2\u51FB\u3001\u5EF6\u7EED\u6CBB\u7597\u6216\u62A4\u4F4F\u8981\u5BB3\u3002"
+    options:
+    - id: OPTION_V4_015_1
+      eventId: EVENT_HB_035
+      text: "\u9886\u53D6\u5DE8\u9F99\u4E4B\u722A"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_015_1
+    - id: OPTION_V4_015_2
+      eventId: EVENT_HB_035
+      text: "\u9886\u53D6\u632F\u594B\u76D4\u7532"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_015_2
+    - id: OPTION_V4_015_3
+      eventId: EVENT_HB_035
+      text: "\u9886\u53D6\u591C\u4E4B\u950B\u5203"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_015_3
+  - id: EVENT_HB_036
+    name: "\u89C2\u661F\u8005\u7684\u9080\u8BF7"
+    cg: EventCG/tempest
+    description: "\u8FDB\u5165\u661F\u754C\u540E\uFF0C\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14\u9080\u8BF7\u961F\u4F0D\u7406\u89E3\u661F\u8F68\uFF0C\u4E5F\u63D0\u4F9B\u4E00\u6B21\u540C\u884C\u673A\u4F1A\u3002"
+    options:
+    - id: OPTION_V4_016_1
+      eventId: EVENT_HB_036
+      text: "\u9080\u8BF7\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14\u540C\u884C"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_016_1
+    - id: OPTION_V4_016_2
+      eventId: EVENT_HB_036
+      text: "\u9886\u53D6\u661F\u754C\u8D50\u798F"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_016_2
+    - id: OPTION_V4_016_3
+      eventId: EVENT_HB_036
+      text: "\u7814\u4E60\u5FC3\u5F97\uFF08\u7ECF\u9A8C\uFF0B75\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_016_3
+  - id: EVENT_HB_037
+    name: "\u661F\u94F8\u5175\u5668\u67B6"
+    cg: EventCG/forge
+    description: "\u5175\u5668\u67B6\u4E0A\u4FDD\u5B58\u7740\u5F3A\u5316\u8FDE\u51FB\u4E0E\u9632\u62A4\u7684\u88C5\u5907\uFF0C\u661F\u754C\u80FD\u91CF\u4EC5\u5141\u8BB8\u53D6\u8D70\u4E00\u4EF6\u3002"
+    options:
+    - id: OPTION_V4_017_1
+      eventId: EVENT_HB_037
+      text: "\u9886\u53D6\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_017_1
+    - id: OPTION_V4_017_2
+      eventId: EVENT_HB_037
+      text: "\u9886\u53D6\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_017_2
+    - id: OPTION_V4_017_3
+      eventId: EVENT_HB_037
+      text: "\u9886\u53D6\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_017_3
+  - id: EVENT_HB_038
+    name: "\u5929\u7A79\u8865\u7ED9\u7AD9"
+    cg: EventCG/shrine
+    description: "\u6700\u540E\u7684\u9A7F\u7AD9\u4E3A\u8FDC\u5F81\u8005\u51C6\u5907\u4E86\u91CD\u7532\u3001\u62A4\u7B26\u548C\u8FD4\u7A0B\u8D44\u91D1\u3002"
+    options:
+    - id: OPTION_V4_018_1
+      eventId: EVENT_HB_038
+      text: "\u9886\u53D6\u5DE8\u9F99\u4E4B\u722A"
+      order: 1
+      effectIds:
+      - FX_OPTION_V4_018_1
+    - id: OPTION_V4_018_2
+      eventId: EVENT_HB_038
+      text: "\u9886\u53D6\u81EA\u7136\u4E4B\u529B"
+      order: 2
+      effectIds:
+      - FX_OPTION_V4_018_2
+    - id: OPTION_V4_018_3
+      eventId: EVENT_HB_038
+      text: "\u6536\u4E0B\u8865\u7ED9\u91D1\uFF08\u91D1\u5E01\uFF0B100\uFF09"
+      order: 3
+      effectIds:
+      - FX_OPTION_V4_018_3

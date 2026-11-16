@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331383683d8f0be45ab134846c352d31, type: 3}
+  m_Name: Floors
+  m_EditorClassIdentifier: 
+  rows:
+  - id: FLOOR_001
+    floor: 1
+    battleWeight: 55
+    eventWeight: 30
+    shopWeight: 15
+    maxShops: 2
+    healthPercent: 100
+    attackPercent: 100
+    name: "\u827E\u6B27\u5C3C\u4E9A\u6797\u5730"
+    rows: 7
+    optional: 0
+  - id: FLOOR_002
+    floor: 2
+    battleWeight: 60
+    eventWeight: 25
+    shopWeight: 15
+    maxShops: 2
+    healthPercent: 135
+    attackPercent: 125
+    name: "\u8BFA\u514B\u8428\u65AF\u524D\u7EBF"
+    rows: 7
+    optional: 0
+  - id: FLOOR_003
+    floor: 3
+    battleWeight: 65
+    eventWeight: 20
+    shopWeight: 15
+    maxShops: 2
+    healthPercent: 175
+    attackPercent: 155
+    name: "\u6697\u5F71\u5C9B\u6DF1\u57DF"
+    rows: 7
+    optional: 0
+  - id: FLOOR_004
+    floor: 4
+    battleWeight: 70
+    eventWeight: 20
+    shopWeight: 10
+    maxShops: 2
+    healthPercent: 210
+    attackPercent: 185
+    name: "\u5DE8\u795E\u5CF0 \xB7 \u661F\u754C\u56DE\u5ECA"
+    rows: 4
+    optional: 1

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c089085fbb40a14c9e7f3b016a4a7bd, type: 3}
+  m_Name: Levels
+  m_EditorClassIdentifier: 
+  rows:
+  - id: LEVEL_01
+    level: 1
+    experienceToNext: 50
+    commonWeight: 80
+    rareWeight: 18
+    epicWeight: 2
+  - id: LEVEL_02
+    level: 2
+    experienceToNext: 75
+    commonWeight: 75
+    rareWeight: 20
+    epicWeight: 5
+  - id: LEVEL_03
+    level: 3
+    experienceToNext: 100
+    commonWeight: 70
+    rareWeight: 22
+    epicWeight: 8
+  - id: LEVEL_04
+    level: 4
+    experienceToNext: 125
+    commonWeight: 65
+    rareWeight: 24
+    epicWeight: 11
+  - id: LEVEL_05
+    level: 5
+    experienceToNext: 150
+    commonWeight: 60
+    rareWeight: 26
+    epicWeight: 14
+  - id: LEVEL_06
+    level: 6
+    experienceToNext: 175
+    commonWeight: 55
+    rareWeight: 28
+    epicWeight: 17
+  - id: LEVEL_07
+    level: 7
+    experienceToNext: 200
+    commonWeight: 50
+    rareWeight: 30
+    epicWeight: 20
+  - id: LEVEL_08
+    level: 8
+    experienceToNext: 225
+    commonWeight: 45
+    rareWeight: 32
+    epicWeight: 23
+  - id: LEVEL_09
+    level: 9
+    experienceToNext: 250
+    commonWeight: 40
+    rareWeight: 34
+    epicWeight: 26
+  - id: LEVEL_10
+    level: 10
+    experienceToNext: 0
+    commonWeight: 35
+    rareWeight: 36
+    epicWeight: 29

@@ -107,3 +107,15 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Local build exports and editor preferences
+/GAME/
+/.vscode/
+*_BurstDebugInformation_DoNotShip/
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+
+# Office lock files and desktop metadata
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini

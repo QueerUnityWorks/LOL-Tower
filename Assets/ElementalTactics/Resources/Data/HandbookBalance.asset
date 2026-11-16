@@ -1,0 +1,3348 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63e7e035bb17f042988281da55af44a, type: 3}
+  m_Name: HandbookBalance
+  m_EditorClassIdentifier: 
+  snapshot:
+    schemaVersion: 1
+    analysisDifficulty: 10
+    sourceWorkbook: "\u82F1\u96C4\u654C\u4EBA\u4E0E\u9053\u5177\u6570\u503C\u673A\u5236\u624B\u518C_v3_\u7EAF\u516C\u5F0F\u7248_2026-11-03.xlsx"
+    sourceSha256: 2cab910cd109381a0b6d4c19278698d9877adffb17a47b08e16609d08609a960
+    gameWorkbookSha256: 78ecc0b59608ec23e262eb63caa5d778efe10955209874bb646680c24f37c223
+    analysisNotes: "\u8282\u70B9\u6982\u7387\u3001\u671F\u671B\u66F2\u7EBF\u3001\u5546\u5E97\u89C6\u4E3A\u7CBE\u82F1\u3001\u4E8B\u4EF6\u9009\u9879\u7B49\u6743\u5C5E\u4E8E\u79BB\u7EBF\u5206\u6790\u3002\u5F3A\u5EA6\u7CFB\u6570\u7528\u4E8E\u6218\u529B\u8BC4\u4F30\uFF0C\u4E0D\u989D\u5916\u4E58\u5165\u5B9E\u6218\u5C5E\u6027\u3001\u4F24\u5BB3\u6216\u9053\u5177\u6548\u679C\u3002\n2026-11-16\uFF1A30\u4EF6\u589E\u76CA\u9053\u5177\u6309\u5F53\u524D6v6\u4E9A\u7D22\u6D4B\u7B97\u91CD\u6D4B\uFF0C\u6700\u4F4E\u589E\u76CA1.1\uFF1B\u901F\u5EA6\u9053\u5177\u9644\u52A0\u653B\u51FB\u3002\u5192\u9669\u521D\u59CB3\u70B9\u751F\u547D\uFF1B\u6218\u8D25\u7ACB\u5373\u62631\u70B9\uFF1B\u91CD\u65B0\u5E03\u9635\u3001\u91CD\u8BD5\u3001\u6B63\u5E38\u8C03\u6574\u7AD9\u4F4D\u4E0D\u6263\u547D\uFF1B\u5E73\u5C40\u4E0D\u6263\u547D\uFF1B\u751F\u547D\u5F52\u96F6\u7ED3\u675F\u672C\u6B21\u5192\u9669\u3002"
+    parameters:
+      referenceHealth: 440
+      referenceAttack: 90
+      referenceDefense: 24
+      referenceSpeed: 70
+      referenceScore: 1000
+      speedWeight: 0.2
+      speedLimit: 0.1
+      defenseConstant: 100
+    units:
+    - id: HERO_001
+      name: "\u4E9A\u7D22"
+      quality: "\u666E\u901A"
+      skillDescription: "\u65A9\u94A2\u95EA\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u56DE\u590D\u672C\u6B21\u6280\u80FD\u9020\u6210\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u7684
+        50%\u3002\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\u5165\u56DE\u590D\u3002"
+      isEnemy: 0
+      maxHealth: 440
+      attack: 90
+      defense: 24
+      speed: 70
+      skillEnergyCost: 3
+      baseStrength: 1000
+      mechanismCoefficient: 1.016
+      totalStrength: 1016
+    - id: HERO_002
+      name: "\u5E03\u9686"
+      quality: "\u7A00\u6709"
+      skillDescription: "\u575A\u4E0D\u53EF\u6467\uFF1A\u6CBB\u7597\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u961F\u53CB100\u70B9\uFF1B\u81EA\u5DF1\u4E0E\u8BE5\u961F\u53CB\u83B7\u5F9790\u62A4\u76FE\u3002\u5BF9\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u65BD\u52A0\u5632\u8BBD\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u5355\u4F53\u653B\u51FB\u4F18\u5148\u9009\u62E9\u65BD\u52A0\u8005\uFF1B\u7FA4\u653B\u4E0E\u6CBB\u7597\u4E0D\u6539\u76EE\u6807\uFF0C\u65BD\u52A0\u8005\u9635\u4EA1\u540E\u89E3\u9664\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 650
+      attack: 58
+      defense: 44
+      speed: 40
+      skillEnergyCost: 3
+      baseStrength: 1005.3897484520206
+      mechanismCoefficient: 1.32
+      totalStrength: 1327.114467956667
+    - id: HERO_003
+      name: "\u62C9\u514B\u4E1D"
+      quality: "\u666E\u901A"
+      skillDescription: "\u7EC8\u6781\u95EA\u5149\uFF1A\u6700\u524D\u65B9\u5B58\u6D3B\u7684\u4E00\u6392\u3002\u9020\u621095%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u8BE5\u6392\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002"
+      isEnemy: 0
+      maxHealth: 290
+      attack: 112
+      defense: 10
+      speed: 60
+      skillEnergyCost: 3
+      baseStrength: 840.7199509005919
+      mechanismCoefficient: 1.008
+      totalStrength: 847.4457105077967
+    - id: HERO_004
+      name: "\u827E\u5E0C"
+      quality: "\u666E\u901A"
+      skillDescription: "\u4E07\u7BAD\u9F50\u53D1\uFF1A\u666E\u901A\u76EE\u6807\u6240\u5728\u7684\u4E00\u5217\u3002\u9020\u6210120%\u653B\u51FB\u4F24\u5BB3\u3002\u547D\u4E2D\u8BE5\u5217\u524D\u540E\u6392\u5B58\u6D3B\u654C\u4EBA\u3002\u76EE\u6807\u6240\u5728\u5217\u4E0D\u4E00\u5B9A\u662F\u65BD\u6CD5\u8005\u6240\u5728\u5217\u3002"
+      isEnemy: 0
+      maxHealth: 320
+      attack: 98
+      defense: 14
+      speed: 90
+      skillEnergyCost: 3
+      baseStrength: 877.3014698566894
+      mechanismCoefficient: 1.005
+      totalStrength: 881.6879772059727
+    - id: HERO_005
+      name: "\u857E\u6B27\u5A1C"
+      quality: "\u53F2\u8BD7"
+      skillDescription: "\u65E5\u5149\u5E87\u62A4\uFF1A\u6CBB\u7597\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u961F\u53CB100\u70B9\uFF1B\u81EA\u5DF1\u4E0E\u8BE5\u961F\u53CB\u83B7\u5F9790\u62A4\u76FE\u3002\u65BD\u653E\u65F6\u5148\u51C0\u5316\u6280\u80FD\u76EE\u6807\u7684\u5168\u90E8\u8D1F\u9762\u72B6\u6001\uFF0C\u518D\u6CBB\u7597\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 747
+      attack: 67
+      defense: 51
+      speed: 40
+      skillEnergyCost: 3
+      baseStrength: 1186.2294649550065
+      mechanismCoefficient: 1.331
+      totalStrength: 1578.8714178551134
+    - id: HERO_006
+      name: "\u56FE\u5947"
+      quality: "\u666E\u901A"
+      skillDescription: "\u5267\u6BD2\u706B\u529B\uFF1A\u5BF9\u76EE\u6807\u6240\u5728\u5217\u7684\u6240\u6709\u654C\u4EBA\u9020\u6210120%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u4E2D\u6BD2\uFF0C\u6301\u7EED\u76EE\u68073\u6B21\u884C\u52A8\u3002\u6BCF\u6B21\u884C\u52A8\u524D\u53D7\u5230\u65BD\u52A0\u8005\u65BD\u653E\u65F6\u653B\u51FB\u768420%\u6301\u7EED\u4F24\u5BB3\uFF0C\u5FFD\u7565\u9632\u5FA1\u4E0E\u5C5E\u6027\u514B\u5236\uFF0C\u53EF\u88AB\u62A4\u76FE\u5438\u6536\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 368
+      attack: 113
+      defense: 16
+      speed: 90
+      skillEnergyCost: 3
+      baseStrength: 1019.0618183961147
+      mechanismCoefficient: 1.005
+      totalStrength: 1024.1571274880953
+    - id: HERO_007
+      name: "\u745F\u5E84\u59AE"
+      quality: "\u53F2\u8BD7"
+      skillDescription: "\u6781\u51B0\u5BD2\u72F1\uFF1A\u5BF9\u5355\u4F53\u9020\u6210140%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u6655\u7729\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u8DF3\u8FC7\u884C\u52A8\uFF0C\u4E0D\u83B7\u5F97\u6280\u529B\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 747
+      attack: 67
+      defense: 51
+      speed: 40
+      skillEnergyCost: 3
+      baseStrength: 1186.2294649550065
+      mechanismCoefficient: 1.407
+      totalStrength: 1669.024857191694
+    - id: HERO_008
+      name: "\u76D6\u4F26"
+      quality: "\u7A00\u6709"
+      skillDescription: "\u81F4\u547D\u6253\u51FB\uFF1A\u5BF9\u5355\u4F53\u9020\u6210160%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u6C89\u9ED8\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u65E0\u6CD5\u91CA\u653E\u6280\u80FD\uFF0C\u4ECD\u53EF\u666E\u653B\u5E76\u79EF\u6512\u6280\u529B\uFF0C\u5DF2\u6709\u6280\u529B\u4FDD\u7559\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 506
+      attack: 103
+      defense: 28
+      speed: 70
+      skillEnergyCost: 3
+      baseStrength: 1165.575526614954
+      mechanismCoefficient: 1.004
+      totalStrength: 1170.2378287214135
+    - id: HERO_009
+      name: "\u6613"
+      quality: "\u53F2\u8BD7"
+      skillDescription: "\u65E0\u6781\u7834\u7532\u65A9\uFF1A\u5BF9\u5355\u4F53\u9020\u6210170%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u7834\u7532\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u9632\u5FA1\u964D\u4F4E30%\uFF0C\u6700\u4F4E\u4E3A0\uFF1B\u4E0D\u6539\u53D8\u57FA\u7840\u914D\u7F6E\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 572
+      attack: 117
+      defense: 31
+      speed: 70
+      skillEnergyCost: 3
+      baseStrength: 1336.1898165329849
+      mechanismCoefficient: 1.132
+      totalStrength: 1512.5668723153387
+    - id: HERO_010
+      name: "\u963F\u72F8"
+      quality: "\u7A00\u6709"
+      skillDescription: "\u9B45\u60D1\u5996\u672F\uFF1A\u5BF9\u5355\u4F53\u9020\u6210135%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u9B45\u60D1\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u5F3A\u5236\u5BF9\u5DF1\u65B9\u5176\u4ED6\u5B58\u6D3B\u89D2\u8272\u666E\u653B\u4E00\u6B21\uFF1B\u6CA1\u6709\u76EE\u6807\u65F6\u8DF3\u8FC7\u884C\u52A8\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 377
+      attack: 146
+      defense: 13
+      speed: 60
+      skillEnergyCost: 3
+      baseStrength: 1109.259930934562
+      mechanismCoefficient: 1.008
+      totalStrength: 1118.1340103820385
+    - id: HERO_011
+      name: "\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14"
+      quality: "\u7A00\u6709"
+      skillDescription: "\u661F\u706B\u503E\u6CFB\uFF1A\u5BF9\u6240\u6709\u654C\u4EBA\u9020\u621080%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u707C\u70E7\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u6BCF\u6B21\u884C\u52A8\u524D\u53D7\u5230\u65BD\u52A0\u8005\u65BD\u653E\u65F6\u653B\u51FB\u768430%\u6301\u7EED\u4F24\u5BB3\uFF0C\u5FFD\u7565\u9632\u5FA1\u4E0E\u5C5E\u6027\u514B\u5236\uFF0C\u53EF\u88AB\u62A4\u76FE\u5438\u6536\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 377
+      attack: 146
+      defense: 13
+      speed: 60
+      skillEnergyCost: 3
+      baseStrength: 1109.259930934562
+      mechanismCoefficient: 1.008
+      totalStrength: 1118.1340103820385
+    - id: HERO_012
+      name: "\u91D1\u514B\u4E1D"
+      quality: "\u7A00\u6709"
+      skillDescription: "\u91CD\u521B\u98DE\u5F39\uFF1A\u5BF9\u6240\u6709\u654C\u4EBA\u9020\u621085%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u91CD\u4F24\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u53D7\u5230\u7684\u6CBB\u7597\u3001\u56DE\u8840\u548C\u5438\u8840\u56DE\u590D\u964D\u4F4E40%\uFF0C\u4E0D\u5F71\u54CD\u62A4\u76FE\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 0
+      maxHealth: 416
+      attack: 127
+      defense: 18
+      speed: 90
+      skillEnergyCost: 3
+      baseStrength: 1158.505056696789
+      mechanismCoefficient: 1.005
+      totalStrength: 1164.297581980273
+    - id: ENEMY_001
+      name: "\u6C83\u91CC\u514B\xB7\u8FFD\u730E\u8005"
+      quality: "\u666E\u901A"
+      skillDescription: "\u91CE\u517D\u4E4B\u53E3\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u56DE\u590D\u672C\u6B21\u6280\u80FD\u9020\u6210\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u7684
+        50%\u3002\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\u5165\u56DE\u590D\u3002"
+      isEnemy: 1
+      maxHealth: 180
+      attack: 32
+      defense: 6
+      speed: 35
+      skillEnergyCost: 3
+      baseStrength: 334.5237784639102
+      mechanismCoefficient: 1.324
+      totalStrength: 442.90948268621713
+    - id: ENEMY_002
+      name: "\u65AF\u7EF4\u56E0\xB7\u9E26\u7FA4"
+      quality: "\u666E\u901A"
+      skillDescription: "\u6076\u9B54\u8000\u5149\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u621060%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002"
+      isEnemy: 1
+      maxHealth: 210
+      attack: 48
+      defense: 8
+      speed: 50
+      skillEnergyCost: 3
+      baseStrength: 457.20045720068583
+      mechanismCoefficient: 1.002
+      totalStrength: 458.1148581150872
+    - id: ENEMY_003
+      name: "\u4F0A\u8389\u4E1D\xB7\u86DB\u7FA4"
+      quality: "\u666E\u901A"
+      skillDescription: "\u795E\u7ECF\u6BD2\u7D20\uFF1A\u653B\u51FB\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u654C\u4EBA\uFF0C\u9020\u6210110%\u653B\u51FB\u4F24\u5BB3\uFF0C\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u4E2D\u6BD2\uFF0C\u6301\u7EED\u76EE\u68073\u6B21\u884C\u52A8\u3002\u6BCF\u6B21\u884C\u52A8\u524D\u53D7\u5230\u65BD\u52A0\u8005\u65BD\u653E\u65F6\u653B\u51FB\u768420%\u6301\u7EED\u4F24\u5BB3\uFF0C\u5FFD\u7565\u9632\u5FA1\u4E0E\u5C5E\u6027\u514B\u5236\uFF0C\u53EF\u88AB\u62A4\u76FE\u5438\u6536\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u65E0\u989D\u5916\u7279\u6027\u3002"
+      isEnemy: 1
+      maxHealth: 190
+      attack: 46
+      defense: 8
+      speed: 65
+      skillEnergyCost: 3
+      baseStrength: 435.2960075167627
+      mechanismCoefficient: 1.007
+      totalStrength: 438.34307956938
+    - id: ENEMY_004
+      name: "\u8BFA\u514B\u8428\u65AF\u91CD\u536B"
+      quality: "\u666E\u901A"
+      skillDescription: "\u94C1\u8840\u9632\u7EBF\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u53CB\u519B\u53CA\u81EA\u8EAB\u3002\u6BCF\u4E2A\u6CBB\u7597\u76EE\u6807\u56DE\u590D100\u70B9\u751F\u547D\u3002\u6BCF\u4E2A\u62A4\u76FE\u76EE\u6807\u83B7\u5F9790\u70B9\u62A4\u76FE\u3002\u6CBB\u7597\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u53CB\u519B\uFF1B\u8BE5\u53CB\u519B\u4E0E\u81EA\u8EAB\u5404\u5F97\u62A4\u76FE\u3002\u76EE\u6807\u5C31\u662F\u81EA\u8EAB\u65F6\u53EA\u52A0\u4E00\u6B21\u62A4\u76FE\uFF0C\u4E0D\u590D\u6D3B\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        50 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 340
+      attack: 30
+      defense: 22
+      speed: 25
+      skillEnergyCost: 3
+      baseStrength: 477.5763592197906
+      mechanismCoefficient: 1.545
+      totalStrength: 737.8554749945765
+    - id: ENEMY_005
+      name: "\u8BFA\u514B\u8428\u65AF\u7A81\u51FB\u5175"
+      quality: "\u666E\u901A"
+      skillDescription: "\u6298\u7FFC\u4E4B\u821E\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u56DE\u590D\u672C\u6B21\u6280\u80FD\u9020\u6210\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u7684
+        50%\u3002\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\u5165\u56DE\u590D\u3002\n\u88AB\u52A8\u300C\u534A\u8840\u72C2\u6012\u300D\uFF1A\u81EA\u8EAB\u751F\u547D\u4E0D\u9AD8\u4E8E\u6700\u5927\u751F\u547D\u7684
+        50% \u65F6\uFF0C\u6240\u6709\u4F24\u5BB3\u63D0\u9AD8 25%\u3002\u4E0E\u9996\u9886\u589E\u4F24\u76F8\u4E58\u3002"
+      isEnemy: 1
+      maxHealth: 280
+      attack: 55
+      defense: 15
+      speed: 55
+      skillEnergyCost: 3
+      baseStrength: 587.542418204817
+      mechanismCoefficient: 1.009
+      totalStrength: 592.8302999686603
+    - id: ENEMY_006
+      name: "\u8BFA\u514B\u8428\u65AF\u6218\u5730\u533B\u5E08"
+      quality: "\u666E\u901A"
+      skillDescription: "\u9C9C\u8840\u8D50\u798F\uFF1A\u6240\u6709\u5B58\u6D3B\u53CB\u519B\uFF08\u542B\u81EA\u8EAB\uFF09\u3002\u6BCF\u4E2A\u6CBB\u7597\u76EE\u6807\u56DE\u590D70\u70B9\u751F\u547D\u3002\u6BCF\u4E2A\u76EE\u6807\u56DE\u590D\u56FA\u5B9A\u751F\u547D\uFF0C\u4E0D\u590D\u6D3B\u3001\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\uFF1B\u4E0D\u9644\u5E26\u76FE\u536B\u9ED8\u8BA4\u6280\u80FD\u7684\u62A4\u76FE\u3002"
+      isEnemy: 1
+      maxHealth: 360
+      attack: 62
+      defense: 18
+      speed: 45
+      skillEnergyCost: 3
+      baseStrength: 705.7279561218671
+      mechanismCoefficient: 1.209
+      totalStrength: 853.2250989513374
+    - id: ENEMY_007
+      name: "\u6C83\u91CC\u514B\xB7\u8840\u730E"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u65E0\u5C3D\u675F\u7F1A\uFF1A\u5BF9\u5355\u4F53\u9020\u6210120%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u6655\u7729\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u8DF3\u8FC7\u884C\u52A8\uFF0C\u4E0D\u83B7\u5F97\u6280\u529B\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u666E\u653B\u653B\u51FB\u4E24\u6B21\uFF0C\u6BCF\u6B21\u884C\u52A8\u4EC5\u83B7\u5F971\u70B9\u6280\u529B\u3002"
+      isEnemy: 1
+      maxHealth: 340
+      attack: 58
+      defense: 12
+      speed: 75
+      skillEnergyCost: 3
+      baseStrength: 675.4359706199388
+      mechanismCoefficient: 1.183
+      totalStrength: 799.0407532433876
+    - id: ENEMY_008
+      name: "\u5F17\u62C9\u57FA\u7C73\u5C14\xB7\u8840\u88AD"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u9C9C\u8840\u8F6C\u6362\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u654C\u4EBA\u3002\u9020\u6210145%\u653B\u51FB\u4F24\u5BB3\u3002\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u6309\u5F53\u524D\u751F\u547D\xF7\u6700\u5927\u751F\u547D\u9009\u62E9\uFF0C\u6BD4\u4F8B\u76F8\u540C\u6309\u9635\u4F4D\u987A\u5E8F\u3002\n\u88AB\u52A8\u300C\u751F\u547D\u4F24\u5BB3\u5438\u8840\u300D\uFF1A\u6309\u9020\u6210\u7684\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u56DE\u590D
+        20%\uFF1B\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\uFF0C\u603B\u5438\u8840\u4E0A\u9650
+        100%\u3002"
+      isEnemy: 1
+      maxHealth: 280
+      attack: 52
+      defense: 8
+      speed: 82
+      skillEnergyCost: 3
+      baseStrength: 575.5120122519896
+      mechanismCoefficient: 1.006
+      totalStrength: 578.9650843255016
+    - id: ENEMY_009
+      name: "\u62C9\u83AB\u65AF\xB7\u575A\u7532"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u72C2\u4E71\u5632\u8BBD\uFF1A\u6CBB\u7597\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u961F\u53CB100\u70B9\uFF1B\u81EA\u5DF1\u4E0E\u8BE5\u961F\u53CB\u83B7\u5F9790\u62A4\u76FE\u3002\u5BF9\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u65BD\u52A0\u5632\u8BBD\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u5355\u4F53\u653B\u51FB\u4F18\u5148\u9009\u62E9\u65BD\u52A0\u8005\uFF1B\u7FA4\u653B\u4E0E\u6CBB\u7597\u4E0D\u6539\u76EE\u6807\uFF0C\u65BD\u52A0\u8005\u9635\u4EA1\u540E\u89E3\u9664\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u5F00\u6218\u83B7\u5F9790\u62A4\u76FE\u3002"
+      isEnemy: 1
+      maxHealth: 480
+      attack: 35
+      defense: 32
+      speed: 28
+      skillEnergyCost: 3
+      baseStrength: 637.5355777548622
+      mechanismCoefficient: 1.615
+      totalStrength: 1029.6199580741024
+    - id: ENEMY_010
+      name: "\u8302\u51EF\xB7\u626D\u66F2\u6811\u7CBE"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u81EA\u7136\u4E4B\u63E1\uFF1A\u6240\u6709\u5B58\u6D3B\u53CB\u519B\uFF08\u542B\u81EA\u8EAB\uFF09\u3002\u6BCF\u4E2A\u6CBB\u7597\u76EE\u6807\u56DE\u590D65\u70B9\u751F\u547D\u3002\u6BCF\u4E2A\u76EE\u6807\u56DE\u590D\u56FA\u5B9A\u751F\u547D\uFF0C\u4E0D\u590D\u6D3B\u3001\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\uFF1B\u4E0D\u9644\u5E26\u76FE\u536B\u9ED8\u8BA4\u6280\u80FD\u7684\u62A4\u76FE\u3002\n\u88AB\u52A8\u300C\u884C\u52A8\u56DE\u590D\u300D\uFF1A\u81EA\u8EAB\u6BCF\u6B21\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        18 \u751F\u547D\uFF1B\u4E0D\u590D\u6D3B\u3001\u4E0D\u8D85\u6700\u5927\u751F\u547D\uFF1B\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      isEnemy: 1
+      maxHealth: 350
+      attack: 48
+      defense: 16
+      speed: 42
+      skillEnergyCost: 3
+      baseStrength: 604.2534150820486
+      mechanismCoefficient: 1.561
+      totalStrength: 943.2395809430778
+    - id: ENEMY_011
+      name: "\u5948\u5FB7\u4E3D\xB7\u6807\u67AA"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u6807\u67AA\u6295\u63B7\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u5FFD\u7565\u9632\u5FA1\uFF0C\u4ECD\u53D7\u5C5E\u6027\u514B\u5236\u3001\u589E\u4F24\u548C\u62A4\u76FE\u5F71\u54CD\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        35 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 330
+      attack: 62
+      defense: 15
+      speed: 64
+      skillEnergyCost: 3
+      baseStrength: 686.2597037218351
+      mechanismCoefficient: 1.085
+      totalStrength: 744.5917785381911
+    - id: ENEMY_012
+      name: "\u8499\u591A\xB7\u72C2\u6012"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u80CC\u6C34\u4E00\u6218\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u56DE\u590D\u672C\u6B21\u6280\u80FD\u9020\u6210\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u7684
+        50%\u3002\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\u5165\u56DE\u590D\u3002\n\u88AB\u52A8\u300C\u534A\u8840\u72C2\u6012\u300D\uFF1A\u81EA\u8EAB\u751F\u547D\u4E0D\u9AD8\u4E8E\u6700\u5927\u751F\u547D\u7684
+        50% \u65F6\uFF0C\u6240\u6709\u4F24\u5BB3\u63D0\u9AD8 35%\u3002\u4E0E\u9996\u9886\u589E\u4F24\u76F8\u4E58\u3002"
+      isEnemy: 1
+      maxHealth: 520
+      attack: 72
+      defense: 18
+      speed: 45
+      skillEnergyCost: 3
+      baseStrength: 914.02515139216
+      mechanismCoefficient: 1.284
+      totalStrength: 1173.6082943875335
+    - id: ENEMY_013
+      name: "\u6CFD\u62C9\u65AF\xB7\u5965\u672F\u4F53"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u5965\u672F\u4EEA\u5F0F\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u621060%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        70 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 260
+      attack: 60
+      defense: 6
+      speed: 58
+      skillEnergyCost: 3
+      baseStrength: 570.2707863155001
+      mechanismCoefficient: 1.198
+      totalStrength: 683.1844020059691
+    - id: ENEMY_014
+      name: "\u7D22\u62C9\u5361\xB7\u6218\u5730\u796D\u53F8"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u51C0\u5316\u7948\u613F\uFF1A\u56DE\u590D\u6240\u6709\u5B58\u6D3B\u961F\u53CB75\u751F\u547D\uFF0C\u4E0D\u590D\u6D3B\u3002\u65BD\u653E\u65F6\u5148\u51C0\u5316\u6280\u80FD\u76EE\u6807\u7684\u5168\u90E8\u8D1F\u9762\u72B6\u6001\uFF0C\u518D\u6CBB\u7597\u3002\n\u6BCF\u6B21\u884C\u52A8\u5F00\u59CB\u56DE\u590D20\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 410
+      attack: 38
+      defense: 18
+      speed: 40
+      skillEnergyCost: 3
+      baseStrength: 585.0692347088365
+      mechanismCoefficient: 1.513
+      totalStrength: 885.2097521144696
+    - id: ENEMY_015
+      name: "\u5361\u897F\u5965\u4F69\u5A05\xB7\u86C7\u7259"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u53CC\u751F\u6BD2\u7259\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u654C\u4EBA\u3002\u9020\u6210160%\u653B\u51FB\u4F24\u5BB3\u3002\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u6309\u5F53\u524D\u751F\u547D\xF7\u6700\u5927\u751F\u547D\u9009\u62E9\uFF0C\u6BD4\u4F8B\u76F8\u540C\u6309\u9635\u4F4D\u987A\u5E8F\u3002\n\u88AB\u52A8\u300C\u666E\u653B\u4E8C\u8FDE\u51FB\u300D\uFF1A\u666E\u901A\u653B\u51FB\u8FDE\u7EED\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\u3002\u6BCF\u6B21\u884C\u52A8\u53EA\u83B7\u5F97
+        1 \u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\uFF0C\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+      isEnemy: 1
+      maxHealth: 300
+      attack: 60
+      defense: 10
+      speed: 95
+      skillEnergyCost: 3
+      baseStrength: 657.2881025620235
+      mechanismCoefficient: 1.149
+      totalStrength: 755.224029843765
+    - id: ENEMY_016
+      name: "\u5E03\u91CC\u8328\xB7\u94A2\u94C1\u536B\u58EB"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u80FD\u91CF\u5C4F\u969C\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210135%\u653B\u51FB\u4F24\u5BB3\u3002\u5FFD\u7565\u9632\u5FA1\uFF0C\u4ECD\u53D7\u5C5E\u6027\u514B\u5236\u3001\u589E\u4F24\u548C\u62A4\u76FE\u5F71\u54CD\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        160 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 650
+      attack: 55
+      defense: 45
+      speed: 25
+      skillEnergyCost: 3
+      baseStrength: 974.7311457276888
+      mechanismCoefficient: 1.481
+      totalStrength: 1443.5768268227073
+    - id: ENEMY_017
+      name: "\u5FB7\u83B1\u5384\u65AF\xB7\u519B\u56E2\u957F"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u8BFA\u514B\u8428\u65AF\u65AD\u5934\u53F0\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u621080%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u534A\u8840\u72C2\u6012\u300D\uFF1A\u81EA\u8EAB\u751F\u547D\u4E0D\u9AD8\u4E8E\u6700\u5927\u751F\u547D\u7684
+        50% \u65F6\uFF0C\u6240\u6709\u4F24\u5BB3\u63D0\u9AD8 30%\u3002\u4E0E\u9996\u9886\u589E\u4F24\u76F8\u4E58\u3002"
+      isEnemy: 1
+      maxHealth: 850
+      attack: 78
+      defense: 28
+      speed: 52
+      skillEnergyCost: 3
+      baseStrength: 1280.378382838359
+      mechanismCoefficient: 1.38
+      totalStrength: 1766.922168316935
+    - id: ENEMY_018
+      name: "\u96F7\u514B\u987F\xB7\u72C2\u6218"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u66B4\u541B\u72C2\u51FB\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u654C\u4EBA\u3002\u9020\u6210170%\u653B\u51FB\u4F24\u5BB3\u3002\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u6309\u5F53\u524D\u751F\u547D\xF7\u6700\u5927\u751F\u547D\u9009\u62E9\uFF0C\u6BD4\u4F8B\u76F8\u540C\u6309\u9635\u4F4D\u987A\u5E8F\u3002\n\u88AB\u52A8\u300C\u751F\u547D\u4F24\u5BB3\u5438\u8840\u300D\uFF1A\u6309\u9020\u6210\u7684\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u56DE\u590D
+        25%\uFF1B\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\uFF0C\u603B\u5438\u8840\u4E0A\u9650
+        100%\u3002"
+      isEnemy: 1
+      maxHealth: 980
+      attack: 84
+      defense: 24
+      speed: 72
+      skillEnergyCost: 3
+      baseStrength: 1445.913782584102
+      mechanismCoefficient: 1.189
+      totalStrength: 1719.1914874924976
+    - id: ENEMY_019
+      name: "\u58A8\u83F2\u7279\xB7\u5CA9\u76FE"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u82B1\u5C97\u5CA9\u62A4\u76FE\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u53CB\u519B\u53CA\u81EA\u8EAB\u3002\u6BCF\u4E2A\u6CBB\u7597\u76EE\u6807\u56DE\u590D100\u70B9\u751F\u547D\u3002\u6BCF\u4E2A\u62A4\u76FE\u76EE\u6807\u83B7\u5F9790\u70B9\u62A4\u76FE\u3002\u6CBB\u7597\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u53CB\u519B\uFF1B\u8BE5\u53CB\u519B\u4E0E\u81EA\u8EAB\u5404\u5F97\u62A4\u76FE\u3002\u76EE\u6807\u5C31\u662F\u81EA\u8EAB\u65F6\u53EA\u52A0\u4E00\u6B21\u62A4\u76FE\uFF0C\u4E0D\u590D\u6D3B\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        35 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 260
+      attack: 30
+      defense: 18
+      speed: 32
+      skillEnergyCost: 3
+      baseStrength: 410.72498665500814
+      mechanismCoefficient: 1.483
+      totalStrength: 609.1051552093771
+    - id: ENEMY_020
+      name: "\u4F0A\u8389\u4E1D\xB7\u6697\u5F71"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u5267\u6BD2\u4E4B\u8707\uFF1A\u6700\u4F4E\u751F\u547D\u6BD4\u4F8B\u654C\u4EBA\u3002\u9020\u6210135%\u653B\u51FB\u4F24\u5BB3\u3002\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u6309\u5F53\u524D\u751F\u547D\xF7\u6700\u5927\u751F\u547D\u9009\u62E9\uFF0C\u6BD4\u4F8B\u76F8\u540C\u6309\u9635\u4F4D\u987A\u5E8F\u3002\n\u88AB\u52A8\u300C\u751F\u547D\u4F24\u5BB3\u5438\u8840\u300D\uFF1A\u6309\u9020\u6210\u7684\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u56DE\u590D
+        10%\uFF1B\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\uFF0C\u603B\u5438\u8840\u4E0A\u9650
+        100%\u3002"
+      isEnemy: 1
+      maxHealth: 245
+      attack: 48
+      defense: 9
+      speed: 72
+      skillEnergyCost: 3
+      baseStrength: 512.3842644037795
+      mechanismCoefficient: 1.038
+      totalStrength: 531.8548664511231
+    - id: ENEMY_021
+      name: "\u8587\u53E4\u4E1D\xB7\u5E7D\u5F71"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u6101\u715E\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u621065%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002"
+      isEnemy: 1
+      maxHealth: 230
+      attack: 52
+      defense: 6
+      speed: 62
+      skillEnergyCost: 3
+      baseStrength: 502.27217279843217
+      mechanismCoefficient: 1.128
+      totalStrength: 566.5630109166315
+    - id: ENEMY_022
+      name: "\u5FB7\u83B1\u6587\xB7\u65CB\u65A7"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u65CB\u8F6C\u98DE\u65A7\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u56DE\u590D\u672C\u6B21\u6280\u80FD\u9020\u6210\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u7684
+        50%\u3002\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\u5165\u56DE\u590D\u3002\n\u88AB\u52A8\u300C\u534A\u8840\u72C2\u6012\u300D\uFF1A\u81EA\u8EAB\u751F\u547D\u4E0D\u9AD8\u4E8E\u6700\u5927\u751F\u547D\u7684
+        50% \u65F6\uFF0C\u6240\u6709\u4F24\u5BB3\u63D0\u9AD8 35%\u3002\u4E0E\u9996\u9886\u589E\u4F24\u76F8\u4E58\u3002"
+      isEnemy: 1
+      maxHealth: 365
+      attack: 68
+      defense: 16
+      speed: 55
+      skillEnergyCost: 3
+      baseStrength: 749.1345531900287
+      mechanismCoefficient: 1.154
+      totalStrength: 864.501274381293
+    - id: ENEMY_023
+      name: "\u5361\u5C14\u739B\xB7\u6218\u6B4C"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u9F13\u821E\uFF1A\u6240\u6709\u5B58\u6D3B\u53CB\u519B\uFF08\u542B\u81EA\u8EAB\uFF09\u3002\u6BCF\u4E2A\u6CBB\u7597\u76EE\u6807\u56DE\u590D65\u70B9\u751F\u547D\u3002\u6BCF\u4E2A\u76EE\u6807\u56DE\u590D\u56FA\u5B9A\u751F\u547D\uFF0C\u4E0D\u590D\u6D3B\u3001\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\uFF1B\u4E0D\u9644\u5E26\u76FE\u536B\u9ED8\u8BA4\u6280\u80FD\u7684\u62A4\u76FE\u3002\n\u88AB\u52A8\u300C\u884C\u52A8\u56DE\u590D\u300D\uFF1A\u81EA\u8EAB\u6BCF\u6B21\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        12 \u751F\u547D\uFF1B\u4E0D\u590D\u6D3B\u3001\u4E0D\u8D85\u6700\u5927\u751F\u547D\uFF1B\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      isEnemy: 1
+      maxHealth: 330
+      attack: 40
+      defense: 12
+      speed: 44
+      skillEnergyCost: 3
+      baseStrength: 527.9296140768719
+      mechanismCoefficient: 1.487
+      totalStrength: 785.0313361323085
+    - id: ENEMY_024
+      name: "\u6F58\u68EE\xB7\u950B\u77DB"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u8D2F\u661F\u7834\u7532\uFF1A\u5BF9\u5355\u4F53\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u7834\u7532\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u9632\u5FA1\u964D\u4F4E30%\uFF0C\u6700\u4F4E\u4E3A0\uFF1B\u4E0D\u6539\u53D8\u57FA\u7840\u914D\u7F6E\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u5F00\u6218\u83B7\u5F9750\u62A4\u76FE\u3002"
+      isEnemy: 1
+      maxHealth: 390
+      attack: 67
+      defense: 20
+      speed: 74
+      skillEnergyCost: 3
+      baseStrength: 803.6547226765161
+      mechanismCoefficient: 1.124
+      totalStrength: 903.3079082884042
+    - id: ENEMY_025
+      name: "\u6D3E\u514B\xB7\u5E7D\u5F71"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u6DF1\u6D77\u91CD\u521B\uFF1A\u653B\u51FB\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u654C\u4EBA\uFF0C\u9020\u6210145%\u653B\u51FB\u4F24\u5BB3\uFF0C\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u91CD\u4F24\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u53D7\u5230\u7684\u6CBB\u7597\u3001\u56DE\u8840\u548C\u5438\u8840\u56DE\u590D\u964D\u4F4E40%\uFF0C\u4E0D\u5F71\u54CD\u62A4\u76FE\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u666E\u653B\u653B\u51FB\u4E24\u6B21\uFF0C\u6BCF\u6B21\u884C\u52A8\u4EC5\u83B7\u5F971\u70B9\u6280\u529B\u3002"
+      isEnemy: 1
+      maxHealth: 420
+      attack: 84
+      defense: 16
+      speed: 95
+      skillEnergyCost: 3
+      baseStrength: 944.9666009086484
+      mechanismCoefficient: 1.208
+      totalStrength: 1141.519653897647
+    - id: ENEMY_026
+      name: "\u52A0\u91CC\u5965\xB7\u7981\u9B54\u536B\u58EB"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u7981\u9B54\u9886\u57DF\uFF1A\u6CBB\u7597\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u961F\u53CB100\u70B9\uFF1B\u81EA\u5DF1\u4E0E\u8BE5\u961F\u53CB\u83B7\u5F9790\u62A4\u76FE\u3002\u5BF9\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u65BD\u52A0\u6C89\u9ED8\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u65E0\u6CD5\u91CA\u653E\u6280\u80FD\uFF0C\u4ECD\u53EF\u666E\u653B\u5E76\u79EF\u6512\u6280\u529B\uFF0C\u5DF2\u6709\u6280\u529B\u4FDD\u7559\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u5F00\u6218\u83B7\u5F97120\u62A4\u76FE\u3002"
+      isEnemy: 1
+      maxHealth: 700
+      attack: 51
+      defense: 32
+      speed: 35
+      skillEnergyCost: 3
+      baseStrength: 929.3598212852517
+      mechanismCoefficient: 1.527
+      totalStrength: 1419.1324471025791
+    - id: ENEMY_027
+      name: "\u7EF4\u514B\u5179\xB7\u865A\u7A7A\u4E4B\u773C"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u751F\u547D\u5F62\u6001\u74E6\u89E3\u5C04\u7EBF\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u6210100%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u751F\u547D\u4F24\u5BB3\u5438\u8840\u300D\uFF1A\u6309\u9020\u6210\u7684\u5B9E\u9645\u751F\u547D\u4F24\u5BB3\u56DE\u590D
+        20%\uFF1B\u62A4\u76FE\u5438\u6536\u90E8\u5206\u4E0D\u8BA1\uFF0C\u603B\u5438\u8840\u4E0A\u9650
+        100%\u3002"
+      isEnemy: 1
+      maxHealth: 420
+      attack: 83
+      defense: 15
+      speed: 65
+      skillEnergyCost: 3
+      baseStrength: 897.0769573724879
+      mechanismCoefficient: 1.166
+      totalStrength: 1045.9917322963208
+    - id: ENEMY_028
+      name: "\u5965\u6069\xB7\u7194\u94F8\u5B88\u536B"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u98CE\u7BB1\u708E\u606F\uFF1A\u5BF9\u6240\u6709\u654C\u4EBA\u9020\u621065%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u707C\u70E7\uFF0C\u6301\u7EED\u76EE\u68072\u6B21\u884C\u52A8\u3002\u6BCF\u6B21\u884C\u52A8\u524D\u53D7\u5230\u65BD\u52A0\u8005\u65BD\u653E\u65F6\u653B\u51FB\u768425%\u6301\u7EED\u4F24\u5BB3\uFF0C\u5FFD\u7565\u9632\u5FA1\u4E0E\u5C5E\u6027\u514B\u5236\uFF0C\u53EF\u88AB\u62A4\u76FE\u5438\u6536\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u6BCF\u6B21\u884C\u52A8\u5F00\u59CB\u56DE\u590D20\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 780
+      attack: 72
+      defense: 38
+      speed: 40
+      skillEnergyCost: 3
+      baseStrength: 1201.2561502444885
+      mechanismCoefficient: 1.351
+      totalStrength: 1622.897058980304
+    - id: ENEMY_029
+      name: "\u5965\u745E\u5229\u5B89\xB7\u661F\u754C\u6295\u5F71"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u661F\u6CB3\u5954\u6D8C\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210150%\u653B\u51FB\u4F24\u5BB3\u3002\u5FFD\u7565\u9632\u5FA1\uFF0C\u4ECD\u53D7\u5C5E\u6027\u514B\u5236\u3001\u589E\u4F24\u548C\u62A4\u76FE\u5F71\u54CD\u3002\n\u88AB\u52A8\u300C\u666E\u653B\u4E8C\u8FDE\u51FB\u300D\uFF1A\u666E\u901A\u653B\u51FB\u8FDE\u7EED\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\u3002\u6BCF\u6B21\u884C\u52A8\u53EA\u83B7\u5F97
+        1 \u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\uFF0C\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+      isEnemy: 1
+      maxHealth: 500
+      attack: 94
+      defense: 20
+      speed: 100
+      skillEnergyCost: 3
+      baseStrength: 1116.7061105568991
+      mechanismCoefficient: 1.324
+      totalStrength: 1478.5188903773346
+    - id: ENEMY_030
+      name: "\u6CFD\u62C9\u65AF\xB7\u661F\u80FD\u56DE\u54CD"
+      quality: "\u7CBE\u82F1"
+      skillDescription: "\u661F\u754C\u8109\u51B2\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u6210110%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        80 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 480
+      attack: 96
+      defense: 16
+      speed: 78
+      skillEnergyCost: 3
+      baseStrength: 1055.198792168034
+      mechanismCoefficient: 1.13
+      totalStrength: 1192.3746351498785
+    - id: ENEMY_031
+      name: "\u7956\u5B89\u6012\u517D\xB7\u6C83\u91CC\u514B"
+      quality: boss
+      skillDescription: "\u8840\u730E\u53F7\u4EE4\uFF1A\u666E\u901A\u7D22\u654C\u5355\u4F53\u3002\u9020\u6210140%\u653B\u51FB\u4F24\u5BB3\u3002\u5FFD\u7565\u9632\u5FA1\uFF0C\u4ECD\u53D7\u5C5E\u6027\u514B\u5236\u3001\u589E\u4F24\u548C\u62A4\u76FE\u5F71\u54CD\u3002\n\u9996\u9886\u673A\u5236\u300C\u72FC\u7FA4\u9886\u8896\u300D\uFF1A\u6BCF\u540D\u5176\u4ED6\u5B58\u6D3B\u53CB\u519B\u4F7F\u81EA\u8EAB\u4F24\u5BB3\u63D0\u9AD8
+        15%\uFF0C\u4E0D\u8BA1\u81EA\u8EAB\u3002\u4F24\u5BB3\u4E58\u6570\u4E3A 1\uFF0B\u5176\u4ED6\u5B58\u6D3B\u53CB\u519B\u6570\xD715%\u3002"
+      isEnemy: 1
+      maxHealth: 880
+      attack: 70
+      defense: 22
+      speed: 72
+      skillEnergyCost: 3
+      baseStrength: 1240.6496159407982
+      mechanismCoefficient: 1.511
+      totalStrength: 1874.621569686546
+    - id: ENEMY_032
+      name: "\u4EA1\u7075\u6218\u795E\xB7\u8D5B\u6069"
+      quality: boss
+      skillDescription: "\u7075\u9B42\u7194\u7089\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u621095%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u534A\u8840\u72C2\u6012\u300D\uFF1A\u81EA\u8EAB\u751F\u547D\u4E0D\u9AD8\u4E8E\u6700\u5927\u751F\u547D\u7684
+        50% \u65F6\uFF0C\u6240\u6709\u4F24\u5BB3\u63D0\u9AD8 25%\u3002\u4E0E\u9996\u9886\u589E\u4F24\u76F8\u4E58\u3002\n\u9996\u9886\u673A\u5236\u300C\u4EA1\u8005\u541E\u566C\u300D\uFF1A\u6BCF\u540D\u5C1A\u672A\u7ED3\u7B97\u7684\u9635\u4EA1\u53CB\u519B\u4F7F\u4E0B\u6B21\u884C\u52A8\u56DE\u590D
+        12% \u6700\u5927\u751F\u547D\uFF0C\u53EA\u7ED3\u7B97\u4E00\u6B21\u3002\u6BCF\u540D\u9635\u4EA1\u53CB\u519B\u6301\u7EED\u4F7F\u4F24\u5BB3\u589E\u52A0
+        15%\uFF1B\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 1200
+      attack: 85
+      defense: 28
+      speed: 42
+      skillEnergyCost: 3
+      baseStrength: 1564.0136851796185
+      mechanismCoefficient: 1.362
+      totalStrength: 2130.1866392146403
+    - id: ENEMY_033
+      name: "\u6B63\u4E49\u5DE8\u50CF\xB7\u52A0\u91CC\u5965"
+      quality: boss
+      skillDescription: "\u5DE8\u50CF\u5C4F\u969C\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u6210110%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u88AB\u52A8\u300C\u5F00\u6218\u62A4\u76FE\u300D\uFF1A\u5F00\u6218\u83B7\u5F97
+        100 \u70B9\u62A4\u76FE\uFF1B\u603B\u62A4\u76FE\u6700\u591A\u4E3A\u81EA\u8EAB\u6700\u5927\u751F\u547D\u3002\n\u9996\u9886\u673A\u5236\u300C\u5C4F\u969C\u518D\u751F\u300D\uFF1A\u6BCF
+        2 \u6B21\u81EA\u8EAB\u884C\u52A8\u83B7\u5F97 100 \u62A4\u76FE\uFF0C\u666E\u901A\u653B\u51FB\u4E0E\u6280\u80FD\u90FD\u8BA1\u6570\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u8BA1\u4E00\u6B21\uFF1B\u603B\u62A4\u76FE\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+      isEnemy: 1
+      maxHealth: 1450
+      attack: 102
+      defense: 26
+      speed: 58
+      skillEnergyCost: 3
+      baseStrength: 1914.411312776542
+      mechanismCoefficient: 1.288
+      totalStrength: 2465.761770856186
+    - id: ENEMY_034
+      name: "\u7834\u8D25\u4E4B\u738B\xB7\u4F5B\u8036\u6208"
+      quality: boss
+      skillDescription: "\u7834\u8D25\u6444\u9B42\uFF1A\u653B\u51FB\u751F\u547D\u6BD4\u4F8B\u6700\u4F4E\u7684\u654C\u4EBA\uFF0C\u9020\u6210140%\u653B\u51FB\u4F24\u5BB3\uFF0C\u53EF\u8D8A\u8FC7\u524D\u6392\u3002\u5BF9\u547D\u4E2D\u7684\u5B58\u6D3B\u76EE\u6807\u65BD\u52A0\u9B45\u60D1\uFF0C\u6301\u7EED\u76EE\u68071\u6B21\u884C\u52A8\u3002\u5F3A\u5236\u5BF9\u5DF1\u65B9\u5176\u4ED6\u5B58\u6D3B\u89D2\u8272\u666E\u653B\u4E00\u6B21\uFF1B\u6CA1\u6709\u76EE\u6807\u65F6\u8DF3\u8FC7\u884C\u52A8\u3002\u540C\u7C7B\u5237\u65B0\uFF0C\u4E0D\u53E0\u5C42\u3002\n\u9020\u6210\u751F\u547D\u4F24\u5BB3\u65F6\u56DE\u590D\u4F24\u5BB3\u768412%\u3002\n\u9996\u9886\u673A\u5236\uFF1A\u6280\u80FD\u5BF9\u5B58\u6D3B\u76EE\u6807\u5404\u593A\u53D61\u70B9\u6280\u529B\uFF0C\u6BCF\u593A\u53D61\u70B9\u83B7\u5F9735\u62A4\u76FE\u3002\u5229\u7528\u901F\u5EA6\u4F18\u5148\u91CA\u653E\u6280\u80FD\uFF0C\u51CF\u5C11\u88AB\u593A\u53D6\u7684\u6280\u529B\u3002"
+      isEnemy: 1
+      maxHealth: 1550
+      attack: 108
+      defense: 24
+      speed: 76
+      skillEnergyCost: 3
+      baseStrength: 2073.581505449028
+      mechanismCoefficient: 1.073
+      totalStrength: 2224.952955346807
+    - id: ENEMY_035
+      name: "\u94F8\u661F\u9F99\u738B\xB7\u5965\u745E\u5229\u5B89\xB7\u7D22\u5C14"
+      quality: boss
+      skillDescription: "\u661F\u7A79\u964D\u4E34\uFF1A\u6240\u6709\u5B58\u6D3B\u654C\u4EBA\u3002\u9020\u6210120%\u653B\u51FB\u4F24\u5BB3\u3002\u5BF9\u6BCF\u4E2A\u5B58\u6D3B\u654C\u4EBA\u5206\u522B\u7ED3\u7B97\u4F24\u5BB3\u3002\n\u9996\u9886\u673A\u5236\u300C\u661F\u7A79\u8F6E\u8F6C\u300D\uFF1A\u6BCF
+        2 \u6B21\u81EA\u8EAB\u884C\u52A8\u5148\u5207\u6362\u5C5E\u6027\u5E76\u83B7\u5F97
+        150 \u62A4\u76FE\uFF0C\u5C5E\u6027\u6309\u706B\u2192\u6C34\u2192\u8349\u2192\u706B\u5FAA\u73AF\u3002\u9996\u6B21\u53D7\u51FB\u540E\u4ECD\u5B58\u6D3B\u4E14\u751F\u547D\u226450%\u65F6\uFF0C\u6280\u529B\u7ACB\u5373\u53D8\u4E3A3\u5E76\u518D\u83B7
+        150 \u62A4\u76FE\uFF1B\u5230\u4E0B\u6B21\u884C\u52A8\u91CA\u653E\u6280\u80FD\u3002"
+      isEnemy: 1
+      maxHealth: 1800
+      attack: 125
+      defense: 32
+      speed: 67
+      skillEnergyCost: 3
+      baseStrength: 2448.784142957856
+      mechanismCoefficient: 1.419
+      totalStrength: 3474.8246988571977
+    items:
+    - id: ITEM_001
+      name: "\u5DE8\u4EBA\u8170\u5E26"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B12\u91D1\u5E01/2\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B583\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u91D1\u94F2\u94F2\u8BAE\u4E8B\u5385\u300D\u9009\u62E9\u300C\u9886\u53D6\u5DE8\u4EBA\u8170\u5E26\u4E0E\u91D1\u5E01\u300D\uFF0C\u83B7\u5F972\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_002
+      name: "\u6676\u4F53\u62A4\u8155"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B25\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u6D77\u514B\u65AF\u9057\u8FF9\u300D\u9009\u62E9\u300C\u9886\u53D6\u6676\u4F53\u62A4\u8155\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002\n\u4E8B\u4EF6\u300C\u65E0\u6781\u5251\u9053\u8BD5\u70BC\u300D\u9009\u62E9\u300C\u9886\u53D6\u8BAD\u7EC3\u7528\u62A4\u8155\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1278306637044124
+    - id: ITEM_003
+      name: "\u66B4\u98CE\u5927\u5251"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B25\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u5F17\u96F7\u5C14\u5353\u5FB7\u8425\u5730\u300D\u9009\u62E9\u300C\u652F\u63F4\u5DE5\u574A\uFF0820\u91D1\u5E01\u6362\u66B4\u98CE\u5927\u5251\uFF09\u300D\uFF0C\u83B7\u5F971\u4EF6\uFF0C\u9700\u652F\u4ED820\u91D1\u5E01\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_004
+      name: "\u53CD\u66F2\u4E4B\u5F13"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B12\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +10\uFF0C\u653B\u51FB
+        +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +10\uFF0C\u653B\u51FB
+        +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1826878097692617
+    - id: ITEM_005
+      name: "\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B55\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002\u914D\u7F6E\u91CF1\u4E3A\u542F\u7528\u5F00\u5173\uFF0C\u8868\u4E2D2\u4E3A\u5B9E\u9645\u653B\u51FB\u6B21\u6570\u3002\n\u751F\u6548\uFF1A\u81EA\u8EAB\u666E\u901A\u653B\u51FB\u3002\u53E0\u52A0\uFF1A\u4E0D\u53E0\u52A0\uFF1B\u540C\u7C7B\u4E5F\u53EA\u4E24\u51FB\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.177669313705485
+    - id: ITEM_006
+      name: "\u9501\u5B50\u7532"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B25\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_007
+      name: "\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B15\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u827E\u7FC1\u7684\u59D4\u6258\u300D\u9009\u62E9\u300C\u6536\u4E0B\u94A2\u94C1\u70C8\u9633\u4E4B\u5323\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u4E0B\u573A\u6218\u6597\u5F00\u6218\u65F6\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u62A4\u76FE\u2264\u6700\u5927\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1117686753468214
+    - id: ITEM_008
+      name: "\u6551\u8D4E"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u827E\u7FC1\u7684\u59D4\u6258\u300D\u9009\u62E9\u300C\u4EA4\u6362\u6551\u8D4E\uFF0820\u91D1\u5E01\uFF09\u300D\uFF0C\u83B7\u5F971\u4EF6\uFF0C\u9700\u652F\u4ED820\u91D1\u5E01\u3002"
+      effectDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u81EA\u8EAB\u884C\u52A8\u5F00\u59CB\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u56DE\u590D\u2264\u7F3A\u5931\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_009
+      name: "\u996E\u8840\u5251"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u9020\u6210\u751F\u547D\u4F24\u5BB3\u540E\u3002\u53E0\u52A0\uFF1A\u767E\u5206\u6BD4\u76F8\u52A0\uFF0C\u4E0A\u9650100%\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1551640012788744
+    - id: ITEM_010
+      name: "\u957F\u5251"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B15\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u5965\u6069\u7684\u953B\u7089\u300D\u9009\u62E9\u300C\u9886\u53D6\u957F\u5251\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_011
+      name: "\u68D8\u523A\u80CC\u5FC3"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u5965\u6069\u7684\u953B\u7089\u300D\u9009\u62E9\u300C\u8BA2\u5236\u68D8\u523A\u80CC\u5FC3\uFF0835\u91D1\u5E01\uFF09\u300D\uFF0C\u83B7\u5F971\u4EF6\uFF0C\u9700\u652F\u4ED835\u91D1\u5E01\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +40\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +40\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1278306637044124
+    - id: ITEM_012
+      name: "\u75BE\u5C04\u706B\u70AE"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u7956\u5B89\u6697\u5DF7\u300D\u9009\u62E9\u300C\u5E26\u8D70\u75BE\u5C04\u706B\u70AE\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB
+        +30\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB
+        +30\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.2805210945212535
+    - id: ITEM_013
+      name: "\u72C2\u5F92\u94E0\u7532"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B65\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u661F\u754C\u5B9D\u5E93\u300D\u9009\u62E9\u300C\u63A5\u53D7\u72C2\u5F92\u94E0\u7532\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1278306637044124
+    - id: ITEM_014
+      name: "\u65E0\u5C3D\u4E4B\u5203"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B65\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u661F\u754C\u5B9D\u5E93\u300D\u9009\u62E9\u300C\u53D6\u8D70\u65E0\u5C3D\u4E4B\u5203\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +28\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +28\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_015
+      name: "\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B65\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u4E0B\u573A\u6218\u6597\u5F00\u6218\u65F6\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u62A4\u76FE\u2264\u6700\u5927\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1117686753468214
+    - id: ITEM_016
+      name: "\u632F\u594B\u76D4\u7532"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B65\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u81EA\u8EAB\u884C\u52A8\u5F00\u59CB\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u56DE\u590D\u2264\u7F3A\u5931\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_017
+      name: "\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B65\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 50% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u9020\u6210\u751F\u547D\u4F24\u5BB3\u540E\u3002\u53E0\u52A0\uFF1A\u767E\u5206\u6BD4\u76F8\u52A0\uFF0C\u4E0A\u9650100%\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 50% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.168902096674664
+    - id: ITEM_018
+      name: "\u7EA2\u6C34\u6676"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\u3001\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\u3001\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B15\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u7956\u5B89\u6697\u5DF7\u300D\u9009\u62E9\u300C\u6536\u96C6\u9053\u8DEF\u7269\u8D44\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002\n\u4E8B\u4EF6\u300C\u53D7\u56F0\u7684\u5546\u961F\u300D\u9009\u62E9\u300C\u9886\u53D6\u7EA2\u6C34\u6676\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +160\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_019
+      name: "\u81EA\u7136\u4E4B\u529B"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0\u300D\u9009\u62E9\u300C\u63A5\u53D7\u81EA\u7136\u4E4B\u529B\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +180\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1278306637044124
+    - id: ITEM_020
+      name: "\u66B4\u98CE\u78E8\u783A\u77F3"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B45\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B50\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B55\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u6D77\u514B\u65AF\u5DE5\u574A\u300D\u9009\u62E9\u300C\u5E26\u8D70\u66B4\u98CE\u78E8\u783A\u77F3\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_021
+      name: "\u5B88\u62A4\u8005\u4E4B\u76FE"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B20\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B25\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u9632\u5FA1 +35\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_022
+      name: "\u8F7B\u7075\u4E4B\u9774"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B20\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B25\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B30\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u6D77\u514B\u65AF\u5DE5\u574A\u300D\u9009\u62E9\u300C\u5E26\u8D70\u8F7B\u7075\u4E4B\u9774\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB
+        +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u901F\u5EA6 +18\uFF0C\u653B\u51FB
+        +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650 100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.2281376189797402
+    - id: ITEM_023
+      name: "\u591C\u4E4B\u950B\u5203"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B45\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B50\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B55\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u6218\u5730\u6551\u62A4\u7AD9\u300D\u9009\u62E9\u300C\u9886\u53D6\u591C\u4E4B\u950B\u5203\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u4E0B\u573A\u6218\u6597\u5F00\u6218\u65F6\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u62A4\u76FE\u2264\u6700\u5927\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        140 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1117686753468214
+    - id: ITEM_024
+      name: "\u518D\u751F\u5760\u9970"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B45\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B50\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B55\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u6218\u5730\u6551\u62A4\u7AD9\u300D\u9009\u62E9\u300C\u9886\u53D6\u518D\u751F\u5760\u9970\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u81EA\u8EAB\u884C\u52A8\u5F00\u59CB\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u56DE\u590D\u2264\u7F3A\u5931\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_025
+      name: "\u6B63\u4E49\u4E4B\u624B"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B45\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B50\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B55\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u7834\u8D25\u9057\u85CF\u300D\u9009\u62E9\u300C\u53D6\u6B63\u4E49\u4E4B\u624B\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u9020\u6210\u751F\u547D\u4F24\u5BB3\u540E\u3002\u53E0\u52A0\uFF1A\u767E\u5206\u6BD4\u76F8\u52A0\uFF0C\u4E0A\u9650100%\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u83B7\u5F97 45% \u5438\u8840\uFF0C\u6309\u5B9E\u9645\u6263\u9664\u7684\u751F\u547D\u8BA1\u7B97\uFF1B\u62A4\u76FE\u5438\u6536\u4E0D\u8BA1\uFF0C\u56DE\u590D\u4E0D\u8D85\u8FC7\u6700\u5927\u751F\u547D\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1551640012788744
+    - id: ITEM_026
+      name: "\u6B7B\u4EA1\u4E4B\u5203"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u7834\u8D25\u9057\u85CF\u300D\u9009\u62E9\u300C\u53D6\u6B7B\u4EA1\u4E4B\u5203\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u653B\u51FB +25\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_027
+      name: "\u5DE8\u9F99\u4E4B\u722A"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +300\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u6309\u6301\u6709\u6570\u91CF\u76F8\u52A0\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D +300\u3002\u5355\u9879\u5C5E\u6027\u4E0A\u9650
+        100 \u4E07\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.2536078919012503
+    - id: ITEM_028
+      name: "\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u661F\u754C\u7684\u9988\u8D60\u300D\u9009\u62E9\u300C\u5E26\u8D70\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        220 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u4E0B\u573A\u6218\u6597\u5F00\u6218\u65F6\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u62A4\u76FE\u2264\u6700\u5927\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u5F00\u6218\u5404\u83B7\u5F97
+        220 \u62A4\u76FE\uFF0C\u6BCF\u573A\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.177669313705485
+    - id: ITEM_029
+      name: "\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002\u914D\u7F6E\u91CF1\u4E3A\u542F\u7528\u5F00\u5173\uFF0C\u8868\u4E2D2\u4E3A\u5B9E\u9645\u653B\u51FB\u6B21\u6570\u3002\n\u751F\u6548\uFF1A\u81EA\u8EAB\u666E\u901A\u653B\u51FB\u3002\u53E0\u52A0\uFF1A\u4E0D\u53E0\u52A0\uFF1B\u540C\u7C7B\u4E5F\u53EA\u4E24\u51FB\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u666E\u653B\u4E24\u51FB\uFF0C\u6280\u80FD\u4E0D\u8FDE\u51FB\uFF0C\u6BCF\u6B21\u884C\u52A8\u53EA\u589E\u52A01\u70B9\u6280\u529B\uFF1B\u7B2C\u4E00\u51FB\u51FB\u6740\u540E\u7B2C\u4E8C\u51FB\u91CD\u65B0\u7D22\u654C\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.177669313705485
+    - id: ITEM_030
+      name: "\u661F\u754C\u8D50\u798F"
+      acquisitionRules: "\u6218\u6597\u5956\u52B1\uFF1A\u5728\u5305\u542B\u6B64\u9053\u5177\u7684\u5956\u52B1\u6C60\u4E2D\u968F\u673A\u62BD\u53D6\uFF0C\u6BCF\u98791\u4EF6\uFF1B\u51FA\u73B0\u540E\u987B\u9009\u4E2D\u5E76\u786E\u8BA4\u9886\u53D6\uFF0C\u53D7\u5956\u52B1\u6C60\u3001\u54C1\u8D28\u6743\u91CD\u4E0E\u5192\u9669\u7B49\u7EA7\u5F71\u54CD\u3002\n\u5546\u5E97\uFF1A\u5965\u6069\u953B\u7089\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B80\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B85\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u5546\u5E97\uFF1A\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9\uFF0C\u968F\u673A\u4E0A\u67B6\uFF1B90\u91D1\u5E01/1\u4EF6\uFF0C\u6BCF\u8F6E\u5E93\u5B581\u6B21\uFF0C\u53EF\u5237\u65B0\u8865\u8D27\u3002\n\u4E8B\u4EF6\u300C\u661F\u754C\u7684\u9988\u8D60\u300D\u9009\u62E9\u300C\u63A5\u53D7\u661F\u754C\u8D50\u798F\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002\n\u751F\u6548\uFF1A\u5404\u89D2\u8272\u81EA\u8EAB\u884C\u52A8\u5F00\u59CB\u3002\u53E0\u52A0\uFF1A\u53EF\u53E0\u52A0\uFF1B\u56DE\u590D\u2264\u7F3A\u5931\u751F\u547D\u3002"
+      runtimeDescription: "\u6211\u65B9\u6BCF\u540D\u89D2\u8272\u5728\u81EA\u5DF1\u7684\u884C\u52A8\u5F00\u59CB\u56DE\u590D
+        30 \u751F\u547D\uFF0C\u5E76\u975E\u4EFB\u4E00\u4EBA\u884C\u52A8\u65F6\u5168\u961F\u540C\u65F6\u56DE\u8840\uFF1B\u4E0D\u590D\u6D3B\uFF0C\u4E8C\u8FDE\u51FB\u53EA\u89E6\u53D1\u4E00\u6B21\u3002"
+      hasGainCoefficient: 1
+      gainCoefficient: 1.1006877972898346
+    - id: ITEM_031
+      name: "\u7834\u8D25\u738B\u51A0"
+      acquisitionRules: "\u4E8B\u4EF6\u300C\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0\u300D\u9009\u62E9\u300C\u643A\u5E26\u7834\u8D25\u738B\u51A0
+        \xB7 \u8FFD\u67E5\u4F5B\u8036\u6208\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D -70\uFF0C\u5728\u751F\u547D\u52A0\u6210\u540E\u6263\u9664\u3002\u6301\u6709\u65F6\u7B2C\u4E09\u5C42\u9996\u9886\u66FF\u6362\u4E3A\u7834\u8D25\u4E4B\u738B\xB7\u4F5B\u8036\u6208\uFF0C\u4EC5\u7531\u300C\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0\u300D\u4E8B\u4EF6\u83B7\u5F97\u3002\n\u751F\u6548\uFF1A\u6301\u6709\u540E\u4E0B\u573A\u6218\u6597\u3002\u53E0\u52A0\uFF1A\u51CF\u76CA\u6309\u6570\u91CF\u53E0\u52A0\uFF1B\u751F\u547D\u22651\u3002"
+      runtimeDescription: "\u6211\u65B9\u5168\u4F53\u6700\u5927\u751F\u547D -70\uFF0C\u5728\u751F\u547D\u52A0\u6210\u540E\u6263\u9664\u3002\u6301\u6709\u65F6\u7B2C\u4E09\u5C42\u9996\u9886\u66FF\u6362\u4E3A\u7834\u8D25\u4E4B\u738B\xB7\u4F5B\u8036\u6208\uFF0C\u4EC5\u7531\u300C\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0\u300D\u4E8B\u4EF6\u83B7\u5F97\u3002"
+      hasGainCoefficient: 0
+      gainCoefficient: 0
+    - id: ITEM_032
+      name: "\u94F8\u661F\u5951\u7EA6"
+      acquisitionRules: "\u4E8B\u4EF6\u300C\u94F8\u661F\u9F99\u738B\u7684\u5951\u7EA6\u300D\u9009\u62E9\u300C\u7ACB\u4E0B\u7EA6\u5B9A
+        \xB7 \u6536\u96C63\u679A\u5370\u8BB0\u300D\uFF0C\u83B7\u5F971\u4EF6\u3002"
+      effectDescription: "\u5F00\u6218\u524D\u5DF2\u6301\u6709\u5951\u7EA6\u65F6\uFF0C\u6BCF\u6218\u80DC\u4E00\u4E2A\u65B0\u7684\u6218\u6597\u8282\u70B9\u83B7\u5F971\u679A\u661F\u754C\u5370\u8BB0\uFF0C\u6700\u591A\u6389\u52303\u679A\u3002\u6301\u5951\u7EA6\u4E14\u5370\u8BB0\u22653\uFF0C\u51FB\u8D25\u7B2C\u4E09\u5C42\u9996\u9886\u540E\u8FDB\u5165\u7B2C\u56DB\u5C42\u3002\n\u751F\u6548\uFF1A\u5F00\u6218\u8BB0\u5F55\u5951\u7EA6\uFF1B\u80DC\u5229\u53D1\u5370\u8BB0\u3002\u53E0\u52A0\uFF1A\u4E0D\u63D0\u4F9B\u53EF\u53E0\u52A0\u6218\u6597\u5C5E\u6027\u3002"
+      runtimeDescription: "\u5F00\u6218\u524D\u5DF2\u6301\u6709\u5951\u7EA6\u65F6\uFF0C\u6BCF\u6218\u80DC\u4E00\u4E2A\u65B0\u7684\u6218\u6597\u8282\u70B9\u83B7\u5F971\u679A\u661F\u754C\u5370\u8BB0\uFF0C\u6700\u591A\u6389\u52303\u679A\u3002\u6301\u5951\u7EA6\u4E14\u5370\u8BB0\u22653\uFF0C\u51FB\u8D25\u7B2C\u4E09\u5C42\u9996\u9886\u540E\u8FDB\u5165\u7B2C\u56DB\u5C42\u3002"
+      hasGainCoefficient: 0
+      gainCoefficient: 0
+    - id: ITEM_033
+      name: "\u661F\u754C\u5370\u8BB0"
+      acquisitionRules: "\u5F00\u6218\u524D\u5DF2\u6301\u6709\u94F8\u661F\u5951\u7EA6\u65F6\uFF0C\u6BCF\u6218\u80DC\u4E00\u4E2A\u4E0D\u540C\u6218\u6597\u8282\u70B9\u81EA\u52A8\u83B7\u5F971\u679A\uFF0C\u6700\u591A\u6389\u843D\u81F3\u6301\u67093\u679A\uFF1B\u91CD\u590D\u8282\u70B9\u4E0D\u91CD\u590D\u53D1\u653E\uFF0C\u4E0D\u5360\u53EF\u9009\u5956\u52B1\u6B21\u6570\u3002"
+      effectDescription: "\u7531\u6301\u5951\u7EA6\u540E\u76843\u4E2A\u4E0D\u540C\u6218\u6597\u8282\u70B9\u5404\u6389\u843D1\u679A\uFF0C\u4E0D\u5360\u53EF\u9009\u5956\u52B1\u6B21\u6570\u3002\u5FC5\u987B\u540C\u65F6\u6301\u6709\u94F8\u661F\u5951\u7EA6\u624D\u80FD\u89E3\u9501\u7B2C\u56DB\u5C42\uFF1B\u7B2C\u4E09\u5C42\u9996\u9886\u4ECD\u7531\u7834\u8D25\u738B\u51A0\u51B3\u5B9A\u3002\n\u751F\u6548\uFF1A\u6218\u6597\u80DC\u5229\u81EA\u52A8\u83B7\u5F97\u3002\u53E0\u52A0\uFF1A\u7D2F\u8BA1\u52303\u679A\uFF1B\u91CD\u590D\u8282\u70B9\u4E0D\u53D1\u3002"
+      runtimeDescription: "\u7531\u6301\u5951\u7EA6\u540E\u76843\u4E2A\u4E0D\u540C\u6218\u6597\u8282\u70B9\u5404\u6389\u843D1\u679A\uFF0C\u4E0D\u5360\u53EF\u9009\u5956\u52B1\u6B21\u6570\u3002\u5FC5\u987B\u540C\u65F6\u6301\u6709\u94F8\u661F\u5951\u7EA6\u624D\u80FD\u89E3\u9501\u7B2C\u56DB\u5C42\uFF1B\u7B2C\u4E09\u5C42\u9996\u9886\u4ECD\u7531\u7834\u8D25\u738B\u51A0\u51B3\u5B9A\u3002"
+      hasGainCoefficient: 0
+      gainCoefficient: 0
+    stages:
+    - nodeId: NODE_B01_F1
+      battleId: BATTLE_001
+      name: "\u827E\u6B27\u5C3C\u4E9A\u6797\u7F18"
+      floor: 1
+      minRow: 5
+      maxRow: 6
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      baseDifficulty: 2657.4568961173027
+      scaledDifficulty: 8234.94956275575
+      rewardPower: 6161.480340294403
+    - nodeId: NODE_B013
+      battleId: BATTLE_013
+      name: "\u6797\u53E3\u906D\u9047"
+      floor: 1
+      minRow: 2
+      maxRow: 2
+      weight: 18
+      rewardTier: 1
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - 
+      - 
+      - 
+      - 
+      baseDifficulty: 885.8189653724343
+      scaledDifficulty: 2744.9831875852497
+      rewardPower: 2053.826780098134
+    - nodeId: NODE_B01
+      battleId: BATTLE_001
+      name: "\u827E\u6B27\u5C3C\u4E9A\u6797\u7F18"
+      floor: 2
+      minRow: 1
+      maxRow: 6
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      baseDifficulty: 2657.4568961173027
+      scaledDifficulty: 10662.1795392337
+      rewardPower: 7940.181356707042
+    - nodeId: NODE_B01
+      battleId: BATTLE_001
+      name: "\u827E\u6B27\u5C3C\u4E9A\u6797\u7F18"
+      floor: 3
+      minRow: 1
+      maxRow: 6
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      baseDifficulty: 2657.4568961173027
+      scaledDifficulty: 13519.877007370598
+      rewardPower: 10047.091828701186
+    - nodeId: NODE_B014
+      battleId: BATTLE_014
+      name: "\u5CA9\u77F3\u5B88\u536B"
+      floor: 1
+      minRow: 2
+      maxRow: 4
+      weight: 18
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_019
+      - 
+      - ENEMY_001
+      - 
+      - 
+      - 
+      baseDifficulty: 1052.0146378955942
+      scaledDifficulty: 3371.4876052206228
+      rewardPower: 2922.0421206996275
+    - nodeId: NODE_B015
+      battleId: BATTLE_015
+      name: "\u591C\u96FE\u730E\u624B"
+      floor: 1
+      minRow: 3
+      maxRow: 6
+      weight: 18
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_019
+      - 
+      - ENEMY_020
+      - 
+      - 
+      - 
+      baseDifficulty: 1140.9600216605004
+      scaledDifficulty: 3606.314050896229
+      rewardPower: 3507.603460244354
+    - nodeId: NODE_B017
+      battleId: BATTLE_017
+      name: "\u519B\u56E2\u65A5\u5019"
+      floor: 2
+      minRow: 1
+      maxRow: 3
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - 
+      - ENEMY_022
+      - 
+      - 
+      - 
+      baseDifficulty: 1602.3567493758696
+      scaledDifficulty: 6751.765732101121
+      rewardPower: 6114.22018502359
+    - nodeId: NODE_B016
+      battleId: BATTLE_016
+      name: "\u5965\u672F\u4E1B\u6797"
+      floor: 1
+      minRow: 4
+      maxRow: 6
+      weight: 18
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_001
+      - 
+      - ENEMY_019
+      - 
+      - ENEMY_021
+      - 
+      baseDifficulty: 1618.5776488122256
+      scaledDifficulty: 5075.7230005926085
+      rewardPower: 5080.790119645658
+    - nodeId: NODE_B02
+      battleId: BATTLE_002
+      name: "\u6E7F\u5730\u963B\u51FB"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - ENEMY_004
+      - ENEMY_005
+      - ENEMY_005
+      - ENEMY_003
+      - ENEMY_003
+      baseDifficulty: 3538.057709065233
+      scaledDifficulty: 14681.551994327796
+      rewardPower: 14039.928747457643
+    - nodeId: NODE_B02
+      battleId: BATTLE_002
+      name: "\u6E7F\u5730\u963B\u51FB"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - ENEMY_004
+      - ENEMY_005
+      - ENEMY_005
+      - ENEMY_003
+      - ENEMY_003
+      baseDifficulty: 3538.057709065233
+      scaledDifficulty: 18598.72867699566
+      rewardPower: 17245.80959644396
+    - nodeId: NODE_B004
+      battleId: BATTLE_004
+      name: "\u72FC\u7FA4\u56F4\u730E"
+      floor: 2
+      minRow: 4
+      maxRow: 5
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_007
+      - 
+      - ENEMY_001
+      - 
+      - ENEMY_008
+      - 
+      baseDifficulty: 1820.9153202551065
+      scaledDifficulty: 7198.189505540768
+      rewardPower: 6757.863862959123
+    - nodeId: NODE_B004
+      battleId: BATTLE_004
+      name: "\u72FC\u7FA4\u56F4\u730E"
+      floor: 3
+      minRow: 4
+      maxRow: 5
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_007
+      - 
+      - ENEMY_001
+      - 
+      - ENEMY_008
+      - 
+      baseDifficulty: 1820.9153202551065
+      scaledDifficulty: 9132.758837884556
+      rewardPower: 8555.77172212909
+    - nodeId: NODE_B009
+      battleId: BATTLE_009
+      name: "\u86C7\u7259\u56DE\u5ECA"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_015
+      - 
+      - ENEMY_011
+      - 
+      - ENEMY_015
+      - 
+      baseDifficulty: 2255.0398382257213
+      scaledDifficulty: 8856.821674865798
+      rewardPower: 9055.219230864865
+    - nodeId: NODE_B009
+      battleId: BATTLE_009
+      name: "\u86C7\u7259\u56DE\u5ECA"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_015
+      - 
+      - ENEMY_011
+      - 
+      - ENEMY_015
+      - 
+      baseDifficulty: 2255.0398382257213
+      scaledDifficulty: 11229.684283051862
+      rewardPower: 11485.742031012853
+    - nodeId: NODE_B018
+      battleId: BATTLE_018
+      name: "\u9F13\u58F0\u524D\u7EBF"
+      floor: 2
+      minRow: 2
+      maxRow: 5
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_022
+      - 
+      - ENEMY_004
+      - 
+      - ENEMY_023
+      - 
+      baseDifficulty: 2387.388085508178
+      scaledDifficulty: 10040.26527080608
+      rewardPower: 8544.959823116373
+    - nodeId: NODE_B006
+      battleId: BATTLE_006
+      name: "\u8FF7\u96FE\u86DB\u5DE2"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_003
+      - ENEMY_009
+      - 
+      - ENEMY_008
+      - ENEMY_003
+      - 
+      baseDifficulty: 2485.271201538364
+      scaledDifficulty: 10294.230163633383
+      rewardPower: 9419.809057440569
+    - nodeId: NODE_B006
+      battleId: BATTLE_006
+      name: "\u8FF7\u96FE\u86DB\u5DE2"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_003
+      - ENEMY_009
+      - 
+      - ENEMY_008
+      - ENEMY_003
+      - 
+      baseDifficulty: 2485.271201538364
+      scaledDifficulty: 13034.203224387831
+      rewardPower: 11655.131495686535
+    - nodeId: NODE_B020
+      battleId: BATTLE_020
+      name: "\u9ED1\u96FE\u8B66\u6212"
+      floor: 3
+      minRow: 1
+      maxRow: 3
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - 
+      - ENEMY_025
+      - 
+      - 
+      - 
+      baseDifficulty: 2560.652101000226
+      scaledDifficulty: 13954.952054856043
+      rewardPower: 13152.369246440228
+    - nodeId: NODE_B008
+      battleId: BATTLE_008
+      name: "\u7956\u5B89\u8425\u5730"
+      floor: 2
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_012
+      - 
+      - ENEMY_005
+      - 
+      - ENEMY_014
+      - 
+      baseDifficulty: 2651.6483464706635
+      scaledDifficulty: 11373.499389513028
+      rewardPower: 10036.53060947381
+    - nodeId: NODE_B008
+      battleId: BATTLE_008
+      name: "\u7956\u5B89\u8425\u5730"
+      floor: 3
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_012
+      - 
+      - ENEMY_005
+      - 
+      - ENEMY_014
+      - 
+      baseDifficulty: 2651.6483464706635
+      scaledDifficulty: 14417.574488273174
+      rewardPower: 12711.24025226982
+    - nodeId: NODE_B007
+      battleId: BATTLE_007
+      name: "\u6811\u7CBE\u79D8\u5883"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - ENEMY_010
+      - 
+      - ENEMY_013
+      - 
+      baseDifficulty: 2656.0439410231493
+      scaledDifficulty: 11313.59773573738
+      rewardPower: 9651.43548372578
+    - nodeId: NODE_B007
+      battleId: BATTLE_007
+      name: "\u6811\u7CBE\u79D8\u5883"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - ENEMY_010
+      - 
+      - ENEMY_013
+      - 
+      baseDifficulty: 2656.0439410231493
+      scaledDifficulty: 14334.161359367154
+      rewardPower: 12020.909705649978
+    - nodeId: NODE_B019
+      battleId: BATTLE_019
+      name: "\u950B\u77DB\u9632\u7EBF"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_024
+      - ENEMY_009
+      - 
+      - ENEMY_023
+      - 
+      - 
+      baseDifficulty: 2717.959202494815
+      scaledDifficulty: 11640.664436459456
+      rewardPower: 9276.898080039296
+    - nodeId: NODE_B03
+      battleId: BATTLE_003
+      name: "\u7956\u5B89\u6012\u517D\xB7\u6C83\u91CC\u514B"
+      floor: 1
+      minRow: 7
+      maxRow: 7
+      weight: 1
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_031
+      - ENEMY_001
+      - 
+      - 
+      - 
+      baseDifficulty: 2760.44053505898
+      scaledDifficulty: 8834.507305598985
+      rewardPower: 6236.89259907803
+    - nodeId: NODE_B005
+      battleId: BATTLE_005
+      name: "\u5CA9\u7532\u5173\u9698"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - ENEMY_009
+      - 
+      - ENEMY_011
+      - 
+      baseDifficulty: 2803.831694686396
+      scaledDifficulty: 12259.509006530676
+      rewardPower: 9770.988342067085
+    - nodeId: NODE_B005
+      battleId: BATTLE_005
+      name: "\u5CA9\u7532\u5173\u9698"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - ENEMY_009
+      - 
+      - ENEMY_011
+      - 
+      baseDifficulty: 2803.831694686396
+      scaledDifficulty: 15517.627505052718
+      rewardPower: 11971.75996921617
+    - nodeId: NODE_B023
+      battleId: BATTLE_023
+      name: "\u661F\u754C\u5165\u53E3"
+      floor: 4
+      minRow: 1
+      maxRow: 2
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - 
+      - ENEMY_029
+      - 
+      - 
+      - 
+      baseDifficulty: 3101.4159493576385
+      scaledDifficulty: 20536.429115605235
+      rewardPower: 19329.64801991238
+    - nodeId: NODE_B021
+      battleId: BATTLE_021
+      name: "\u5965\u672F\u7ED3\u754C"
+      floor: 3
+      minRow: 2
+      maxRow: 5
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - 
+      - ENEMY_013
+      - 
+      - ENEMY_027
+      - 
+      baseDifficulty: 3148.308581404869
+      scaledDifficulty: 17089.68268122105
+      rewardPower: 17750.826419215507
+    - nodeId: NODE_B010
+      battleId: BATTLE_010
+      name: "\u6D77\u514B\u65AF\u94A2\u9057\u8FF9"
+      floor: 2
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_016
+      - 
+      - ENEMY_009
+      - 
+      - ENEMY_013
+      - ENEMY_010
+      baseDifficulty: 4099.620767845857
+      scaledDifficulty: 17917.355088548768
+      rewardPower: 14596.820408213907
+    - nodeId: NODE_B010
+      battleId: BATTLE_010
+      name: "\u6D77\u514B\u65AF\u94A2\u9057\u8FF9"
+      floor: 3
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_016
+      - 
+      - ENEMY_009
+      - 
+      - ENEMY_013
+      - ENEMY_010
+      baseDifficulty: 4099.620767845857
+      scaledDifficulty: 22713.726131515858
+      rewardPower: 18306.6110066577
+    - nodeId: NODE_B024
+      battleId: BATTLE_024
+      name: "\u98CE\u66B4\u56DE\u58F0"
+      floor: 4
+      minRow: 2
+      maxRow: 3
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - 
+      - ENEMY_028
+      - 
+      - ENEMY_030
+      - 
+      baseDifficulty: 4438.168753110486
+      scaledDifficulty: 30397.317302887288
+      rewardPower: 30807.410938841236
+    - nodeId: NODE_B011
+      battleId: BATTLE_011
+      name: "\u4EA1\u7075\u6218\u795E\u7684\u6012\u706B"
+      floor: 2
+      minRow: 7
+      maxRow: 7
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - ENEMY_032
+      - ENEMY_022
+      - ENEMY_023
+      - 
+      - 
+      baseDifficulty: 4517.574724722818
+      scaledDifficulty: 19656.38478914443
+      rewardPower: 19619.158980028085
+    - nodeId: NODE_B022
+      battleId: BATTLE_022
+      name: "\u6DF1\u57DF\u730E\u6740"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - ENEMY_025
+      - ENEMY_025
+      - 
+      - ENEMY_027
+      - 
+      baseDifficulty: 4748.163487194194
+      scaledDifficulty: 25152.163064029533
+      rewardPower: 26436.164461823104
+    - nodeId: NODE_B012
+      battleId: BATTLE_012
+      name: "\u5DE8\u50CF\u964D\u4E34"
+      floor: 3
+      minRow: 7
+      maxRow: 7
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - ENEMY_033
+      - 
+      - ENEMY_027
+      - 
+      - 
+      baseDifficulty: 4930.885950255086
+      scaledDifficulty: 27321.954167389653
+      rewardPower: 29357.89970831804
+    - nodeId: NODE_B026
+      battleId: BATTLE_026
+      name: "\u661F\u7A79\u524D\u591C"
+      floor: 4
+      minRow: 3
+      maxRow: 3
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_029
+      - ENEMY_028
+      - ENEMY_029
+      - 
+      - ENEMY_030
+      - 
+      baseDifficulty: 5772.309474884852
+      scaledDifficulty: 36871.561403626176
+      rewardPower: 37284.95781796328
+    - nodeId: NODE_B027
+      battleId: BATTLE_027
+      name: "\u7834\u8D25\u738B\u5EA7"
+      floor: 3
+      minRow: 7
+      maxRow: 7
+      weight: 1
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - ENEMY_034
+      - 
+      - ENEMY_025
+      - ENEMY_027
+      - 
+      baseDifficulty: 5831.596788643354
+      scaledDifficulty: 31336.238922532117
+      rewardPower: 32066.938305213655
+    - nodeId: NODE_B025
+      battleId: BATTLE_025
+      name: "\u5C01\u5370\u536B\u9635"
+      floor: 4
+      minRow: 2
+      maxRow: 3
+      weight: 18
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - ENEMY_029
+      - ENEMY_028
+      - ENEMY_030
+      - 
+      - ENEMY_030
+      baseDifficulty: 7109.062278637699
+      scaledDifficulty: 46732.44959090823
+      rewardPower: 49284.44055162066
+    - nodeId: NODE_B028
+      battleId: BATTLE_028
+      name: "\u94F8\u661F\u9F99\u738B\u7684\u7EA6\u5B9A"
+      floor: 4
+      minRow: 4
+      maxRow: 4
+      weight: 1
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - ENEMY_035
+      - ENEMY_028
+      - 
+      - ENEMY_030
+      - 
+      baseDifficulty: 7912.993451967684
+      scaledDifficulty: 53673.38764924076
+      rewardPower: 55913.82809168291
+    - nodeId: NODE_HB_B_044
+      battleId: BATTLE_HB_044
+      name: "\u6797\u95F4\u9E26\u54E8"
+      floor: 1
+      minRow: 3
+      maxRow: 3
+      weight: 8
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - 
+      - ENEMY_002
+      - 
+      - 
+      baseDifficulty: 1343.9338234875215
+      scaledDifficulty: 4169.650149969679
+      rewardPower: 3504.389796073061
+    - nodeId: NODE_HB_B_045
+      battleId: BATTLE_HB_045
+      name: "\u86DB\u4E1D\u5C94\u8DEF"
+      floor: 1
+      minRow: 3
+      maxRow: 3
+      weight: 6
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - 
+      - ENEMY_003
+      - 
+      - 
+      baseDifficulty: 1324.1620449418142
+      scaledDifficulty: 4080.67392395485
+      rewardPower: 3429.609570556605
+    - nodeId: NODE_HB_B_046
+      battleId: BATTLE_HB_046
+      name: "\u9E26\u6797\u5305\u56F4"
+      floor: 1
+      minRow: 4
+      maxRow: 4
+      weight: 6
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_002
+      - 
+      - 
+      baseDifficulty: 1786.8433061737385
+      scaledDifficulty: 5542.141743762304
+      rewardPower: 4657.902768022975
+    - nodeId: NODE_HB_B_047
+      battleId: BATTLE_HB_047
+      name: "\u6797\u5730\u6BD2\u7F51"
+      floor: 1
+      minRow: 5
+      maxRow: 6
+      weight: 4
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_001
+      - ENEMY_003
+      - ENEMY_003
+      - ENEMY_002
+      baseDifficulty: 2663.529465312499
+      scaledDifficulty: 8213.523216501506
+      rewardPower: 6903.070021336532
+    - nodeId: NODE_HB_B_048
+      battleId: BATTLE_HB_048
+      name: "\u5CA9\u76FE\u5DE1\u903B"
+      floor: 1
+      minRow: 3
+      maxRow: 4
+      weight: 6
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_019
+      - ENEMY_001
+      - 
+      - ENEMY_002
+      - 
+      - 
+      baseDifficulty: 1510.1294960106814
+      scaledDifficulty: 4796.154567605052
+      rewardPower: 4030.9365348617
+    - nodeId: NODE_HB_B_049
+      battleId: BATTLE_HB_049
+      name: "\u8584\u66AE\u4F0F\u51FB"
+      floor: 1
+      minRow: 4
+      maxRow: 6
+      weight: 4
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_019
+      - 
+      - ENEMY_001
+      - ENEMY_020
+      - 
+      - 
+      baseDifficulty: 1583.8695043467171
+      scaledDifficulty: 4978.805644688854
+      rewardPower: 4184.445953578493
+    - nodeId: NODE_HB_B_050
+      battleId: BATTLE_HB_050
+      name: "\u5E7D\u5F71\u6797\u54E8"
+      floor: 1
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 2
+      enemyIds:
+      - ENEMY_019
+      - 
+      - 
+      - ENEMY_021
+      - ENEMY_002
+      - 
+      baseDifficulty: 1633.7830242410955
+      scaledDifficulty: 5127.898369184413
+      rewardPower: 4309.751195888754
+    - nodeId: NODE_HB_B_051
+      battleId: BATTLE_HB_051
+      name: "\u519B\u56E2\u76FE\u5217"
+      floor: 2
+      minRow: 1
+      maxRow: 3
+      weight: 6
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - ENEMY_004
+      - ENEMY_005
+      - ENEMY_005
+      - ENEMY_002
+      - ENEMY_003
+      baseDifficulty: 3557.8294876109408
+      scaledDifficulty: 14801.499940906486
+      rewardPower: 13066.53164883798
+    - nodeId: NODE_HB_B_052
+      battleId: BATTLE_HB_052
+      name: "\u6218\u5730\u8865\u7ED9\u7EBF"
+      floor: 2
+      minRow: 2
+      maxRow: 4
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_004
+      - ENEMY_005
+      - ENEMY_005
+      - ENEMY_006
+      - ENEMY_002
+      - ENEMY_003
+      baseDifficulty: 3673.1991115677015
+      scaledDifficulty: 15342.294479797629
+      rewardPower: 13543.93657307886
+    - nodeId: NODE_HB_B_053
+      battleId: BATTLE_HB_053
+      name: "\u730E\u77DB\u8425\u5792"
+      floor: 2
+      minRow: 2
+      maxRow: 5
+      weight: 4
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - ENEMY_005
+      - 
+      - ENEMY_011
+      - 
+      - 
+      baseDifficulty: 2367.0420365809537
+      scaledDifficulty: 10139.590292332778
+      rewardPower: 8951.07103941944
+    - nodeId: NODE_HB_B_054
+      battleId: BATTLE_HB_054
+      name: "\u70C8\u65A7\u524D\u54E8"
+      floor: 2
+      minRow: 3
+      maxRow: 5
+      weight: 4
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_022
+      - ENEMY_004
+      - 
+      - ENEMY_023
+      - 
+      - 
+      baseDifficulty: 2387.388085508178
+      scaledDifficulty: 10040.26527080608
+      rewardPower: 8863.3884705932
+    - nodeId: NODE_HB_B_055
+      battleId: BATTLE_HB_055
+      name: "\u6BD2\u7259\u4FA7\u7FFC"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - 
+      - ENEMY_003
+      - ENEMY_015
+      - 
+      baseDifficulty: 2223.1870674872475
+      scaledDifficulty: 9221.563216783648
+      rewardPower: 8140.65115730996
+    - nodeId: NODE_HB_B_056
+      battleId: BATTLE_HB_056
+      name: "\u8840\u730E\u7A81\u56F4"
+      floor: 2
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_007
+      - ENEMY_012
+      - 
+      - ENEMY_008
+      - 
+      - 
+      baseDifficulty: 2551.6141319564226
+      scaledDifficulty: 10474.705712842057
+      rewardPower: 9246.905668719171
+    - nodeId: NODE_HB_B_057
+      battleId: BATTLE_HB_057
+      name: "\u519B\u56E2\u7834\u7532\u9635"
+      floor: 2
+      minRow: 5
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_024
+      - ENEMY_004
+      - 
+      - ENEMY_022
+      - ENEMY_023
+      - 
+      baseDifficulty: 3290.695993796582
+      scaledDifficulty: 13797.683117689608
+      rewardPower: 12180.377925055574
+    - nodeId: NODE_HB_B_058
+      battleId: BATTLE_HB_058
+      name: "\u7981\u9B54\u6E21\u53E3"
+      floor: 3
+      minRow: 1
+      maxRow: 3
+      weight: 6
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - ENEMY_004
+      - 
+      - ENEMY_021
+      - 
+      - 
+      baseDifficulty: 2723.550933013787
+      scaledDifficulty: 14989.166477359378
+      rewardPower: 13867.125719159149
+    - nodeId: NODE_HB_B_059
+      battleId: BATTLE_HB_059
+      name: "\u6DF1\u96FE\u8FFD\u730E"
+      floor: 3
+      minRow: 2
+      maxRow: 4
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_009
+      - 
+      - 
+      - ENEMY_025
+      - ENEMY_008
+      - 
+      baseDifficulty: 2750.104696297251
+      scaledDifficulty: 14376.961982454475
+      rewardPower: 13300.748882294753
+    - nodeId: NODE_HB_B_060
+      battleId: BATTLE_HB_060
+      name: "\u51C0\u5316\u5723\u575B"
+      floor: 3
+      minRow: 2
+      maxRow: 5
+      weight: 4
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_019
+      - ENEMY_004
+      - 
+      - ENEMY_014
+      - ENEMY_013
+      - 
+      baseDifficulty: 2915.3547843243923
+      scaledDifficulty: 15539.6046101599
+      rewardPower: 14376.359824984407
+    - nodeId: NODE_HB_B_061
+      battleId: BATTLE_HB_061
+      name: "\u7194\u706B\u5173\u9698"
+      floor: 3
+      minRow: 3
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - ENEMY_004
+      - 
+      - ENEMY_021
+      - 
+      - 
+      baseDifficulty: 2927.315544891512
+      scaledDifficulty: 16396.64417188595
+      rewardPower: 15169.244163596535
+    - nodeId: NODE_HB_B_062
+      battleId: BATTLE_HB_062
+      name: "\u865A\u7A7A\u89C6\u7EBF"
+      floor: 3
+      minRow: 4
+      maxRow: 6
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - 
+      - 
+      - ENEMY_027
+      - ENEMY_013
+      - 
+      baseDifficulty: 3148.308581404869
+      scaledDifficulty: 17089.68268122105
+      rewardPower: 15810.404040744124
+    - nodeId: NODE_HB_B_063
+      battleId: BATTLE_HB_063
+      name: "\u65AD\u5934\u53F0\u524D\u7EBF"
+      floor: 3
+      minRow: 5
+      maxRow: 6
+      weight: 2
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_017
+      - ENEMY_024
+      - 
+      - ENEMY_023
+      - 
+      - 
+      baseDifficulty: 3455.261412737648
+      scaledDifficulty: 18885.42245098321
+      rewardPower: 17471.72051112952
+    - nodeId: NODE_HB_B_064
+      battleId: BATTLE_HB_064
+      name: "\u8840\u94F8\u9632\u7EBF"
+      floor: 3
+      minRow: 5
+      maxRow: 6
+      weight: 2
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_018
+      - ENEMY_028
+      - 
+      - ENEMY_025
+      - 
+      - 
+      baseDifficulty: 4483.608200370449
+      scaledDifficulty: 24621.81483368103
+      rewardPower: 22778.70502327374
+    - nodeId: NODE_HB_B_065
+      battleId: BATTLE_HB_065
+      name: "\u661F\u5C51\u54E8\u7AD9"
+      floor: 4
+      minRow: 1
+      maxRow: 2
+      weight: 5
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_016
+      - 
+      - 
+      - ENEMY_030
+      - 
+      - 
+      baseDifficulty: 2635.951461972586
+      scaledDifficulty: 17364.449902779234
+      rewardPower: 17580.778351530153
+    - nodeId: NODE_HB_B_066
+      battleId: BATTLE_HB_066
+      name: "\u661F\u706B\u4EA4\u6C47"
+      floor: 4
+      minRow: 2
+      maxRow: 3
+      weight: 3
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_028
+      - ENEMY_009
+      - 
+      - ENEMY_029
+      - 
+      - 
+      baseDifficulty: 4131.03590743174
+      scaledDifficulty: 27486.436132278675
+      rewardPower: 27828.865528169612
+    - nodeId: NODE_HB_B_067
+      battleId: BATTLE_HB_067
+      name: "\u661F\u7A79\u5C01\u9501"
+      floor: 4
+      minRow: 3
+      maxRow: 3
+      weight: 2
+      rewardTier: 3
+      enemyIds:
+      - ENEMY_026
+      - ENEMY_016
+      - 
+      - ENEMY_030
+      - ENEMY_029
+      - 
+      baseDifficulty: 5533.602799452499
+      scaledDifficulty: 36218.60718391227
+      rewardPower: 36669.82303882747
+    - nodeId: NODE_HB_B_068
+      battleId: BATTLE_HB_068
+      name: "\u6797\u7F18\u65A5\u5019"
+      floor: 1
+      minRow: 1
+      maxRow: 1
+      weight: 18
+      rewardTier: 1
+      enemyIds:
+      - ENEMY_001
+      - 
+      - 
+      - 
+      - 
+      - 
+      baseDifficulty: 442.90948268621713
+      scaledDifficulty: 1372.4915937926248
+      rewardPower: 1026.913390049067
+    events:
+    - id: EVENT_001
+      name: "\u6D77\u514B\u65AF\u9057\u8FF9"
+      itemGainExpectation: 1.1278306637044124
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.5
+    - id: EVENT_002
+      name: "\u5F17\u96F7\u5C14\u5353\u5FB7\u8425\u5730"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1327.114467956667
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_003
+      name: "\u91D1\u94F2\u94F2\u8BAE\u4E8B\u5385"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 864.5668438568847
+      heroQuantityExpectation: 0.6666666666666666
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_004
+      name: "\u827E\u7FC1\u7684\u59D4\u6258"
+      itemGainExpectation: 1.106228236318328
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_005
+      name: "\u5965\u6069\u7684\u953B\u7089"
+      itemGainExpectation: 1.1142592304971235
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_006
+      name: "\u7956\u5B89\u6697\u5DF7"
+      itemGainExpectation: 1.1906044459055445
+      heroPowerExpectation: 1024.1571274880953
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_007
+      name: "\u65E0\u6781\u5251\u9053\u8BD5\u70BC"
+      itemGainExpectation: 1.1278306637044124
+      heroPowerExpectation: 1512.5668723153387
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_008
+      name: "\u661F\u754C\u5B9D\u5E93"
+      itemGainExpectation: 1.1142592304971235
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_009
+      name: "\u53D7\u56F0\u7684\u5546\u961F"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1578.8714178551131
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_010
+      name: "\u827E\u7FC1\u4E0E\u7834\u8D25\u738B\u51A0"
+      itemGainExpectation: 1.1278306637044124
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.5
+    - id: EVENT_011
+      name: "\u94F8\u661F\u9F99\u738B\u7684\u5951\u7EA6"
+      itemGainExpectation: 0
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0
+    - id: EVENT_012
+      name: "\u6D77\u514B\u65AF\u5DE5\u574A"
+      itemGainExpectation: 1.1644127081347873
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_013
+      name: "\u6218\u5730\u6551\u62A4\u7AD9"
+      itemGainExpectation: 1.106228236318328
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_014
+      name: "\u7834\u8D25\u9057\u85CF"
+      itemGainExpectation: 1.1279258992843544
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_015
+      name: "\u661F\u754C\u7684\u9988\u8D60"
+      itemGainExpectation: 1.1391785554976597
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_HB_021
+      name: "\u98CE\u884C\u8005\u7684\u8DEF\u6807"
+      itemGainExpectation: 1.2281376189797402
+      heroPowerExpectation: 1016
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_022
+      name: "\u51B0\u5F13\u8BD5\u70BC"
+      itemGainExpectation: 1.1826878097692617
+      heroPowerExpectation: 881.6879772059727
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_023
+      name: "\u6668\u5149\u9A7F\u7AD9"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 847.4457105077967
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_024
+      name: "\u575A\u76FE\u8425\u706B"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1327.114467956667
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_025
+      name: "\u6797\u5730\u62FE\u8352"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_026
+      name: "\u65E0\u754F\u519B\u65D7"
+      itemGainExpectation: 1.1278306637044124
+      heroPowerExpectation: 1170.2378287214135
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_027
+      name: "\u51DB\u51AC\u8865\u7ED9\u8F66"
+      itemGainExpectation: 1.1142592304971235
+      heroPowerExpectation: 1669.024857191694
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_028
+      name: "\u65E5\u8F6E\u62A4\u9001"
+      itemGainExpectation: 1.1117686753468214
+      heroPowerExpectation: 1578.8714178551131
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_029
+      name: "\u6697\u5DF7\u4EA4\u6362"
+      itemGainExpectation: 1.1961448849340377
+      heroPowerExpectation: 1024.1571274880953
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_030
+      name: "\u5251\u9053\u56DE\u54CD"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1512.5668723153387
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_031
+      name: "\u72D0\u706B\u5F15\u8DEF"
+      itemGainExpectation: 1.168902096674664
+      heroPowerExpectation: 1118.1340103820385
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_032
+      name: "\u7206\u7834\u5DE5\u574A"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1164.297581980273
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_033
+      name: "\u9ED1\u96FE\u6551\u63F4"
+      itemGainExpectation: 1.1279258992843546
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_034
+      name: "\u7194\u94F8\u519B\u68B0\u5E93"
+      itemGainExpectation: 1.119799669525617
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    - id: EVENT_HB_035
+      name: "\u7981\u9B54\u9057\u4EA7"
+      itemGainExpectation: 1.155354788179302
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_HB_036
+      name: "\u89C2\u661F\u8005\u7684\u9080\u8BF7"
+      itemGainExpectation: 1.1006877972898346
+      heroPowerExpectation: 1118.1340103820385
+      heroQuantityExpectation: 0.3333333333333333
+      itemQuantityExpectation: 0.3333333333333333
+    - id: EVENT_HB_037
+      name: "\u661F\u94F8\u5175\u5668\u67B6"
+      itemGainExpectation: 1.177669313705485
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 1
+    - id: EVENT_HB_038
+      name: "\u5929\u7A79\u8865\u7ED9\u7AD9"
+      itemGainExpectation: 1.1907192778028317
+      heroPowerExpectation: 0
+      heroQuantityExpectation: 0
+      itemQuantityExpectation: 0.6666666666666666
+    nodeExpectations:
+    - x: 1
+      floor: 1
+      localRow: 1
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 20
+      levelExpectation: 1
+      heroPowerExpectation: 997.9196284019948
+      itemGainExpectation: 1.15648924216118
+      instantPowerExpectation: 2013.919628401995
+      powerDeltaExpectation: 997.9196284019948
+      powerGrowthRate: 0.9822043586633808
+      difficultyExpectation: 1372.4915937926248
+    - x: 2
+      floor: 1
+      localRow: 2
+      battleWeight: 0.5512
+      eventWeight: 0.4488
+      shopWeight: 0
+      battleExperience: 30
+      levelExpectation: 1.5669473684210526
+      heroPowerExpectation: 1017.1526776039914
+      itemGainExpectation: 1.1520753147368965
+      instantPowerExpectation: 2841.6156983389856
+      powerDeltaExpectation: 827.6960699369906
+      powerGrowthRate: 0.41098763737346905
+      difficultyExpectation: 3058.2353964029367
+    - x: 3
+      floor: 1
+      localRow: 3
+      battleWeight: 0.69785
+      eventWeight: 0.1991
+      shopWeight: 0.10305
+      battleExperience: 40
+      levelExpectation: 1.920716525105868
+      heroPowerExpectation: 1018.8321896537668
+      itemGainExpectation: 1.1545721019954285
+      instantPowerExpectation: 4312.1824032246295
+      powerDeltaExpectation: 1470.566704885644
+      powerGrowthRate: 0.5175107618335713
+      difficultyExpectation: 3789.617892128932
+    - x: 4
+      floor: 1
+      localRow: 4
+      battleWeight: 0.7084
+      eventWeight: 0.20105
+      shopWeight: 0.09055
+      battleExperience: 50
+      levelExpectation: 2.3694064781218156
+      heroPowerExpectation: 1037.3662147979985
+      itemGainExpectation: 1.1522946095909397
+      instantPowerExpectation: 6155.4299144458555
+      powerDeltaExpectation: 1843.247511221226
+      powerGrowthRate: 0.42745119265893167
+      difficultyExpectation: 4270.1206323961405
+    - x: 5
+      floor: 1
+      localRow: 5
+      battleWeight: 0.6353
+      eventWeight: 0.1581
+      shopWeight: 0.2066
+      battleExperience: 60
+      levelExpectation: 2.8289298618212153
+      heroPowerExpectation: 1047.0660596475668
+      itemGainExpectation: 1.148072035883315
+      instantPowerExpectation: 8531.92200575677
+      powerDeltaExpectation: 2376.4920913109154
+      powerGrowthRate: 0.38608060271040545
+      difficultyExpectation: 5107.777409478702
+    - x: 6
+      floor: 1
+      localRow: 6
+      battleWeight: 0.7645
+      eventWeight: 0.2355
+      shopWeight: 0
+      battleExperience: 70
+      levelExpectation: 3.4653286427473056
+      heroPowerExpectation: 1068.3708924592795
+      itemGainExpectation: 1.1459740092764483
+      instantPowerExpectation: 10765.033133041334
+      powerDeltaExpectation: 2233.111127284563
+      powerGrowthRate: 0.2617359987325023
+      difficultyExpectation: 5107.777409478702
+    - x: 7
+      floor: 1
+      localRow: 7
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 80
+      levelExpectation: 4.167394120017708
+      heroPowerExpectation: 1074.1910105582251
+      itemGainExpectation: 1.1249734239024791
+      instantPowerExpectation: 13623.85135832536
+      powerDeltaExpectation: 2858.818225284025
+      powerGrowthRate: 0.26556520448686743
+      difficultyExpectation: 8834.507305598985
+    - x: 8
+      floor: 2
+      localRow: 1
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 90
+      levelExpectation: 4.806717263242715
+      heroPowerExpectation: 1089.586019177476
+      itemGainExpectation: 1.1256311177779044
+      instantPowerExpectation: 17262.038375182467
+      powerDeltaExpectation: 3638.187016857108
+      powerGrowthRate: 0.2670454133099345
+      difficultyExpectation: 9091.437259290606
+    - x: 9
+      floor: 2
+      localRow: 2
+      battleWeight: 0.56395
+      eventWeight: 0.43605
+      shopWeight: 0
+      battleExperience: 100
+      levelExpectation: 5.204630194717033
+      heroPowerExpectation: 1119.101551286742
+      itemGainExpectation: 1.1216228822817664
+      instantPowerExpectation: 20340.6179576335
+      powerDeltaExpectation: 3078.579582451035
+      powerGrowthRate: 0.1783439195035675
+      difficultyExpectation: 10029.398017183148
+    - x: 10
+      floor: 2
+      localRow: 3
+      battleWeight: 0.73575
+      eventWeight: 0.16525
+      shopWeight: 0.099
+      battleExperience: 110
+      levelExpectation: 5.705114630378706
+      heroPowerExpectation: 1122.010401334619
+      itemGainExpectation: 1.126649715395946
+      instantPowerExpectation: 25361.867303343537
+      powerDeltaExpectation: 5021.249345710035
+      powerGrowthRate: 0.24685824964455627
+      difficultyExpectation: 10030.12250075801
+    - x: 11
+      floor: 2
+      localRow: 4
+      battleWeight: 0.73595
+      eventWeight: 0.17465
+      shopWeight: 0.0894
+      battleExperience: 120
+      levelExpectation: 6.259633436299883
+      heroPowerExpectation: 1135.7396928018552
+      itemGainExpectation: 1.1280638262776002
+      instantPowerExpectation: 31573.89531398363
+      powerDeltaExpectation: 6212.028010640093
+      powerGrowthRate: 0.24493575083965297
+      difficultyExpectation: 11040.776726224149
+    - x: 12
+      floor: 2
+      localRow: 5
+      battleWeight: 0.65855
+      eventWeight: 0.1373
+      shopWeight: 0.20415
+      battleExperience: 130
+      levelExpectation: 6.85801631696393
+      heroPowerExpectation: 1147.6558288595602
+      itemGainExpectation: 1.1306623838587353
+      instantPowerExpectation: 39696.682933186334
+      powerDeltaExpectation: 8122.787619202703
+      powerGrowthRate: 0.25726276528209163
+      difficultyExpectation: 11140.669981978546
+    - x: 13
+      floor: 2
+      localRow: 6
+      battleWeight: 0.8023
+      eventWeight: 0.1977
+      shopWeight: 0
+      battleExperience: 140
+      levelExpectation: 7.439313798984502
+      heroPowerExpectation: 1163.2385785819083
+      itemGainExpectation: 1.1265190735992194
+      instantPowerExpectation: 49191.04876629213
+      powerDeltaExpectation: 9494.365833105796
+      powerGrowthRate: 0.23917277544538937
+      difficultyExpectation: 11868.682051682012
+    - x: 14
+      floor: 2
+      localRow: 7
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 150
+      levelExpectation: 8.108715454564756
+      heroPowerExpectation: 1169.09868996822
+      itemGainExpectation: 1.1277438012930514
+      instantPowerExpectation: 62561.47496919586
+      powerDeltaExpectation: 13370.426202903727
+      powerGrowthRate: 0.27180608135490153
+      difficultyExpectation: 19656.38478914443
+    - x: 15
+      floor: 3
+      localRow: 1
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 160
+      levelExpectation: 8.819546279317628
+      heroPowerExpectation: 1186.2156155634632
+      itemGainExpectation: 1.1280475108628374
+      instantPowerExpectation: 79608.92552924852
+      powerDeltaExpectation: 17047.45056005266
+      powerGrowthRate: 0.2724911867638434
+      difficultyExpectation: 14093.914513393724
+    - x: 16
+      floor: 3
+      localRow: 2
+      battleWeight: 0.8434
+      eventWeight: 0.1566
+      shopWeight: 0
+      battleExperience: 170
+      levelExpectation: 9.41284809864272
+      heroPowerExpectation: 1200.7254124047734
+      itemGainExpectation: 1.128456921219343
+      instantPowerExpectation: 99450.8255022956
+      powerDeltaExpectation: 19841.89997304708
+      powerGrowthRate: 0.24924215270004013
+      difficultyExpectation: 15185.375669701943
+    - x: 17
+      floor: 3
+      localRow: 3
+      battleWeight: 0.7675
+      eventWeight: 0.1394
+      shopWeight: 0.0931
+      battleExperience: 180
+      levelExpectation: 9.807587349356496
+      heroPowerExpectation: 1209.2781264211324
+      itemGainExpectation: 1.1295077561311258
+      instantPowerExpectation: 124764.67355292718
+      powerDeltaExpectation: 25313.848050631583
+      powerGrowthRate: 0.25453632911319846
+      difficultyExpectation: 15246.96559354181
+    - x: 18
+      floor: 3
+      localRow: 4
+      battleWeight: 0.7834
+      eventWeight: 0.13085
+      shopWeight: 0.08575
+      battleExperience: 190
+      levelExpectation: 9.954322961818264
+      heroPowerExpectation: 1214.3496973683366
+      itemGainExpectation: 1.129636420355895
+      instantPowerExpectation: 156577.20877279332
+      powerDeltaExpectation: 31812.535219866146
+      powerGrowthRate: 0.2549803106435473
+      difficultyExpectation: 17699.917978655354
+    - x: 19
+      floor: 3
+      localRow: 5
+      battleWeight: 0.6822
+      eventWeight: 0.10635
+      shopWeight: 0.21145
+      battleExperience: 200
+      levelExpectation: 9.992010694160136
+      heroPowerExpectation: 1215.15410673488
+      itemGainExpectation: 1.131175672061405
+      instantPowerExpectation: 197774.2491140016
+      powerDeltaExpectation: 41197.04034120828
+      powerGrowthRate: 0.2631100698760612
+      difficultyExpectation: 18169.349788817653
+    - x: 20
+      floor: 3
+      localRow: 6
+      battleWeight: 0.84635
+      eventWeight: 0.15365
+      shopWeight: 0
+      battleExperience: 210
+      levelExpectation: 9.998474517169893
+      heroPowerExpectation: 1215.6316109276363
+      itemGainExpectation: 1.1282668505375173
+      instantPowerExpectation: 247102.93472647527
+      powerDeltaExpectation: 49328.685612473666
+      powerGrowthRate: 0.2494191525613604
+      difficultyExpectation: 19188.32767282068
+    - x: 21
+      floor: 3
+      localRow: 7
+      battleWeight: 1
+      eventWeight: 0
+      shopWeight: 0
+      battleExperience: 220
+      levelExpectation: 9.999940568086751
+      heroPowerExpectation: 1214.6397082031372
+      itemGainExpectation: 1.128483054837812
+      instantPowerExpectation: 355110.1042249851
+      powerDeltaExpectation: 108007.16949850984
+      powerGrowthRate: 0.4370938354822286
+      difficultyExpectation: 28325.52535617527
+    poolEntries:
+    - id: POOLROW_H1_1
+      poolId: POOL_HERO01
+      targetId: HERO_001
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_2
+      poolId: POOL_HERO01
+      targetId: HERO_002
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_3
+      poolId: POOL_HERO01
+      targetId: HERO_003
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_4
+      poolId: POOL_HERO01
+      targetId: HERO_004
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_5
+      poolId: POOL_HERO01
+      targetId: HERO_005
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_6
+      poolId: POOL_HERO01
+      targetId: HERO_006
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_7
+      poolId: POOL_HERO01
+      targetId: HERO_007
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_8
+      poolId: POOL_HERO01
+      targetId: HERO_008
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_9
+      poolId: POOL_HERO01
+      targetId: HERO_009
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_10
+      poolId: POOL_HERO01
+      targetId: HERO_010
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_11
+      poolId: POOL_HERO01
+      targetId: HERO_011
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H1_12
+      poolId: POOL_HERO01
+      targetId: HERO_012
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_1
+      poolId: POOL_HERO02
+      targetId: HERO_001
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_2
+      poolId: POOL_HERO02
+      targetId: HERO_002
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_3
+      poolId: POOL_HERO02
+      targetId: HERO_003
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_4
+      poolId: POOL_HERO02
+      targetId: HERO_004
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_5
+      poolId: POOL_HERO02
+      targetId: HERO_005
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_6
+      poolId: POOL_HERO02
+      targetId: HERO_006
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_7
+      poolId: POOL_HERO02
+      targetId: HERO_007
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_8
+      poolId: POOL_HERO02
+      targetId: HERO_008
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_9
+      poolId: POOL_HERO02
+      targetId: HERO_009
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_10
+      poolId: POOL_HERO02
+      targetId: HERO_010
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_11
+      poolId: POOL_HERO02
+      targetId: HERO_011
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H2_12
+      poolId: POOL_HERO02
+      targetId: HERO_012
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_1
+      poolId: POOL_HERO03
+      targetId: HERO_001
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_2
+      poolId: POOL_HERO03
+      targetId: HERO_002
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_3
+      poolId: POOL_HERO03
+      targetId: HERO_003
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_4
+      poolId: POOL_HERO03
+      targetId: HERO_004
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_5
+      poolId: POOL_HERO03
+      targetId: HERO_005
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_6
+      poolId: POOL_HERO03
+      targetId: HERO_006
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_7
+      poolId: POOL_HERO03
+      targetId: HERO_007
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_8
+      poolId: POOL_HERO03
+      targetId: HERO_008
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_9
+      poolId: POOL_HERO03
+      targetId: HERO_009
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_10
+      poolId: POOL_HERO03
+      targetId: HERO_010
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_11
+      poolId: POOL_HERO03
+      targetId: HERO_011
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOLROW_H3_12
+      poolId: POOL_HERO03
+      targetId: HERO_012
+      type: Character
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_001
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_001
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_002
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_002
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_003
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_003
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_004
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_004
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_006
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_006
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_007
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_007
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_008
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_008
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_009
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_009
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_010
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_010
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_011
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_011
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_012
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_012
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_018
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_018
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_001
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_001
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_002
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_002
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_003
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_003
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_004
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_004
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_005
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_005
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_006
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_006
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_007
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_007
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_008
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_008
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_009
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_009
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_010
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_010
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_011
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_011
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_012
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_012
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_013
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_013
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_014
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_014
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_015
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_015
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_016
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_016
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_017
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_017
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_018
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_018
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_002
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_002
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_003
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_003
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_005
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_005
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_007
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_007
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_008
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_008
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_009
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_009
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_010
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_010
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_011
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_011
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_013
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_013
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_014
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_014
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_015
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_015
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_016
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_016
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_017
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_017
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_018
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_018
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_019
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_019
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_019
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_019
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_020
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_020
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_020
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_020
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_020
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_020
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_021
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_021
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_021
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_021
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_022
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_022
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_022
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_022
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_023
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_023
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_023
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_023
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_023
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_023
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_024
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_024
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_024
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_024
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_024
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_024
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_LOW_ITEM_025
+      poolId: POOL_DIFF_LOW
+      targetId: ITEM_025
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_025
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_025
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_025
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_025
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_026
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_026
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_026
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_026
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_027
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_027
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_027
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_027
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_028
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_028
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_028
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_028
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_029
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_029
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_029
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_029
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_MID_ITEM_030
+      poolId: POOL_DIFF_MID
+      targetId: ITEM_030
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1
+    - id: POOL_DIFF_HIGH_ITEM_030
+      poolId: POOL_DIFF_HIGH
+      targetId: ITEM_030
+      type: Item
+      weight: 1
+      minQuantity: 1
+      maxQuantity: 1

@@ -1,0 +1,704 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a41dd54ee101094f87bf162d3751c4d, type: 3}
+  m_Name: Battles
+  m_EditorClassIdentifier: 
+  rows:
+  - id: BATTLE_001
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: ENEMY_001
+    slot4: ENEMY_001
+    slot5: ENEMY_001
+    slot6: ENEMY_001
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_002
+    slot1: ENEMY_004
+    slot2: ENEMY_004
+    slot3: ENEMY_005
+    slot4: ENEMY_005
+    slot5: ENEMY_003
+    slot6: ENEMY_003
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_003
+    slot1: ENEMY_001
+    slot2: ENEMY_031
+    slot3: ENEMY_001
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_003
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 2
+  - id: BATTLE_004
+    slot1: ENEMY_007
+    slot2: 
+    slot3: ENEMY_001
+    slot4: 
+    slot5: ENEMY_008
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_005
+    slot1: ENEMY_009
+    slot2: 
+    slot3: ENEMY_009
+    slot4: 
+    slot5: ENEMY_011
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_006
+    slot1: ENEMY_003
+    slot2: ENEMY_009
+    slot3: 
+    slot4: ENEMY_008
+    slot5: ENEMY_003
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_007
+    slot1: ENEMY_009
+    slot2: 
+    slot3: ENEMY_010
+    slot4: 
+    slot5: ENEMY_013
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_008
+    slot1: ENEMY_012
+    slot2: 
+    slot3: ENEMY_005
+    slot4: 
+    slot5: ENEMY_014
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_009
+    slot1: ENEMY_015
+    slot2: 
+    slot3: ENEMY_011
+    slot4: 
+    slot5: ENEMY_015
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_010
+    slot1: ENEMY_016
+    slot2: 
+    slot3: ENEMY_009
+    slot4: 
+    slot5: ENEMY_013
+    slot6: ENEMY_010
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_011
+    slot1: ENEMY_004
+    slot2: ENEMY_032
+    slot3: ENEMY_022
+    slot4: ENEMY_023
+    slot5: 
+    slot6: 
+    rewardId: REWARD_003
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 2
+  - id: BATTLE_012
+    slot1: ENEMY_026
+    slot2: ENEMY_033
+    slot3: 
+    slot4: ENEMY_027
+    slot5: 
+    slot6: 
+    rewardId: REWARD_003
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 3
+  - id: BATTLE_013
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: 
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_014
+    slot1: ENEMY_019
+    slot2: 
+    slot3: ENEMY_001
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_015
+    slot1: ENEMY_019
+    slot2: 
+    slot3: ENEMY_020
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_016
+    slot1: ENEMY_001
+    slot2: 
+    slot3: ENEMY_019
+    slot4: 
+    slot5: ENEMY_021
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_017
+    slot1: ENEMY_004
+    slot2: 
+    slot3: ENEMY_022
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_018
+    slot1: ENEMY_022
+    slot2: 
+    slot3: ENEMY_004
+    slot4: 
+    slot5: ENEMY_023
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_019
+    slot1: ENEMY_024
+    slot2: ENEMY_009
+    slot3: 
+    slot4: ENEMY_023
+    slot5: 
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_020
+    slot1: ENEMY_026
+    slot2: 
+    slot3: ENEMY_025
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_021
+    slot1: ENEMY_026
+    slot2: 
+    slot3: ENEMY_013
+    slot4: 
+    slot5: ENEMY_027
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_022
+    slot1: ENEMY_026
+    slot2: ENEMY_025
+    slot3: ENEMY_025
+    slot4: 
+    slot5: ENEMY_027
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_023
+    slot1: ENEMY_028
+    slot2: 
+    slot3: ENEMY_029
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_024
+    slot1: ENEMY_028
+    slot2: 
+    slot3: ENEMY_028
+    slot4: 
+    slot5: ENEMY_030
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_025
+    slot1: ENEMY_028
+    slot2: ENEMY_029
+    slot3: ENEMY_028
+    slot4: ENEMY_030
+    slot5: 
+    slot6: ENEMY_030
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_026
+    slot1: ENEMY_029
+    slot2: ENEMY_028
+    slot3: ENEMY_029
+    slot4: 
+    slot5: ENEMY_030
+    slot6: 
+    rewardId: REWARD_002
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_027
+    slot1: ENEMY_026
+    slot2: ENEMY_034
+    slot3: 
+    slot4: ENEMY_025
+    slot5: ENEMY_027
+    slot6: 
+    rewardId: REWARD_003
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 3
+  - id: BATTLE_028
+    slot1: ENEMY_028
+    slot2: ENEMY_035
+    slot3: ENEMY_028
+    slot4: 
+    slot5: ENEMY_030
+    slot6: 
+    rewardId: REWARD_003
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: 3
+    characterCandidates: 2
+    chooseCount: 3
+  - id: BATTLE_HB_044
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: 
+    slot4: ENEMY_002
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_045
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: 
+    slot4: ENEMY_003
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_046
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: ENEMY_001
+    slot4: ENEMY_002
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_047
+    slot1: ENEMY_001
+    slot2: ENEMY_001
+    slot3: ENEMY_001
+    slot4: ENEMY_003
+    slot5: ENEMY_003
+    slot6: ENEMY_002
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_048
+    slot1: ENEMY_019
+    slot2: ENEMY_001
+    slot3: 
+    slot4: ENEMY_002
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_049
+    slot1: ENEMY_019
+    slot2: 
+    slot3: ENEMY_001
+    slot4: ENEMY_020
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_050
+    slot1: ENEMY_019
+    slot2: 
+    slot3: 
+    slot4: ENEMY_021
+    slot5: ENEMY_002
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_051
+    slot1: ENEMY_004
+    slot2: ENEMY_004
+    slot3: ENEMY_005
+    slot4: ENEMY_005
+    slot5: ENEMY_002
+    slot6: ENEMY_003
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_052
+    slot1: ENEMY_004
+    slot2: ENEMY_005
+    slot3: ENEMY_005
+    slot4: ENEMY_006
+    slot5: ENEMY_002
+    slot6: ENEMY_003
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_053
+    slot1: ENEMY_009
+    slot2: ENEMY_005
+    slot3: 
+    slot4: ENEMY_011
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_054
+    slot1: ENEMY_022
+    slot2: ENEMY_004
+    slot3: 
+    slot4: ENEMY_023
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_055
+    slot1: ENEMY_009
+    slot2: 
+    slot3: 
+    slot4: ENEMY_003
+    slot5: ENEMY_015
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_056
+    slot1: ENEMY_007
+    slot2: ENEMY_012
+    slot3: 
+    slot4: ENEMY_008
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_057
+    slot1: ENEMY_024
+    slot2: ENEMY_004
+    slot3: 
+    slot4: ENEMY_022
+    slot5: ENEMY_023
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_058
+    slot1: ENEMY_026
+    slot2: ENEMY_004
+    slot3: 
+    slot4: ENEMY_021
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_059
+    slot1: ENEMY_009
+    slot2: 
+    slot3: 
+    slot4: ENEMY_025
+    slot5: ENEMY_008
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_060
+    slot1: ENEMY_019
+    slot2: ENEMY_004
+    slot3: 
+    slot4: ENEMY_014
+    slot5: ENEMY_013
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_061
+    slot1: ENEMY_028
+    slot2: ENEMY_004
+    slot3: 
+    slot4: ENEMY_021
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_062
+    slot1: ENEMY_026
+    slot2: 
+    slot3: 
+    slot4: ENEMY_027
+    slot5: ENEMY_013
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_063
+    slot1: ENEMY_017
+    slot2: ENEMY_024
+    slot3: 
+    slot4: ENEMY_023
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_064
+    slot1: ENEMY_018
+    slot2: ENEMY_028
+    slot3: 
+    slot4: ENEMY_025
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_065
+    slot1: ENEMY_016
+    slot2: 
+    slot3: 
+    slot4: ENEMY_030
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_066
+    slot1: ENEMY_028
+    slot2: ENEMY_009
+    slot3: 
+    slot4: ENEMY_029
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_067
+    slot1: ENEMY_026
+    slot2: ENEMY_016
+    slot3: 
+    slot4: ENEMY_030
+    slot5: ENEMY_029
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1
+  - id: BATTLE_HB_068
+    slot1: ENEMY_001
+    slot2: 
+    slot3: 
+    slot4: 
+    slot5: 
+    slot6: 
+    rewardId: REWARD_001
+    itemPoolId: 
+    characterPoolId: 
+    itemCandidates: -1
+    characterCandidates: -1
+    chooseCount: -1

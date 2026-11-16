@@ -1,0 +1,1038 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce48ca5b14d65c04fb477fcd69157dc2, type: 3}
+  m_Name: Shops
+  m_EditorClassIdentifier: 
+  rows:
+  - id: SHOP_001
+    name: "\u5965\u6069\u953B\u7089"
+    description: "\u5965\u6069\u68C0\u67E5\u65B0\u953B\u9020\u7684\u88C5\u5907\u3002\u6D77\u514B\u65AF\u6C34\u6676\u7167\u4EAE\u4E0B\u4E00\u6BB5\u8FDC\u5F81\u3002"
+    background: EventCG/village
+    offerCount: 9
+    refreshCost: 15
+    refreshIncrease: 5
+    goods:
+    - id: GOOD_EXP1
+      shopId: SHOP_001
+      name: "\u6D77\u514B\u65AF\u7ECF\u9A8C\u5B9D\u5178"
+      effectId: FX_EXP40
+      price: 20
+      stock: 3
+      order: 1
+      weight: 1
+      isFixed: 1
+    - id: GOOD_I1_1
+      shopId: SHOP_001
+      name: "\u5DE8\u4EBA\u8170\u5E26"
+      effectId: FX_ITEM01
+      price: 12
+      stock: 3
+      order: 2
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I1_2
+      shopId: SHOP_001
+      name: "\u6676\u4F53\u62A4\u8155"
+      effectId: FX_ITEM02
+      price: 25
+      stock: 1
+      order: 3
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I1_3
+      shopId: SHOP_001
+      name: "\u66B4\u98CE\u5927\u5251"
+      effectId: FX_ITEM03
+      price: 25
+      stock: 1
+      order: 4
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I1_4
+      shopId: SHOP_001
+      name: "\u53CD\u66F2\u4E4B\u5F13"
+      effectId: FX_ITEM04
+      price: 12
+      stock: 1
+      order: 5
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I1_5
+      shopId: SHOP_001
+      name: "\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+      effectId: FX_ITEM05
+      price: 55
+      stock: 1
+      order: 6
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I1_6
+      shopId: SHOP_001
+      name: "\u9501\u5B50\u7532"
+      effectId: FX_ITEM06
+      price: 25
+      stock: 1
+      order: 7
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_1
+      shopId: SHOP_001
+      name: "\u4E9A\u7D22"
+      effectId: FX_SHOP_H1
+      price: 35
+      stock: 1
+      order: 8
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_2
+      shopId: SHOP_001
+      name: "\u5E03\u9686"
+      effectId: FX_SHOP_H2
+      price: 35
+      stock: 1
+      order: 9
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_5
+      shopId: SHOP_001
+      name: "\u857E\u6B27\u5A1C"
+      effectId: FX_SHOP_H5
+      price: 60
+      stock: 1
+      order: 10
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_6
+      shopId: SHOP_001
+      name: "\u56FE\u5947"
+      effectId: FX_SHOP_H6
+      price: 60
+      stock: 1
+      order: 11
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_9
+      shopId: SHOP_001
+      name: "\u6613"
+      effectId: FX_SHOP_H9
+      price: 95
+      stock: 1
+      order: 12
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H1_10
+      shopId: SHOP_001
+      name: "\u963F\u72F8"
+      effectId: FX_SHOP_H10
+      price: 95
+      stock: 1
+      order: 13
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_007
+      shopId: SHOP_001
+      name: "\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      effectId: FX_ITEM007
+      price: 15
+      stock: 1
+      order: 37
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_008
+      shopId: SHOP_001
+      name: "\u6551\u8D4E"
+      effectId: FX_ITEM008
+      price: 30
+      stock: 1
+      order: 38
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_009
+      shopId: SHOP_001
+      name: "\u996E\u8840\u5251"
+      effectId: FX_ITEM009
+      price: 30
+      stock: 1
+      order: 39
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_010
+      shopId: SHOP_001
+      name: "\u957F\u5251"
+      effectId: FX_ITEM010
+      price: 15
+      stock: 1
+      order: 40
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_011
+      shopId: SHOP_001
+      name: "\u68D8\u523A\u80CC\u5FC3"
+      effectId: FX_ITEM011
+      price: 30
+      stock: 1
+      order: 41
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_012
+      shopId: SHOP_001
+      name: "\u75BE\u5C04\u706B\u70AE"
+      effectId: FX_ITEM012
+      price: 30
+      stock: 1
+      order: 42
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_013
+      shopId: SHOP_001
+      name: "\u72C2\u5F92\u94E0\u7532"
+      effectId: FX_ITEM013
+      price: 65
+      stock: 1
+      order: 43
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_014
+      shopId: SHOP_001
+      name: "\u65E0\u5C3D\u4E4B\u5203"
+      effectId: FX_ITEM014
+      price: 65
+      stock: 1
+      order: 44
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_015
+      shopId: SHOP_001
+      name: "\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+      effectId: FX_ITEM015
+      price: 65
+      stock: 1
+      order: 45
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_016
+      shopId: SHOP_001
+      name: "\u632F\u594B\u76D4\u7532"
+      effectId: FX_ITEM016
+      price: 65
+      stock: 1
+      order: 46
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_017
+      shopId: SHOP_001
+      name: "\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+      effectId: FX_ITEM017
+      price: 65
+      stock: 1
+      order: 47
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I1_018
+      shopId: SHOP_001
+      name: "\u7EA2\u6C34\u6676"
+      effectId: FX_ITEM018
+      price: 15
+      stock: 1
+      order: 48
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_019
+      shopId: SHOP_001
+      name: "\u81EA\u7136\u4E4B\u529B"
+      effectId: FX_GIVE_19
+      price: 80
+      stock: 1
+      order: 49
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_020
+      shopId: SHOP_001
+      name: "\u66B4\u98CE\u78E8\u783A\u77F3"
+      effectId: FX_GIVE_20
+      price: 45
+      stock: 1
+      order: 50
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_021
+      shopId: SHOP_001
+      name: "\u5B88\u62A4\u8005\u4E4B\u76FE"
+      effectId: FX_GIVE_21
+      price: 20
+      stock: 1
+      order: 51
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_022
+      shopId: SHOP_001
+      name: "\u8F7B\u7075\u4E4B\u9774"
+      effectId: FX_GIVE_22
+      price: 20
+      stock: 1
+      order: 52
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_023
+      shopId: SHOP_001
+      name: "\u591C\u4E4B\u950B\u5203"
+      effectId: FX_GIVE_23
+      price: 45
+      stock: 1
+      order: 53
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_024
+      shopId: SHOP_001
+      name: "\u518D\u751F\u5760\u9970"
+      effectId: FX_GIVE_24
+      price: 45
+      stock: 1
+      order: 54
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_025
+      shopId: SHOP_001
+      name: "\u6B63\u4E49\u4E4B\u624B"
+      effectId: FX_GIVE_25
+      price: 45
+      stock: 1
+      order: 55
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_026
+      shopId: SHOP_001
+      name: "\u6B7B\u4EA1\u4E4B\u5203"
+      effectId: FX_GIVE_26
+      price: 80
+      stock: 1
+      order: 56
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_027
+      shopId: SHOP_001
+      name: "\u5DE8\u9F99\u4E4B\u722A"
+      effectId: FX_GIVE_27
+      price: 80
+      stock: 1
+      order: 57
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_028
+      shopId: SHOP_001
+      name: "\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      effectId: FX_GIVE_28
+      price: 80
+      stock: 1
+      order: 58
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_029
+      shopId: SHOP_001
+      name: "\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+      effectId: FX_GIVE_29
+      price: 80
+      stock: 1
+      order: 59
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_001_ITEM_030
+      shopId: SHOP_001
+      name: "\u661F\u754C\u8D50\u798F"
+      effectId: FX_GIVE_30
+      price: 80
+      stock: 1
+      order: 60
+      weight: 1
+      isFixed: 0
+  - id: SHOP_002
+    name: "\u76AE\u5C14\u7279\u6C83\u592B\u96C6\u5E02"
+    description: "\u76AE\u5C14\u7279\u6C83\u592B\u5546\u65C5\u5907\u9F50\u88C5\u5907\u4E0E\u7814\u4E60\u5FC3\u5F97\u3002\u9009\u62E9\u9002\u5408\u8FD9\u652F\u961F\u4F0D\u7684\u8D27\u7269\u3002"
+    background: EventCG/tempest
+    offerCount: 9
+    refreshCost: 15
+    refreshIncrease: 5
+    goods:
+    - id: GOOD_EXP2
+      shopId: SHOP_002
+      name: "\u6D77\u514B\u65AF\u7ECF\u9A8C\u5B9D\u5178"
+      effectId: FX_EXP40
+      price: 20
+      stock: 3
+      order: 1
+      weight: 1
+      isFixed: 1
+    - id: GOOD_I2_1
+      shopId: SHOP_002
+      name: "\u5DE8\u4EBA\u8170\u5E26"
+      effectId: FX_ITEM01
+      price: 12
+      stock: 3
+      order: 2
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I2_2
+      shopId: SHOP_002
+      name: "\u6676\u4F53\u62A4\u8155"
+      effectId: FX_ITEM02
+      price: 25
+      stock: 1
+      order: 3
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I2_3
+      shopId: SHOP_002
+      name: "\u66B4\u98CE\u5927\u5251"
+      effectId: FX_ITEM03
+      price: 25
+      stock: 1
+      order: 4
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I2_4
+      shopId: SHOP_002
+      name: "\u53CD\u66F2\u4E4B\u5F13"
+      effectId: FX_ITEM04
+      price: 12
+      stock: 1
+      order: 5
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I2_5
+      shopId: SHOP_002
+      name: "\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+      effectId: FX_ITEM05
+      price: 55
+      stock: 1
+      order: 6
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I2_6
+      shopId: SHOP_002
+      name: "\u9501\u5B50\u7532"
+      effectId: FX_ITEM06
+      price: 25
+      stock: 1
+      order: 7
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_1
+      shopId: SHOP_002
+      name: "\u4E9A\u7D22"
+      effectId: FX_SHOP_H1
+      price: 35
+      stock: 1
+      order: 8
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_2
+      shopId: SHOP_002
+      name: "\u5E03\u9686"
+      effectId: FX_SHOP_H2
+      price: 35
+      stock: 1
+      order: 9
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_5
+      shopId: SHOP_002
+      name: "\u857E\u6B27\u5A1C"
+      effectId: FX_SHOP_H5
+      price: 60
+      stock: 1
+      order: 10
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_6
+      shopId: SHOP_002
+      name: "\u56FE\u5947"
+      effectId: FX_SHOP_H6
+      price: 60
+      stock: 1
+      order: 11
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_9
+      shopId: SHOP_002
+      name: "\u6613"
+      effectId: FX_SHOP_H9
+      price: 95
+      stock: 1
+      order: 12
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H2_10
+      shopId: SHOP_002
+      name: "\u963F\u72F8"
+      effectId: FX_SHOP_H10
+      price: 95
+      stock: 1
+      order: 13
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_007
+      shopId: SHOP_002
+      name: "\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      effectId: FX_ITEM007
+      price: 15
+      stock: 1
+      order: 37
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_008
+      shopId: SHOP_002
+      name: "\u6551\u8D4E"
+      effectId: FX_ITEM008
+      price: 30
+      stock: 1
+      order: 38
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_009
+      shopId: SHOP_002
+      name: "\u996E\u8840\u5251"
+      effectId: FX_ITEM009
+      price: 30
+      stock: 1
+      order: 39
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_010
+      shopId: SHOP_002
+      name: "\u957F\u5251"
+      effectId: FX_ITEM010
+      price: 15
+      stock: 1
+      order: 40
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_011
+      shopId: SHOP_002
+      name: "\u68D8\u523A\u80CC\u5FC3"
+      effectId: FX_ITEM011
+      price: 30
+      stock: 1
+      order: 41
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_012
+      shopId: SHOP_002
+      name: "\u75BE\u5C04\u706B\u70AE"
+      effectId: FX_ITEM012
+      price: 30
+      stock: 1
+      order: 42
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_013
+      shopId: SHOP_002
+      name: "\u72C2\u5F92\u94E0\u7532"
+      effectId: FX_ITEM013
+      price: 65
+      stock: 1
+      order: 43
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_014
+      shopId: SHOP_002
+      name: "\u65E0\u5C3D\u4E4B\u5203"
+      effectId: FX_ITEM014
+      price: 65
+      stock: 1
+      order: 44
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_015
+      shopId: SHOP_002
+      name: "\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+      effectId: FX_ITEM015
+      price: 65
+      stock: 1
+      order: 45
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_016
+      shopId: SHOP_002
+      name: "\u632F\u594B\u76D4\u7532"
+      effectId: FX_ITEM016
+      price: 65
+      stock: 1
+      order: 46
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_017
+      shopId: SHOP_002
+      name: "\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+      effectId: FX_ITEM017
+      price: 65
+      stock: 1
+      order: 47
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I2_018
+      shopId: SHOP_002
+      name: "\u7EA2\u6C34\u6676"
+      effectId: FX_ITEM018
+      price: 15
+      stock: 1
+      order: 48
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_019
+      shopId: SHOP_002
+      name: "\u81EA\u7136\u4E4B\u529B"
+      effectId: FX_GIVE_19
+      price: 85
+      stock: 1
+      order: 49
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_020
+      shopId: SHOP_002
+      name: "\u66B4\u98CE\u78E8\u783A\u77F3"
+      effectId: FX_GIVE_20
+      price: 50
+      stock: 1
+      order: 50
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_021
+      shopId: SHOP_002
+      name: "\u5B88\u62A4\u8005\u4E4B\u76FE"
+      effectId: FX_GIVE_21
+      price: 25
+      stock: 1
+      order: 51
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_022
+      shopId: SHOP_002
+      name: "\u8F7B\u7075\u4E4B\u9774"
+      effectId: FX_GIVE_22
+      price: 25
+      stock: 1
+      order: 52
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_023
+      shopId: SHOP_002
+      name: "\u591C\u4E4B\u950B\u5203"
+      effectId: FX_GIVE_23
+      price: 50
+      stock: 1
+      order: 53
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_024
+      shopId: SHOP_002
+      name: "\u518D\u751F\u5760\u9970"
+      effectId: FX_GIVE_24
+      price: 50
+      stock: 1
+      order: 54
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_025
+      shopId: SHOP_002
+      name: "\u6B63\u4E49\u4E4B\u624B"
+      effectId: FX_GIVE_25
+      price: 50
+      stock: 1
+      order: 55
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_026
+      shopId: SHOP_002
+      name: "\u6B7B\u4EA1\u4E4B\u5203"
+      effectId: FX_GIVE_26
+      price: 85
+      stock: 1
+      order: 56
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_027
+      shopId: SHOP_002
+      name: "\u5DE8\u9F99\u4E4B\u722A"
+      effectId: FX_GIVE_27
+      price: 85
+      stock: 1
+      order: 57
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_028
+      shopId: SHOP_002
+      name: "\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      effectId: FX_GIVE_28
+      price: 85
+      stock: 1
+      order: 58
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_029
+      shopId: SHOP_002
+      name: "\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+      effectId: FX_GIVE_29
+      price: 85
+      stock: 1
+      order: 59
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_002_ITEM_030
+      shopId: SHOP_002
+      name: "\u661F\u754C\u8D50\u798F"
+      effectId: FX_GIVE_30
+      price: 85
+      stock: 1
+      order: 60
+      weight: 1
+      isFixed: 0
+  - id: SHOP_003
+    name: "\u91D1\u94F2\u94F2\u8865\u7ED9\u7AD9"
+    description: "\u82F1\u96C4\u4EEC\u6B63\u5728\u51C6\u5907\u4E0B\u4E00\u6B21\u51FA\u5F81\u3002\u5E26\u9F50\u7269\u8D44\uFF0C\u518D\u53BB\u8FCE\u63A5\u68CB\u76D8\u4E0A\u7684\u6311\u6218\u3002"
+    background: EventCG/tempest
+    offerCount: 9
+    refreshCost: 15
+    refreshIncrease: 5
+    goods:
+    - id: GOOD_EXP3
+      shopId: SHOP_003
+      name: "\u6D77\u514B\u65AF\u7ECF\u9A8C\u5B9D\u5178"
+      effectId: FX_EXP40
+      price: 20
+      stock: 3
+      order: 1
+      weight: 1
+      isFixed: 1
+    - id: GOOD_I3_1
+      shopId: SHOP_003
+      name: "\u5DE8\u4EBA\u8170\u5E26"
+      effectId: FX_ITEM01
+      price: 12
+      stock: 3
+      order: 2
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I3_2
+      shopId: SHOP_003
+      name: "\u6676\u4F53\u62A4\u8155"
+      effectId: FX_ITEM02
+      price: 25
+      stock: 1
+      order: 3
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I3_3
+      shopId: SHOP_003
+      name: "\u66B4\u98CE\u5927\u5251"
+      effectId: FX_ITEM03
+      price: 25
+      stock: 1
+      order: 4
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I3_4
+      shopId: SHOP_003
+      name: "\u53CD\u66F2\u4E4B\u5F13"
+      effectId: FX_ITEM04
+      price: 12
+      stock: 1
+      order: 5
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I3_5
+      shopId: SHOP_003
+      name: "\u9B3C\u7D22\u7684\u72C2\u66B4\u4E4B\u5203"
+      effectId: FX_ITEM05
+      price: 55
+      stock: 1
+      order: 6
+      weight: 1
+      isFixed: 0
+    - id: GOOD_I3_6
+      shopId: SHOP_003
+      name: "\u9501\u5B50\u7532"
+      effectId: FX_ITEM06
+      price: 25
+      stock: 1
+      order: 7
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_1
+      shopId: SHOP_003
+      name: "\u4E9A\u7D22"
+      effectId: FX_SHOP_H1
+      price: 35
+      stock: 1
+      order: 8
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_2
+      shopId: SHOP_003
+      name: "\u5E03\u9686"
+      effectId: FX_SHOP_H2
+      price: 35
+      stock: 1
+      order: 9
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_5
+      shopId: SHOP_003
+      name: "\u857E\u6B27\u5A1C"
+      effectId: FX_SHOP_H5
+      price: 60
+      stock: 1
+      order: 10
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_6
+      shopId: SHOP_003
+      name: "\u56FE\u5947"
+      effectId: FX_SHOP_H6
+      price: 60
+      stock: 1
+      order: 11
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_9
+      shopId: SHOP_003
+      name: "\u6613"
+      effectId: FX_SHOP_H9
+      price: 95
+      stock: 1
+      order: 12
+      weight: 1
+      isFixed: 0
+    - id: GOOD_H3_10
+      shopId: SHOP_003
+      name: "\u963F\u72F8"
+      effectId: FX_SHOP_H10
+      price: 95
+      stock: 1
+      order: 13
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_007
+      shopId: SHOP_003
+      name: "\u94A2\u94C1\u70C8\u9633\u4E4B\u5323"
+      effectId: FX_ITEM007
+      price: 15
+      stock: 1
+      order: 37
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_008
+      shopId: SHOP_003
+      name: "\u6551\u8D4E"
+      effectId: FX_ITEM008
+      price: 30
+      stock: 1
+      order: 38
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_009
+      shopId: SHOP_003
+      name: "\u996E\u8840\u5251"
+      effectId: FX_ITEM009
+      price: 30
+      stock: 1
+      order: 39
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_010
+      shopId: SHOP_003
+      name: "\u957F\u5251"
+      effectId: FX_ITEM010
+      price: 15
+      stock: 1
+      order: 40
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_011
+      shopId: SHOP_003
+      name: "\u68D8\u523A\u80CC\u5FC3"
+      effectId: FX_ITEM011
+      price: 30
+      stock: 1
+      order: 41
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_012
+      shopId: SHOP_003
+      name: "\u75BE\u5C04\u706B\u70AE"
+      effectId: FX_ITEM012
+      price: 30
+      stock: 1
+      order: 42
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_013
+      shopId: SHOP_003
+      name: "\u72C2\u5F92\u94E0\u7532"
+      effectId: FX_ITEM013
+      price: 65
+      stock: 1
+      order: 43
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_014
+      shopId: SHOP_003
+      name: "\u65E0\u5C3D\u4E4B\u5203"
+      effectId: FX_ITEM014
+      price: 65
+      stock: 1
+      order: 44
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_015
+      shopId: SHOP_003
+      name: "\u77F3\u50CF\u9B3C\u77F3\u677F\u7532"
+      effectId: FX_ITEM015
+      price: 65
+      stock: 1
+      order: 45
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_016
+      shopId: SHOP_003
+      name: "\u632F\u594B\u76D4\u7532"
+      effectId: FX_ITEM016
+      price: 65
+      stock: 1
+      order: 46
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_017
+      shopId: SHOP_003
+      name: "\u6D77\u514B\u65AF\u79D1\u6280\u67AA\u5203"
+      effectId: FX_ITEM017
+      price: 65
+      stock: 1
+      order: 47
+      weight: 1
+      isFixed: 0
+    - id: GOOD_EXP_I3_018
+      shopId: SHOP_003
+      name: "\u7EA2\u6C34\u6676"
+      effectId: FX_ITEM018
+      price: 15
+      stock: 1
+      order: 48
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_019
+      shopId: SHOP_003
+      name: "\u81EA\u7136\u4E4B\u529B"
+      effectId: FX_GIVE_19
+      price: 90
+      stock: 1
+      order: 49
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_020
+      shopId: SHOP_003
+      name: "\u66B4\u98CE\u78E8\u783A\u77F3"
+      effectId: FX_GIVE_20
+      price: 55
+      stock: 1
+      order: 50
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_021
+      shopId: SHOP_003
+      name: "\u5B88\u62A4\u8005\u4E4B\u76FE"
+      effectId: FX_GIVE_21
+      price: 30
+      stock: 1
+      order: 51
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_022
+      shopId: SHOP_003
+      name: "\u8F7B\u7075\u4E4B\u9774"
+      effectId: FX_GIVE_22
+      price: 30
+      stock: 1
+      order: 52
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_023
+      shopId: SHOP_003
+      name: "\u591C\u4E4B\u950B\u5203"
+      effectId: FX_GIVE_23
+      price: 55
+      stock: 1
+      order: 53
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_024
+      shopId: SHOP_003
+      name: "\u518D\u751F\u5760\u9970"
+      effectId: FX_GIVE_24
+      price: 55
+      stock: 1
+      order: 54
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_025
+      shopId: SHOP_003
+      name: "\u6B63\u4E49\u4E4B\u624B"
+      effectId: FX_GIVE_25
+      price: 55
+      stock: 1
+      order: 55
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_026
+      shopId: SHOP_003
+      name: "\u6B7B\u4EA1\u4E4B\u5203"
+      effectId: FX_GIVE_26
+      price: 90
+      stock: 1
+      order: 56
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_027
+      shopId: SHOP_003
+      name: "\u5DE8\u9F99\u4E4B\u722A"
+      effectId: FX_GIVE_27
+      price: 90
+      stock: 1
+      order: 57
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_028
+      shopId: SHOP_003
+      name: "\u5723\u76FE\u4F7F\u7684\u8A93\u7EA6"
+      effectId: FX_GIVE_28
+      price: 90
+      stock: 1
+      order: 58
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_029
+      shopId: SHOP_003
+      name: "\u6D77\u514B\u65AF\u8FDE\u51FB\u6838\u5FC3"
+      effectId: FX_GIVE_29
+      price: 90
+      stock: 1
+      order: 59
+      weight: 1
+      isFixed: 0
+    - id: GOOD_SHOP_003_ITEM_030
+      shopId: SHOP_003
+      name: "\u661F\u754C\u8D50\u798F"
+      effectId: FX_GIVE_30
+      price: 90
+      stock: 1
+      order: 60
+      weight: 1
+      isFixed: 0
