@@ -119,3 +119,8 @@ InitTestScene*.unity*
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Personal resumes
+/docx/*简历*
+/docx/*resume*
+/docx/*Resume*
