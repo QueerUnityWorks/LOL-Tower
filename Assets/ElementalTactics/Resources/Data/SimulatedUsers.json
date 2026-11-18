@@ -1,0 +1,184 @@
+{
+    "users": [
+        {
+            "id": "SIM_001",
+            "name": "星海旅人",
+            "commonScore": 17600,
+            "difficulty": 10
+        },
+        {
+            "id": "SIM_002",
+            "name": "林间听风",
+            "commonScore": 16800,
+            "difficulty": 9
+        },
+        {
+            "id": "SIM_003",
+            "name": "黎明守望",
+            "commonScore": 15800,
+            "difficulty": 10
+        },
+        {
+            "id": "SIM_004",
+            "name": "铸星学徒",
+            "commonScore": 16200,
+            "difficulty": 8
+        },
+        {
+            "id": "SIM_005",
+            "name": "雾中归客",
+            "commonScore": 15000,
+            "difficulty": 8
+        },
+        {
+            "id": "SIM_006",
+            "name": "剑与微光",
+            "commonScore": 14200,
+            "difficulty": 7
+        },
+        {
+            "id": "SIM_007",
+            "name": "月下拾光",
+            "commonScore": 13800,
+            "difficulty": 7
+        },
+        {
+            "id": "SIM_008",
+            "name": "云上弈士",
+            "commonScore": 13400,
+            "difficulty": 6
+        },
+        {
+            "id": "SIM_009",
+            "name": "远山来信",
+            "commonScore": 12800,
+            "difficulty": 6
+        },
+        {
+            "id": "SIM_010",
+            "name": "不眠之森",
+            "commonScore": 12000,
+            "difficulty": 5
+        },
+        {
+            "id": "SIM_011",
+            "name": "破晓之刃",
+            "commonScore": 11600,
+            "difficulty": 5
+        },
+        {
+            "id": "SIM_012",
+            "name": "白露",
+            "commonScore": 11000,
+            "difficulty": 4
+        },
+        {
+            "id": "SIM_013",
+            "name": "橘子汽水",
+            "commonScore": 10400,
+            "difficulty": 4
+        },
+        {
+            "id": "SIM_014",
+            "name": "静水流深",
+            "commonScore": 9800,
+            "difficulty": 4
+        },
+        {
+            "id": "SIM_015",
+            "name": "长夜星灯",
+            "commonScore": 9200,
+            "difficulty": 3
+        },
+        {
+            "id": "SIM_016",
+            "name": "草木有灵",
+            "commonScore": 8600,
+            "difficulty": 3
+        },
+        {
+            "id": "SIM_017",
+            "name": "青石小路",
+            "commonScore": 8000,
+            "difficulty": 3
+        },
+        {
+            "id": "SIM_018",
+            "name": "风起艾欧尼亚",
+            "commonScore": 7400,
+            "difficulty": 2
+        },
+        {
+            "id": "SIM_019",
+            "name": "火花",
+            "commonScore": 6800,
+            "difficulty": 2
+        },
+        {
+            "id": "SIM_020",
+            "name": "晚风轻语",
+            "commonScore": 6200,
+            "difficulty": 2
+        },
+        {
+            "id": "SIM_021",
+            "name": "追云的人",
+            "commonScore": 5600,
+            "difficulty": 2
+        },
+        {
+            "id": "SIM_022",
+            "name": "一颗薄荷",
+            "commonScore": 5000,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_023",
+            "name": "纸飞机",
+            "commonScore": 4400,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_024",
+            "name": "路过的盾卫",
+            "commonScore": 3800,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_025",
+            "name": "小小射手",
+            "commonScore": 3200,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_026",
+            "name": "森林散步",
+            "commonScore": 2600,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_027",
+            "name": "初晴",
+            "commonScore": 2000,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_028",
+            "name": "慢慢来",
+            "commonScore": 1400,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_029",
+            "name": "新来的伙伴",
+            "commonScore": 800,
+            "difficulty": 1
+        },
+        {
+            "id": "SIM_030",
+            "name": "今天也出发",
+            "commonScore": 200,
+            "difficulty": 1
+        }
+    ]
+}

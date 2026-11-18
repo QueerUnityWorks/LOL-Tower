@@ -52,7 +52,13 @@ namespace ElementalTactics
                 body.rectTransform.sizeDelta = new Vector2(670, bodyHeight);
                 body.rectTransform.anchoredPosition = new Vector2(0, height / 2 - 36 - titleHeight - bodyHeight / 2);
                 button.interactable = allowed;
-                button.onClick.AddListener(() => { if (RunState.ChooseEvent(option.id)) ReturnMap(); });
+                button.onClick.AddListener(() =>
+                {
+                    int previousLevel = Progression.Level;
+                    if (!RunState.ChooseEvent(option.id)) { GameAudio.Play(SoundCue.Error); return; }
+                    GameAudio.PlayReward(effects, previousLevel, SoundCue.Confirm);
+                    ReturnMap();
+                });
                 top += height + 18;
             }
             scroll.content.sizeDelta = new Vector2(766, Mathf.Max(scroll.viewport.rect.height, top + 10));
@@ -61,6 +67,7 @@ namespace ElementalTactics
         }
         public static void OpenShop(Transform parent)
         {
+            GameAudio.PlayMusic(MusicTrack.Home);
             int nodeId = MapRun.Pending;
             var shop = GameContent.Shops.Get(MapRun.Nodes[nodeId].Definition.contentId);
             var root = Shell(parent, "Shop Encounter", shop.name, "旅途补给 / 商店");
@@ -107,6 +114,7 @@ namespace ElementalTactics
                 var state = JourneyPresentation.Label("Selection State", button.transform, "点击选择", new Vector2(274, upper - 42), new Vector2(146, 34), 20, MapPresentation.Gold, true, TextAnchor.MiddleRight);
                 buttons.Add(button); states.Add(state);
                 int candidate = index;
+                UiAudioFeedback.Bind(button, SoundCue.CardSelect);
                 button.onClick.AddListener(() => { if (!selected.Remove(candidate) && selected.Count < reward.ChooseCount) selected.Add(candidate); RefreshReward(reward, selected, buttons, states, hint); });
                 top += rowHeight + 18;
             }
@@ -114,7 +122,26 @@ namespace ElementalTactics
             scroll.content.sizeDelta = new Vector2(766, Mathf.Max(scroll.viewport.rect.height, top + 8));
             InventoryPresentation.Top(scroll);
             RefreshReward(reward, selected, buttons, states, hint);
-            JourneyPresentation.Button("Claim Rewards", root, "确认领取  ›", new Vector2(0, -618), new Vector2(810, 82), () => { if (RewardFlow.Claim(selected)) ReturnMap(); }, true);
+            JourneyPresentation.Button("Claim Rewards", root, "确认领取  ›", new Vector2(0, -618), new Vector2(810, 82), () =>
+            {
+                int previousFloor = MapRun.CurrentFloor;
+                int previousLevel = Progression.Level;
+                var effects = selected.Select(index => reward.Candidates[index]).ToArray();
+                if (!RewardFlow.Claim(selected)) { GameAudio.Play(SoundCue.Error); return; }
+                if (MapRun.CurrentFloor > previousFloor) GameAudio.Play(SoundCue.NodeUnlock);
+                else GameAudio.PlayReward(effects, previousLevel);
+                if (MapRun.Finished && !TutorialRun.Active)
+                {
+                    AdventurePersistence.SaveNow();
+                    if (SettlementController.TryOpen(parent))
+                    {
+                        root.gameObject.SetActive(false);
+                        Object.Destroy(root.gameObject);
+                        return;
+                    }
+                }
+                ReturnMap();
+            }, true);
         }
         private static void RefreshReward(PendingReward reward, HashSet<int> selected, List<Button> buttons, List<Text> states, Text hint)
         {

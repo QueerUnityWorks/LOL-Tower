@@ -7,7 +7,7 @@ namespace ElementalTactics
     public sealed class FormationPresentation
     {
         private readonly FormationController owner;
-        private readonly Text reserveCount, ready, classification;
+        private readonly Text reserveCount, ready, classification, selectionTitle, selectionHint, skillHeading;
         private readonly GameObject prompt, emptyReserve;
         private readonly ResourceArtwork portrait;
         private readonly ScrollRect skillScroll;
@@ -102,8 +102,8 @@ namespace ElementalTactics
             MapPresentation.Panel("Formation Selection Panel",visual,540,295,988,128,PrototypeUI.Hex("102737"),PrototypeUI.Hex("536875"));
             var intro=PrototypeUI.Rect("Formation Selection Intro",visual,Vector2.zero,new Vector2(900,1600));prompt=intro.gameObject;
             MapPresentation.At("Selection Role Icon",intro,"role",102,291,53,53,MapPresentation.Cyan);
-            Label(intro,"Selection Intro Title","选择伙伴，安排前后排",567,276,832,42,29,MapPresentation.Ivory,true);
-            Label(intro,"Selection Intro Hint","点击候补再点阵位，或长按卡片拖入；已上阵角色可交换位置。",567,322,832,32,20,MapPresentation.Muted);
+            selectionTitle=Label(intro,"Selection Intro Title","选择伙伴，安排前后排",567,276,832,42,29,MapPresentation.Ivory,true);
+            selectionHint=Label(intro,"Selection Intro Hint","点击候补再点阵位，或长按卡片拖入；已上阵角色可交换位置。",567,322,832,32,20,MapPresentation.Muted);
             MapPresentation.Panel("Formation Board",visual,540,717,1008,672,InventoryPresentation.Surface,PrototypeUI.Hex("506772"));
             Label(visual,"Formation Board Title","我方阵形",243,417,354,42,27,MapPresentation.Gold,true);
             Label(visual,"Formation Board Hint","六个阵位 · 长按拖动调整",800,417,416,32,20,MapPresentation.Muted,false,TextAnchor.MiddleRight);
@@ -140,35 +140,38 @@ namespace ElementalTactics
             emptyReserve=Label(visual,"Formation Empty Reserve","暂无候补伙伴 · 已拥有的角色均已上阵",540,1350,870,70,25,MapPresentation.Muted,false,TextAnchor.MiddleCenter).gameObject;
             emptyReserve.transform.SetParent(scroll.viewport,false);
             Place(emptyReserve.transform,Vector2.zero,S(870,70));
-            // Keep the original detail bindings but move them into the compact strip.
             Place(owner.informationWindow.transform,Vector2.zero,new Vector2(900,1600));
             owner.informationWindow.GetComponent<Image>().enabled=false;
             foreach(string name in new[]{"Top Border","Bottom Border","Left Border","Right Border","Detail Element Accent","Detail Role Emblem"})Hide(owner.informationWindow.transform,name);
             Transform detail=owner.informationWindow.transform;
-            MapPresentation.Panel("Formation Detail Panel",detail,540,295,988,128,PrototypeUI.Hex("102737"),PrototypeUI.Hex("536875"));
-            InventoryPresentation.ArtworkFrame("Formation Portrait Frame",detail,P(96,294.5f),S(72,105),MapPresentation.Gold);
-            portrait=ResourceArtwork.Create(detail,"Formation Selected Portrait",null,P(96,294.5f),S(66,99),true);
-            TextStyle(owner.informationTitle,218,260,136,40,30,MapPresentation.Ivory,TextAnchor.MiddleLeft,true);
-            classification=Label(detail,"Formation Selected Classification","",563,264,544,31,20,MapPresentation.Muted);
-            TextStyle(owner.informationStats,506,296,712,30,20,MapPresentation.Ivory);
+            PrototypeUI.Panel("Formation Detail Shadow",detail,P(540,1374),S(1028,632),new Color(0,0,0,.45f));
+            var sheet=MapPresentation.Panel("Formation Detail Panel",detail,540,1368,1008,620,PrototypeUI.Hex("102737"),MapPresentation.Gold);
+            sheet.raycastTarget=true;
+            MapPresentation.Rule("Formation Detail Accent",detail,540,1070,94,3,MapPresentation.Gold);
+            Label(detail,"Formation Detail Heading","伙伴详情",225,1102,316,38,25,MapPresentation.Gold,true);
+            InventoryPresentation.ArtworkFrame("Formation Portrait Frame",detail,P(155,1238),S(146,212),MapPresentation.Gold);
+            portrait=ResourceArtwork.Create(detail,"Formation Selected Portrait",null,P(155,1238),S(140,206),true);
+            TextStyle(owner.informationTitle,568,1170,614,56,36,MapPresentation.Ivory,TextAnchor.MiddleLeft,true);
+            classification=Label(detail,"Formation Selected Classification","",622,1220,722,36,23,MapPresentation.Cyan);
+            TextStyle(owner.informationStats,622,1291,722,94,25,MapPresentation.Ivory);
+            MapPresentation.Rule("Formation Skill Divider",detail,540,1364,924,1,PrototypeUI.Hex("3F5661"));
+            skillHeading=Label(detail,"Formation Skill Heading","技能介绍",540,1400,924,42,25,MapPresentation.Gold,true);
             owner.informationSkill.gameObject.SetActive(false);
-            owner.informationSkill=InventoryPresentation.Description("Formation Selected Skill",detail,P(504,331),S(720,42),out skillScroll);
-            owner.informationSkill.fontSize=15;
-            // Compact strip has no inset: keep a complete text line inside the mask.
-            skillScroll.GetComponent<Image>().color=Color.clear;Hide(skillScroll.transform,"Frame");
-            skillScroll.viewport.anchoredPosition=new Vector2(-6,0);
-            skillScroll.viewport.sizeDelta=new Vector2(588,35);
-            skillScroll.content.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,588);
-            owner.informationSkill.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,580);
-            owner.informationSkill.rectTransform.anchoredPosition=Vector2.zero;
-            Place(skillScroll.verticalScrollbar.transform,new Vector2(294,0),new Vector2(3,29));
-            StyleButton(owner.removeButton,P(944,273.5f),S(128,45),"撤下",19);
-            StyleButton(owner.closeInformationButton,P(944,328),S(150,32),"× 取消选择",15);
-            owner.closeInformationButton.image.color=Color.clear;Hide(owner.closeInformationButton.transform,"Formation Button Frame");
-            owner.closeInformationButton.GetComponentInChildren<Text>().color=MapPresentation.Muted;
+            owner.informationSkill=InventoryPresentation.Description("Formation Selected Skill",detail,P(540,1502),S(924,142),out skillScroll);
+            owner.informationSkill.fontSize=20;
+            owner.informationSkill.color=MapPresentation.Ivory;
+            StyleButton(owner.removeButton,P(814,1625),S(436,64),"撤下伙伴",23);
+            StyleButton(owner.closeInformationButton,P(938,1102),S(150,50),"收起  ×",21);
+            var cancel=JourneyPresentation.Button("Cancel Formation Selection",detail,"取消选择",P(266,1625),S(436,64),owner.ClearSelection);
+            cancel.GetComponentInChildren<Text>().fontSize=20;
             foreach(var t in new[]{owner.informationTitle.transform,owner.informationStats.transform,owner.removeButton.transform,owner.closeInformationButton.transform})t.SetAsLastSibling();
             TextStyle(owner.teamCount,887,119,242,38,23,MapPresentation.Cyan,TextAnchor.MiddleRight,true);
             TextStyle(owner.hint,540,1625,970,62,22,MapPresentation.Muted,TextAnchor.MiddleCenter);
+            if(DailyChallengeState.IsDailyRun)
+            {
+                owner.hint.gameObject.SetActive(false);
+                DailyTaskProgressUI.Build(root,P(540,1640),S(988,84),true);
+            }
             StyleButton(owner.battle.backButton,P(938.5f,53.5f),S(207,57),"← 返回地图",21);
             StyleButton(owner.enemyButton,P(938.5f,169.5f),S(207,49),"敌方情报  ›",19);
             StyleButton(owner.battle.startButton,new Vector2(0,-649),new Vector2(412,76),"开始战斗    →",27,true);
@@ -183,7 +186,9 @@ namespace ElementalTactics
         public void Refresh()
         {
             bool chosen=owner.SelectedIndex>=0&&owner.SelectedIndex<owner.availableRoster.Count;
-            owner.informationWindow.SetActive(chosen);prompt.SetActive(!chosen);
+            owner.informationWindow.SetActive(chosen&&owner.InformationOpen);prompt.SetActive(true);
+            selectionTitle.text=chosen?"已选择「"+owner.availableRoster[owner.SelectedIndex].displayName+"」":"选择伙伴，安排前后排";
+            selectionHint.text=chosen?"点击上方阵位可上阵或换位；点击角色卡片可再次查看详情。":"点击候补再点阵位，或长按卡片拖入；已上阵角色可交换位置。";
             int count=owner.availableRoster.Count-owner.State.Count;
             reserveCount.text=count==0?"0 名":count+" 名 · 上下滑动查看";emptyReserve.SetActive(count==0);
             owner.teamCount.text="出战队伍  "+owner.State.Count+" / 6";
@@ -192,15 +197,14 @@ namespace ElementalTactics
             if(!chosen)return;
             var unit=owner.availableRoster[owner.SelectedIndex];int slot=owner.State.FindSlot(owner.SelectedIndex);
             owner.informationTitle.text=unit.displayName;
-            classification.text=unit.RoleName+" · "+unit.ElementName+" · "+(slot<0?"候补":(slot<3?"前排":"后排")+new[]{"左","中","右"}[slot%3]);
-            owner.informationStats.text="生命 "+unit.maxHealth+"   攻击 "+unit.attack+"   防御 "+unit.defense+"   速度 "+unit.speed;
+            classification.text=RarityRules.Name(unit.rarity)+" · "+unit.RoleName+" · "+unit.ElementName+"属性 · "+(slot<0?"候补":(slot<3?"前排":"后排")+new[]{"左","中","右"}[slot%3]);
+            owner.informationStats.text="生命  "+unit.maxHealth+"       攻击  "+unit.attack+"\n防御  "+unit.defense+"        速度  "+unit.speed;
             string path="CardPortraits/"+unit.imagePath;
             portrait.SetPath(!string.IsNullOrEmpty(unit.imagePath)&&Resources.Load<Texture2D>(path)!=null?path:unit.imagePath);
-            owner.informationSkill.text=unit.SkillName+"："+unit.SkillDescription+(unit.doubleAttack?"\n道具加成：普攻二连击，每次行动仅获得1点技力。":"");
-            float skillHeight=Mathf.Max(skillScroll.viewport.rect.height,owner.informationSkill.preferredHeight+2);
-            owner.informationSkill.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,skillHeight);
-            skillScroll.content.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,skillHeight);
-            InventoryPresentation.Top(skillScroll);
+            skillHeading.text="技能介绍 · "+unit.SkillName;
+            string description="消耗 "+CombatRules.SkillEnergyCost+" 点技力，战斗中自动释放。\n"+unit.SkillDescription
+                +(unit.doubleAttack?"\n道具加成：普攻二连击，每次行动仅获得1点技力。":"");
+            InventoryPresentation.SetDescription(owner.informationSkill,skillScroll,description);
         }
         private void StyleScout()
         {

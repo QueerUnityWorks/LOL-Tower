@@ -43,6 +43,7 @@ namespace ElementalTactics
             if (IsDefeated || nodeId < 0 || nodeId != MapRun.Pending || RewardFlow.Pending != null
                 || MapRun.Nodes[nodeId].Definition.type != NodeKind.Battle || MapRun.IsCleared(nodeId)) return false;
             Lives--;
+            DailyChallengeState.ObserveRoster();
             AdventureRun.FinishIfNeeded();
             return true;
         }
@@ -113,6 +114,7 @@ namespace ElementalTactics
                     InventoryState.TryAdd(item.id, item.name, item.description, effect.amount);
                 }
             }
+            DailyChallengeState.ObserveRoster();
             return true;
         }
         public static EffectRecord[] Effects(EventOptionRecord option) => option.effectIds.Select(id => GameContent.Effects.Get(id)).ToArray();

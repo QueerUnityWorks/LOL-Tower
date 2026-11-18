@@ -19,6 +19,7 @@ namespace ElementalTactics
         private void Start()
         {
             PrototypeUI.font = hubFont;
+            root.Find("Profile Caption").GetComponent<Text>().text = "弈士 · " + LeaderboardState.PlayerName;
             var profile = root.Find("Profile Frame/Profile Rimuru");
             if (profile != null) profile.GetComponent<ResourceArtwork>().SetPath(GameContent.Characters.Get("HERO_001").imagePath);
             codex = gameObject.AddComponent<CodexUI>();
@@ -34,7 +35,10 @@ namespace ElementalTactics
             achievements.onClick.AddListener(panels.OpenAchievements);
             settings.onClick.AddListener(panels.OpenSettings);
             back.onClick.AddListener(() => { if (!loading) { loading = true; SceneManager.LoadSceneAsync("StartScene"); } });
+            HomeQuickEntryPresentation.Build(root, false, panels.OpenLeaderboard);
+            HomeQuickEntryPresentation.Build(root, true, panels.OpenDailyChallenge);
             TutorialGuide.BuildHomeEntry(root);
+            SettlementController.TryOpen(root);
         }
         public void StartAdventure()
         {
@@ -73,7 +77,7 @@ namespace ElementalTactics
             var portrait=PrototypeUI.Panel("Profile Frame",root,new Vector2(-348,711),new Vector2(112,112),Gold);
             PrototypeUI.Panel("Profile Inset",portrait.transform,Vector2.zero,new Vector2(104,104),PrototypeUI.Hex("284668"));
             ResourceArtwork.Create(portrait.transform,"Profile Rimuru",GameContent.Characters.Get("HERO_001").imagePath,new Vector2(0,-3),new Vector2(104,82));
-            Label("Profile Caption",root,"弈 士 · 亚 索",-96,747,340,34,20,Gold,TextAnchor.MiddleLeft);
+            Label("Profile Caption",root,"弈士 · " + LeaderboardState.PlayerName,-96,747,340,34,20,Gold,TextAnchor.MiddleLeft);
             Label("Home Title",root,"金铲铲之战",-65,699,400,58,38,Cream,TextAnchor.MiddleLeft);
             Label("Home Subtitle",root,"艾欧尼亚林地的冒险，从这里启程",-65,654,400,30,17,PrototypeUI.Hex("BDCBE3"),TextAnchor.MiddleLeft);
             back=GoldButton("Return Title",root,"返回\n标题",new Vector2(351,716),new Vector2(108,92));
@@ -92,6 +96,7 @@ namespace ElementalTactics
             var fan=Art(root,"Start Adventure",MainHubArt.Motif.AdventureFan,new Vector2(290,-640),new Vector2(320,320),PrototypeUI.Hex("AF7E38"));
             fan.raycastTarget=true;
             adventure=fan.gameObject.AddComponent<Button>(); adventure.targetGraphic=fan;
+            UiAudioFeedback.Bind(adventure, SoundCue.Confirm);
             Art(fan.transform,"Adventure Compass",MainHubArt.Motif.Compass,new Vector2(24,31),new Vector2(48,48),Cream);
             Label("Adventure Caption",fan.transform,"开始冒险",24,-24,186,46,29,Cream);
             Label("Adventure Note",fan.transform,"踏上全新旅途",24,-69,178,26,16,Cream);
@@ -110,6 +115,7 @@ namespace ElementalTactics
             var hit=PrototypeUI.Panel(name,root,position,size,Color.clear);
             hit.raycastTarget=true;
             var button=hit.gameObject.AddComponent<Button>(); button.targetGraphic=hit;
+            UiAudioFeedback.Bind(button, SoundCue.None);
             var area=hit.gameObject.AddComponent<HomeTowerHitArea>();
             area.tower=new Rect(-towerWidth/2,baseY-position.y,towerWidth,towerHeight);
             area.plaque=new Rect(-27,plaquePosition.y-position.y-plaqueHeight/2,54,plaqueHeight);

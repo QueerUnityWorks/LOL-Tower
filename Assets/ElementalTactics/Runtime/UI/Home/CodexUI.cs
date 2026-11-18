@@ -27,6 +27,7 @@ namespace ElementalTactics
             overlay.gameObject.SetActive(true);
             overlay.SetAsLastSibling();
             SelectCategory(tab);
+            GameAudio.Play(SoundCue.CodexPage);
         }
 
         public void Close()
@@ -35,6 +36,7 @@ namespace ElementalTactics
             search.DeactivateInputField();
             grid.StopMovement();
             overlay.gameObject.SetActive(false);
+            GameAudio.Play(SoundCue.PanelClose);
         }
 
         private void CloseDetail()
@@ -66,6 +68,7 @@ namespace ElementalTactics
             var image = Panel(name, root, pos, size, InventoryPresentation.Surface, MapPresentation.Gold);
             image.raycastTarget = true;
             var button = image.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button, name.StartsWith("Close") ? SoundCue.PanelClose : SoundCue.CodexPage);
             button.targetGraphic = image;
             var label = Label("Label", image.transform, caption, Vector2.zero, size - new Vector2(18, 8),
                 fontSize, MapPresentation.Ivory, TextAnchor.MiddleCenter, true);
@@ -197,6 +200,7 @@ namespace ElementalTactics
             TopAnchor(image.rectTransform);
             image.raycastTarget = true;
             var button = image.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button, SoundCue.CardSelect);
             button.targetGraphic = image;
             return button;
         }

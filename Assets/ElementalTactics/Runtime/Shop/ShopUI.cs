@@ -56,7 +56,13 @@ namespace ElementalTactics
                     height = Mathf.Max(height, 84 + detailHeight + 86 + 206);
                     int stock = ShopRun.Stock(nodeId, good); bool capped = experience && Progression.IsMaxLevel;
                     var buy = JourneyPresentation.Button("Buy " + good.id, card.transform, capped ? "已满级" : stock <= 0 ? "售罄" : good.price + " 金币 · 剩" + stock, Vector2.zero, new Vector2(214, 54),
-                        () => { if (ShopRun.Buy(good.id)) Rebuild(); }, true);
+                        () =>
+                        {
+                            int previousLevel = Progression.Level;
+                            if (!ShopRun.Buy(good.id)) { GameAudio.Play(SoundCue.Error); return; }
+                            GameAudio.PlayReward(new[] { effect }, previousLevel, SoundCue.Purchase);
+                            Rebuild();
+                        }, true);
                     buy.interactable = !capped && stock > 0 && RunState.CanApply(new[] { effect }, good.price);
                     cards.Add(card.rectTransform); buys.Add(buy);
                 }

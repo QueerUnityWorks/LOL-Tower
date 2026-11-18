@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 namespace ElementalTactics
 {
-    // Settings currently exposes help and fixed defaults. Unimplemented controls are clearly marked.
     public static class SettingsPresentation
     {
         private static Text Label(string name, Transform root, string value, Vector2 pos, Vector2 size,
@@ -24,6 +23,7 @@ namespace ElementalTactics
             var panel = Panel(name, root, pos, size, primary ? PrototypeUI.Hex("CFAD70") : InventoryPresentation.Surface, MapPresentation.Gold);
             panel.raycastTarget = true;
             var button = panel.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button);
             button.targetGraphic = panel;
             button.onClick.AddListener(() => click());
             var label = Label("Label", panel.transform, caption, Vector2.zero, size - new Vector2(24, 8), 24,
@@ -58,12 +58,36 @@ namespace ElementalTactics
             Label("Status", tag.transform, "暂未开放", Vector2.zero, new Vector2(116, 30), 17, MapPresentation.Muted, false, TextAnchor.MiddleCenter);
         }
 
-        private static void SoundRow(Transform parent, string title, float y)
+        private static void SoundRow(Transform parent, string title, float y, bool music)
         {
             Label(title + " Caption", parent, title, new Vector2(-170, y + 24), new Vector2(370, 40), 24, MapPresentation.Ivory);
-            Unavailable(parent, title + " Status", new Vector2(291, y + 24));
-            // An unfilled track communicates unavailable audio without implying a saved volume.
-            PrototypeUI.Panel(title + " Track", parent, new Vector2(0, y - 26), new Vector2(706, 5), PrototypeUI.Hex("314A59"));
+            float volume = music ? GameAudio.MusicVolume : GameAudio.EffectsVolume;
+            var value = Label(title + " Value", parent, Mathf.RoundToInt(volume * 100) + "%", new Vector2(291, y + 24), new Vector2(124, 36), 22, MapPresentation.Cyan, false, TextAnchor.MiddleRight);
+            var control = PrototypeUI.Panel(music ? "Music Volume" : "Effects Volume", parent, new Vector2(0, y - 26), new Vector2(706, 48), Color.clear);
+            control.raycastTarget = true;
+            PrototypeUI.Panel("Track", control.transform, Vector2.zero, new Vector2(680, 6), PrototypeUI.Hex("314A59"));
+            var fillArea = PrototypeUI.Rect("Fill Area", control.transform, Vector2.zero, new Vector2(680, 6));
+            var fill = PrototypeUI.Panel("Fill", fillArea, Vector2.zero, Vector2.zero, MapPresentation.Gold);
+            fill.rectTransform.anchorMin = Vector2.zero;
+            fill.rectTransform.anchorMax = Vector2.one;
+            fill.rectTransform.offsetMin = fill.rectTransform.offsetMax = Vector2.zero;
+            var handleArea = PrototypeUI.Rect("Handle Area", control.transform, Vector2.zero, new Vector2(680, 34));
+            var handle = PrototypeUI.Panel("Handle", handleArea, Vector2.zero, new Vector2(26, 0), MapPresentation.Ivory);
+            handle.raycastTarget = true;
+            var slider = control.gameObject.AddComponent<Slider>();
+            slider.minValue = 0;
+            slider.maxValue = 1;
+            slider.wholeNumbers = false;
+            slider.fillRect = fill.rectTransform;
+            slider.handleRect = handle.rectTransform;
+            slider.targetGraphic = handle;
+            slider.SetValueWithoutNotify(volume);
+            slider.onValueChanged.AddListener(amount =>
+            {
+                if (music) GameAudio.MusicVolume = amount;
+                else GameAudio.EffectsVolume = amount;
+                value.text = Mathf.RoundToInt(amount * 100) + "%";
+            });
         }
 
         public static RectTransform BuildSettings(RectTransform root, Action close, Action instructions)
@@ -71,8 +95,8 @@ namespace ElementalTactics
             var overlay = Shell(root, "Settings Overlay", "冒险设置", "声音、画面与操作说明", close, out var paper);
             Panel("Sound Panel", paper, new Vector2(0, 350), new Vector2(780, 332), InventoryPresentation.Surface, InventoryPresentation.Border);
             Section(paper, "Sound", "声音", "01", 470);
-            SoundRow(paper, "背景音乐", 382);
-            SoundRow(paper, "游戏音效", 270);
+            SoundRow(paper, "背景音乐", 382, true);
+            SoundRow(paper, "游戏音效", 270, false);
 
             Panel("Display Panel", paper, new Vector2(0, -41), new Vector2(780, 398), InventoryPresentation.Surface, InventoryPresentation.Border);
             Section(paper, "Display", "画面与操作", "02", 110);
@@ -91,7 +115,7 @@ namespace ElementalTactics
             Label("Help Title", help.transform, "玩法说明", new Vector2(-46, 32), new Vector2(610, 46), 27, MapPresentation.Gold, true);
             Label("Help Hint", help.transform, "布阵与索敌、属性克制、探索与进度保存", new Vector2(-46, -26), new Vector2(610, 38), 20, MapPresentation.Muted);
             Label("Help Arrow", help.transform, "›", new Vector2(336, 0), new Vector2(48, 64), 40, MapPresentation.Gold, false, TextAnchor.MiddleCenter);
-            Label("Settings Availability", paper, "声音、画质与特效开关暂未开放", new Vector2(0, -472), new Vector2(780, 40), 18, MapPresentation.Muted, false, TextAnchor.MiddleCenter);
+            Label("Settings Availability", paper, "音量自动保存，拖到 0% 可静音\n画质与特效开关暂未开放", new Vector2(0, -480), new Vector2(780, 60), 18, MapPresentation.Muted, false, TextAnchor.MiddleCenter);
             Button("Done", paper, "完成", new Vector2(0, -568), new Vector2(780, 78), close, true);
             Label("Footer", paper, "金铲铲之战 / 符文远征", new Vector2(0, -665), new Vector2(780, 32), 17, MapPresentation.Dim, false, TextAnchor.MiddleCenter);
             return overlay;

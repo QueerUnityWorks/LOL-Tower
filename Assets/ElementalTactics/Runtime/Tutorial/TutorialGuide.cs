@@ -30,10 +30,7 @@ namespace ElementalTactics
 
         public static void BuildHomeEntry(RectTransform parent)
         {
-            var button = MainHubController.GoldButton("Tutorial Entry", parent,
-                TutorialRun.Active ? "继续新手教程" : "新手教程", new Vector2(290, 558), new Vector2(232, 58));
-            button.GetComponentInChildren<Text>().fontSize = 22;
-            button.onClick.AddListener(() => {
+            HomeQuickEntryPresentation.BuildTutorial(parent, () => {
                 if (TutorialRun.Active) OpenTraining();
                 else { TutorialRun.Replay(); AdventurePersistence.SaveNow(); }
             });
@@ -165,7 +162,7 @@ namespace ElementalTactics
                 return Unseen("prep.stats", "四项基础属性", "生命：能够承受多少伤害。\n攻击：影响输出；防御：降低受到的伤害。\n速度：决定每回合行动的先后顺序。", formation.informationStats.name)
                     ?? Unseen("prep.element", "属性克制与职业", "火克草、草克水、水克火。克制伤害×1.25，被克制时×0.8。战士、法师、盾卫和射手各有不同技能与职责。", formation.informationTitle.name)
                     ?? Unseen("prep.skill", "技能与被动加成", "这里写明伙伴的技能及状态效果。技能由技力驱动，在战斗中自动释放；道具加成在进入布阵时应用。", formation.informationSkill.name)
-                    ?? new Step("prep.close", "返回布阵", "点击关闭按钮，继续认识阵位与敌方情报。", formation.closeInformationButton.name, true);
+                    ?? new Step("prep.close", "返回布阵", "点击“收起”关闭详情，继续认识阵位与敌方情报。", formation.closeInformationButton.name, true);
             var arrange = Unseen("prep.formation", "前排、后排与候补", "敌人通常优先攻击前排。点击候补再点阵位可上阵；点击已上阵伙伴再点其他阵位可移动或交换。长按拖动也可以布阵。", formation.slotCards[0].name);
             if (arrange != null) return arrange;
             if (!TutorialRun.HasSeen("prep.enemy"))

@@ -49,6 +49,7 @@ namespace ElementalTactics
         private Text roundNoticeText;
         private BattleHud hud;
         private BattlePresentation presentation;
+        private BattleAudio battleAudio;
         private BattleFighterDetails fighterDetails;
         public string PresentationStage => presentation == null ? "Idle" : presentation.Stage;
         public float PresentationProgress => presentation == null ? 0 : presentation.Progress;
@@ -79,6 +80,7 @@ namespace ElementalTactics
                     ? GameContent.EnemyLineup(MapRun.Nodes[mapNodeId]) : GameContent.EnemyLineup(GameContent.Battles.Get(battleId));
             }
             startButton.onClick.AddListener(StartBattle);
+            UiAudioFeedback.Bind(startButton, SoundCue.None);
             resetButton.onClick.AddListener(ResetFormation);
             backButton.onClick.AddListener(OpenMap);
             speedButton.onClick.AddListener(ToggleSpeed);
@@ -170,7 +172,15 @@ namespace ElementalTactics
                 return;
             }
             IsBattling = true;
+            if (DailyChallengeState.IsDailyRun)
+            {
+                DailyChallengeState.BattleStarted(mapNodeId, playerLineup);
+                AdventurePersistence.SaveNow();
+            }
             IsPaused = false;
+            battleAudio = new BattleAudio();
+            bool boss = mapNodeId >= 0 && MapRun.Nodes[mapNodeId].Definition.isFinal;
+            GameAudio.BeginBattle(this, boss);
             selectedSlot = -1;
             startButton.interactable = false;
             resetButton.interactable = false;
@@ -227,6 +237,7 @@ namespace ElementalTactics
             // Battle cards are separate from formation cards. Replace only their battle click handlers.
             view.button.onClick.RemoveAllListeners();
             view.button.onClick.AddListener(() => InspectFighter(fighter));
+            UiAudioFeedback.Bind(view.button, SoundCue.CardSelect);
             view.button.interactable = true;
             view.Show(definition, fighter);
             if (fighter.shield > 0) AddLog(definition.displayName + "：开战护盾 +" + fighter.shield);
@@ -258,6 +269,7 @@ namespace ElementalTactics
             Outcome = playerAlive && !enemyAlive ? "胜利" : !playerAlive && enemyAlive ? "失败" : "平局";
             Finished = true;
             if (fighterDetails != null) fighterDetails.Close();
+            int previousLevel = Progression.Level;
             if (Outcome == "胜利") RewardFlow.Victory(mapNodeId);
             else if (Outcome == "失败")
             {
@@ -267,7 +279,13 @@ namespace ElementalTactics
             }
             IsBattling = false;
             IsPaused = false;
+            GameAudio.EndBattle(Outcome == "胜利", Progression.Level > previousLevel);
             hud.Finish();
+            if (RunState.IsDefeated && !TutorialRun.Active && SettlementController.TryOpen(FindObjectOfType<PortraitLayout>().content))
+            {
+                resultPanel.SetActive(false);
+                yield break;
+            }
             AddLog("战斗结束：" + Outcome);
             phaseLabel.text = "战斗结束";
             actionLabel.text = Outcome;
@@ -312,6 +330,7 @@ namespace ElementalTactics
                 RefreshCombatCards();
                 AddLog(actor.definition.displayName + " · 状态结算：" + string.Join("；", action.openingEffects.Select(effect => effect.status
                     + (effect.damage > 0 ? " 伤害" + effect.damage : "") + (effect.absorbed > 0 ? " 护盾吸收" + effect.absorbed : ""))));
+                battleAudio.Impact(action.openingEffects);
                 yield return presentation.Impact(action.openingEffects, views, false);
                 foreach (var pair in views) pair.Value.RestoreTint();
                 presentation.Reset();
@@ -343,6 +362,7 @@ namespace ElementalTactics
             int sibling = view.transform.GetSiblingIndex();
             view.transform.SetAsLastSibling();
             view.Select(true);
+            battleAudio.Cast(actor, skill);
             yield return presentation.Charge(actor, view, skill);
             yield return Move(view, view.homePosition + new Vector2(0, actor.enemy ? -18 : 18), .12f);
             yield return presentation.Travel(actor, view, targets.Select(target => views[target]).ToList(), skill);
@@ -351,6 +371,7 @@ namespace ElementalTactics
             RefreshCombatCards();
             RecordAction(actor, skill, effects);
             if (strikes > 1) AddLog(actor.definition.displayName + "：二连击第" + (strike + 1) + "击");
+            battleAudio.Impact(effects, actor, skill);
             yield return presentation.Impact(effects, views, skill);
             foreach (var pair in views)
             {
@@ -494,6 +515,7 @@ namespace ElementalTactics
 
         public void ToggleSpeed()
         {
+            GameAudio.Play(SoundCue.Toggle);
             animationSpeed = animationSpeed < 1.5f ? 2f : 1f;
             speedButton.GetComponentInChildren<Text>().text = animationSpeed.ToString("0") + "×";
         }
@@ -504,6 +526,7 @@ namespace ElementalTactics
             if (IsBattling) return;
             if (RunState.IsDefeated)
             {
+                if (!TutorialRun.Active && SettlementController.TryOpen(FindObjectOfType<PortraitLayout>().content)) return;
                 if (TutorialRun.Active) TutorialRun.Exit(false);
                 else AdventureRun.FinishIfNeeded();
                 AdventurePersistence.SaveNow();

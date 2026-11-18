@@ -28,12 +28,14 @@ namespace ElementalTactics
         {
             mapRoot = root;
             RunState.Ensure();
+            if (SettlementController.TryOpen(root)) return;
             bool resume = AdventureRun.ResumeEncounter;
             AdventureRun.ResumeEncounter = false;
             if (!resume) MapRun.LeaveEncounter();
             viewFloor = MapRun.CurrentFloor;
             var floor = System.Array.Find(GameContent.Floors.rows, entry => entry.floor == viewFloor);
             MapPresentation.BuildHeader(root, floor);
+            DailyTaskProgressUI.Build(root, MapPresentation.Point(540,330), MapPresentation.Size(986,108));
             BuildMap(root);
             string[] icons = { "battle", "event", "shop" }, labels = { "战斗", "事件", "商店" };
             for (int i = 0; i < 3; i++)
@@ -48,6 +50,7 @@ namespace ElementalTactics
             MapPresentation.StyleNavigation(open, MapPresentation.Point(200, 1824), MapPresentation.Size(304, 86), "角色", "role");
             open.onClick.RemoveAllListeners();
             open.onClick.AddListener(() => { if (!loading && !InventoryUI.IsOpen) characters.Open(); });
+            UiAudioFeedback.Bind(open, SoundCue.PanelOpen);
             var home = PrototypeUI.Button("Return Home", root, "返回主城", Vector2.zero, Vector2.one, false);
             MapPresentation.StyleNavigation(home, MapPresentation.Point(870, 1824), MapPresentation.Size(324, 86), "返回主城", "home");
             home.onClick.AddListener(ReturnHome);
@@ -70,7 +73,8 @@ namespace ElementalTactics
 
         private void BuildMap(RectTransform root)
         {
-            var panel = PrototypeUI.Panel("Map Viewport", root, MapPresentation.Point(540, 826), MapPresentation.Size(986, 1084), new Color(.035f, .09f, .14f, .76f));
+            bool daily = DailyChallengeState.IsDailyRun;
+            var panel = PrototypeUI.Panel("Map Viewport", root, MapPresentation.Point(540, daily ? 884 : 826), MapPresentation.Size(986, daily ? 968 : 1084), new Color(.035f, .09f, .14f, .76f));
             panel.raycastTarget = true;
             panel.gameObject.AddComponent<RectMask2D>();
             var world = PrototypeUI.Rect("Map World", panel.transform, Vector2.zero, new Vector2(1060, 1060));
@@ -190,6 +194,7 @@ namespace ElementalTactics
             var fill = MapPresentation.Art("Node Fill", rect, "HexFill", Vector2.zero, new Vector2(size, size), current ? PrototypeUI.Hex("C7A264") : cleared ? PrototypeUI.Hex("443D2E") : reachable ? PrototypeUI.Hex("113B48") : PrototypeUI.Hex("102633"));
             fill.raycastTarget = true;
             var button = rect.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button, SoundCue.CardSelect);
             button.targetGraphic = fill;
             button.onClick.AddListener(() => SelectNode(node.Id));
             if (boss)
@@ -261,6 +266,7 @@ namespace ElementalTactics
         public void EnterSelected()
         {
             if (loading || InventoryUI.IsOpen || characters.IsOpen || !MapRun.TryEnter(selected)) return;
+            GameAudio.Play(SoundCue.MapStep);
             loading = true; enter.interactable = false;
             var kind = MapRun.Nodes[selected].Definition.type;
             if (kind == NodeKind.Battle) SceneManager.LoadSceneAsync("LevelScene");

@@ -68,6 +68,7 @@ namespace ElementalTactics
             Border(background.transform, size, primary ? Hex("E8C778") : Hex("A88C57"));
             background.raycastTarget = true;
             var button = background.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button);
             button.targetGraphic = background;
             var colors = button.colors;
             colors.highlightedColor = new Color(1.06f, 1.06f, 1.06f);
@@ -146,6 +147,7 @@ namespace ElementalTactics
             view.body = body;
             view.group = body.gameObject.AddComponent<CanvasGroup>();
             view.button = body.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(view.button, SoundCue.CardSelect);
             view.button.transition = Selectable.Transition.None;
             view.button.targetGraphic = body;
             view.homePosition = position;

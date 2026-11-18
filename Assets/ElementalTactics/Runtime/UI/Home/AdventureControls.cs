@@ -42,6 +42,7 @@ namespace ElementalTactics
             if (TutorialRun.Active) entryText.text = "新手试炼\n练习难度";
             if (AdventureRun.Active || TutorialRun.Active) entryText.text += " · 生命 " + RunState.Lives + "/" + RunState.InitialLives;
             caption.text = AdventureRun.Active ? "继续冒险" : "开始冒险";
+            if (DailyChallengeState.IsDailyRun && AdventureRun.Active) caption.text = "继续每日挑战";
             if (TutorialRun.Active) caption.text = "继续教程";
             note.gameObject.SetActive(!AdventureRun.Active && !TutorialRun.Active);
             abandon.gameObject.SetActive(AdventureRun.Active);
@@ -115,8 +116,8 @@ namespace ElementalTactics
             var panel=PrototypeUI.Panel("Confirmation",overlay,Vector2.zero,new Vector2(740,380),MainHubController.Navy).rectTransform;
             panel.GetComponent<Image>().raycastTarget=true; panel.gameObject.AddComponent<Button>();
             PrototypeUI.Border(panel,panel.sizeDelta,MainHubController.Gold);
-            Label(panel,"Title","放弃本次冒险？",0,112,660,58,34,MainHubController.Cream,TextAnchor.MiddleCenter);
-            Label(panel,"Description","本局队伍、道具与路线将清空。\n本次远征会保留在成就的冒险记录中。",0,14,660,100,23,MainHubController.Cream,TextAnchor.MiddleCenter);
+            Label(panel,"Title",DailyChallengeState.IsDailyRun ? "放弃本次每日挑战？" : "放弃本次冒险？",0,112,660,58,34,MainHubController.Cream,TextAnchor.MiddleCenter);
+            Label(panel,"Description",DailyChallengeState.IsDailyRun ? "本次挑战记为未完成，保留本日最好成绩。\n结束后恢复原有的普通远征。" : "本局队伍、道具与路线将清空。\n本次远征会保留在成就的冒险记录中。",0,14,660,100,23,MainHubController.Cream,TextAnchor.MiddleCenter);
             MainHubController.GoldButton("Keep Adventure",panel,"保留冒险",new Vector2(-170,-115),new Vector2(290,64)).onClick.AddListener(Close);
             var yes=MainHubController.GoldButton("Confirm Abandon",panel,"确认放弃",new Vector2(170,-115),new Vector2(290,64));
             yes.targetGraphic.color=PrototypeUI.Hex("9B4540");

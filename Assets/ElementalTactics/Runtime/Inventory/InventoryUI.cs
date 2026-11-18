@@ -88,12 +88,13 @@ namespace ElementalTactics
 
         public void Open()
         {
-            if (overlay == null || IsOpen) return;
+            if (overlay == null || IsOpen || SettlementRun.Pending) return;
             var map = FindObjectOfType<MapController>();
             if (map != null && map.GetComponent<OwnedCharactersUI>() != null && map.GetComponent<OwnedCharactersUI>().IsOpen) return;
             var battle = FindObjectOfType<BattleController>();
             if (battle != null && battle.IsBattling && !battle.IsPaused) battle.PauseBattle();
             IsOpen = true;
+            GameAudio.Play(SoundCue.InventoryOpen);
             if (TutorialRun.Active && MapRun.Pending == 2) TutorialRun.Mark("shop.bag.open");
             opened = true;
             overlay.transform.parent.SetAsLastSibling();
@@ -106,6 +107,7 @@ namespace ElementalTactics
         {
             if (!IsOpen) return;
             IsOpen = false;
+            GameAudio.Play(SoundCue.PanelClose);
             opened = false;
             closedFrame = Time.frameCount;
             scroll.StopMovement();
@@ -122,6 +124,13 @@ namespace ElementalTactics
         private void RefreshOpenButton()
         {
             if (openButton == null) return;
+            bool available = !SettlementRun.Pending;
+            if (openButton.gameObject.activeSelf != available) openButton.gameObject.SetActive(available);
+            if (!available)
+            {
+                if (IsOpen) Close();
+                return;
+            }
             bool preparing = formation != null && formation.preparationRoot.activeInHierarchy;
             bool fighting = formation != null && !preparing;
             int mode = preparing ? 1 : fighting ? 2 : 0;
@@ -187,6 +196,7 @@ namespace ElementalTactics
                 row.rectTransform.anchorMin = row.rectTransform.anchorMax = new Vector2(0.5f, 1);
                 row.raycastTarget = true;
                 var button = row.gameObject.AddComponent<Button>();
+                UiAudioFeedback.Bind(button, SoundCue.CardSelect);
                 button.targetGraphic = row;
                 button.onClick.AddListener(() => ShowItem(item));
                 itemRows.Add(item.Id,row);

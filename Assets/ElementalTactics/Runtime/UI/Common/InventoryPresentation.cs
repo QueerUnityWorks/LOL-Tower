@@ -44,6 +44,7 @@ namespace ElementalTactics
             var buttonBody = Panel("Close " + prefix, paper.transform, new Vector2(330,654), new Vector2(124,58), Surface, MapPresentation.Gold);
             buttonBody.raycastTarget = true;
             var button = buttonBody.gameObject.AddComponent<Button>(); button.targetGraphic = buttonBody; button.onClick.AddListener(() => close());
+            UiAudioFeedback.Bind(button, SoundCue.PanelClose);
             Label("Label", button.transform, "关闭", Vector2.zero, new Vector2(116,48), 23, MapPresentation.Ivory, false, TextAnchor.MiddleCenter);
             summary = Label(prefix + " Summary", paper.transform, "", new Vector2(0,588), new Vector2(780,36), 21, MapPresentation.Muted);
             FitLine(summary);

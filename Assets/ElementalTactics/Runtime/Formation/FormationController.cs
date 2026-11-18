@@ -35,6 +35,7 @@ namespace ElementalTactics
         public Text enemyDetails;
         public FormationState State { get; private set; }
         public int SelectedIndex { get; private set; } = -1;
+        public bool InformationOpen { get; private set; }
         private bool locked;
         private int draggedCharacter = -1;
         private CardView dragSource;
@@ -79,7 +80,7 @@ namespace ElementalTactics
             }
             enemyButton.onClick.AddListener(OpenEnemy);
             closeEnemyButton.onClick.AddListener(CloseEnemy);
-            closeInformationButton.onClick.AddListener(ClearSelection);
+            closeInformationButton.onClick.AddListener(HideInformation);
             removeButton.onClick.AddListener(RemoveSelected);
             if (refreshButton != null) refreshButton.onClick.AddListener(ResetFormation);
             enemyOverlay.SetActive(false);
@@ -118,9 +119,11 @@ namespace ElementalTactics
             if (SelectedIndex >= 0 && State.FindSlot(SelectedIndex) != slot)
             {
                 State.Place(SelectedIndex, slot);
+                GameAudio.Play(SoundCue.CardDrop);
                 RunState.SaveFormation(State);
                 hint.text = "「" + availableRoster[SelectedIndex].displayName + "」已就位 · 可以继续布置其他伙伴";
                 SelectedIndex = -1;
+                InformationOpen = false;
             }
             else if (State[slot] >= 0)
             {
@@ -145,8 +148,17 @@ namespace ElementalTactics
         {
             if (locked || draggedCharacter >= 0 || enemyOverlay.activeSelf) return;
             SelectedIndex = -1;
+            InformationOpen = false;
             informationWindow.SetActive(false);
             hint.text = "点击布阵或长按候补卡片拖动上阵；拖动已上阵角色可交换位置";
+            Refresh();
+        }
+
+        public void HideInformation()
+        {
+            if (locked || draggedCharacter >= 0 || enemyOverlay.activeSelf) return;
+            InformationOpen = false;
+            informationWindow.SetActive(false);
             Refresh();
         }
 
@@ -163,7 +175,9 @@ namespace ElementalTactics
         private void ShowInformation(CharacterDefinition definition)
         {
             if (TutorialRun.Active) TutorialRun.Mark("prep.inspect");
+            InformationOpen = true;
             informationWindow.SetActive(true);
+            informationWindow.transform.SetAsLastSibling();
             informationTitle.text = definition.displayName + "　／　" + definition.ElementName + "属性 · " + definition.RoleName;
             informationStats.text = "生命　" + definition.maxHealth + "　　攻击　" + definition.attack
                 + "　　防御　" + definition.defense + "　　速度　" + definition.speed;
@@ -221,6 +235,8 @@ namespace ElementalTactics
         {
             if (locked || draggedCharacter >= 0 || battle.IsBattling) return;
             rosterScroll.StopMovement();
+            InformationOpen = false;
+            informationWindow.SetActive(false);
             enemyOverlay.SetActive(true);
             if (TutorialRun.Active) TutorialRun.Mark("prep.enemy");
             enemyOverlay.transform.SetAsLastSibling();
@@ -265,6 +281,7 @@ namespace ElementalTactics
         public void EnterBattleMode()
         {
             enemyOverlay.SetActive(false);
+            InformationOpen = false;
             informationWindow.SetActive(false);
             preparationRoot.SetActive(false);
         }
@@ -276,10 +293,12 @@ namespace ElementalTactics
             if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, eventData.position,
                 eventData.pressEventCamera, out Vector2 pointer)) return false;
             draggedCharacter = character;
+            GameAudio.Play(SoundCue.CardSelect);
             dragSource = source;
             rosterScroll.StopMovement();
             SelectedIndex = character;
-            ShowInformation(availableRoster[character]);
+            InformationOpen = false;
+            informationWindow.SetActive(false);
             Refresh();
             dropHighlight = PrototypeUI.Panel("Drag Destination", parent, Vector2.zero,
                 new Vector2(158, 233), new Color(MapPresentation.Cyan.r, MapPresentation.Cyan.g, MapPresentation.Cyan.b, 0.25f));
@@ -341,7 +360,11 @@ namespace ElementalTactics
             int target = FindDropSlot(eventData);
             bool placed = !locked && !battle.IsBattling && !enemyOverlay.activeSelf && target >= 0
                 && State.Place(draggedCharacter, target);
-            if (placed) RunState.SaveFormation(State);
+            if (placed)
+            {
+                RunState.SaveFormation(State);
+                GameAudio.Play(SoundCue.CardDrop);
+            }
             CancelCardDrag();
             ClearSelection();
             hint.text = placed ? "布阵完成 · 可继续拖动角色上阵或交换位置" : "已取消拖动，阵形保持不变";
@@ -367,6 +390,12 @@ namespace ElementalTactics
         private void OnDisable()
         {
             CancelCardDrag();
+        }
+
+        private void Update()
+        {
+            if (InformationOpen && !InventoryUI.IsOpen && !enemyOverlay.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+                HideInformation();
         }
 
         private void OnApplicationFocus(bool hasFocus)

@@ -24,6 +24,7 @@ namespace ElementalTactics
             var image = Panel(name, root, pos, size, primary ? PrototypeUI.Hex("CFAD70") : InventoryPresentation.Surface, MapPresentation.Gold);
             image.raycastTarget = true;
             var button = image.gameObject.AddComponent<Button>();
+            UiAudioFeedback.Bind(button);
             button.targetGraphic = image;
             var colors = button.colors;
             colors.highlightedColor = new Color(1.08f, 1.08f, 1.08f);

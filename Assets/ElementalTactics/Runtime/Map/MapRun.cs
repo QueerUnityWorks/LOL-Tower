@@ -81,6 +81,7 @@ namespace ElementalTactics
             Current = id;
             Pending = -1;
             EndingRun.Complete(Nodes[id]);
+            DailyChallengeState.NodeCompleted(Nodes[id]);
             return true;
         }
         private static void RefreshFinalBoss()

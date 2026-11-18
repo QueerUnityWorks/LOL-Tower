@@ -20,7 +20,7 @@ namespace ElementalTactics
         public static bool Completed { get; private set; }
         public static bool Dismissed { get; private set; }
         public static bool HomeRequested { get; private set; }
-        public static bool ShowHome => !Active && !Dismissed && (!AdventureRun.Active || HomeRequested);
+        public static bool ShowHome => !Active && !Dismissed && !SettlementRun.Pending && !DailyChallengeState.IsDailyRun && (!AdventureRun.Active || HomeRequested);
         public static bool Finished => Active && MapRun.IsCleared(3);
         public static bool HasSeen(string key) => seen.Contains(key);
         public static void Mark(string key) { if (Active || ShowHome) seen.Add(key); }
@@ -81,7 +81,9 @@ namespace ElementalTactics
         private static AdventureSave CopyProfile(AdventureSave profile) => new AdventureSave {
             version = profile.version, active = profile.active, selectedDifficulty = profile.selectedDifficulty,
             difficulty = profile.difficulty, id = profile.id, startedAt = profile.startedAt,
-            history = profile.history, run = profile.run
+            history = profile.history, run = profile.run, personalBest = profile.personalBest,
+            settlement = profile.settlement, hasSettlement = profile.hasSettlement, settlementPending = profile.settlementPending,
+            hasDailyChallenge = profile.hasDailyChallenge, dailyChallenge = profile.dailyChallenge, dailyRecords = profile.dailyRecords
         };
 
         internal static void Validate(TutorialSave state)

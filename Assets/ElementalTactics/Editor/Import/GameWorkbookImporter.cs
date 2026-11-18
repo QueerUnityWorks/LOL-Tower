@@ -362,7 +362,7 @@ namespace ElementalTactics.Editor
             return result.ToArray();
         }
 
-        private static Dictionary<string, List<Dictionary<string, string>>> ReadWorkbook(string path)
+        internal static Dictionary<string, List<Dictionary<string, string>>> ReadWorkbook(string path, string selectedSheet = null)
         {
             var result = new Dictionary<string, List<Dictionary<string, string>>>();
             using (var file = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -373,15 +373,16 @@ namespace ElementalTactics.Editor
                 var relations = ReadXml(zip.GetEntry("xl/_rels/workbook.xml.rels")).Root.Elements().ToDictionary(entry => (string)entry.Attribute("Id"), entry => (string)entry.Attribute("Target"));
                 foreach (var sheet in ReadXml(zip.GetEntry("xl/workbook.xml")).Descendants(Spreadsheet + "sheet"))
                 {
-                    if (!ConfigurationSheets.Contains((string)sheet.Attribute("name"))) continue;
+                    if (selectedSheet == null ? !ConfigurationSheets.Contains((string)sheet.Attribute("name")) : (string)sheet.Attribute("name") != selectedSheet) continue;
                     string target = relations[(string)sheet.Attribute(XName.Get("id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships"))];
                     string sheetPath = target.StartsWith("/") ? target.TrimStart('/') : "xl/" + target;
                     var rows = ReadXml(zip.GetEntry(sheetPath)).Descendants(Spreadsheet + "row").ToArray();
-                    var header = rows.Single(row => (int)row.Attribute("r") == 3).Elements(Spreadsheet + "c").ToDictionary(cell => Column((string)cell.Attribute("r")), cell => Cell(cell, shared));
+                    var header = rows.Single(row => (int)row.Attribute("r") == 3).Elements(Spreadsheet + "c")
+                        .Where(cell => !string.IsNullOrWhiteSpace(Cell(cell, shared))).ToDictionary(cell => Column((string)cell.Attribute("r")), cell => Cell(cell, shared));
                     var entries = new List<Dictionary<string, string>>();
                     foreach (var row in rows.Where(row => (int)row.Attribute("r") >= 5))
                     {
-                        var cells = row.Elements(Spreadsheet + "c").ToDictionary(cell => Column((string)cell.Attribute("r")), cell => Cell(cell, shared));
+                        var cells = row.Elements(Spreadsheet + "c").ToDictionary(cell => Column((string)cell.Attribute("r")), cell => Cell(cell, shared, selectedSheet != null));
                         if (cells.Values.All(string.IsNullOrWhiteSpace)) continue;
                         entries.Add(header.ToDictionary(pair => pair.Value, pair => cells.TryGetValue(pair.Key, out string value) ? value.Trim() : ""));
                     }
@@ -392,9 +393,9 @@ namespace ElementalTactics.Editor
         }
         private static XDocument ReadXml(ZipArchiveEntry entry) { using (var stream = entry.Open()) return XDocument.Load(stream); }
         private static string Column(string address) { return new string(address.TakeWhile(char.IsLetter).ToArray()); }
-        private static string Cell(XElement cell, string[] shared)
+        private static string Cell(XElement cell, string[] shared, bool allowFormula = false)
         {
-            Check(cell.Element(Spreadsheet + "f") == null, "配置数据请填写固定值，不支持公式：" + cell.Attribute("r"));
+            Check(allowFormula || cell.Element(Spreadsheet + "f") == null, "配置数据请填写固定值，不支持公式：" + cell.Attribute("r"));
             string value = (string)cell.Element(Spreadsheet + "v") ?? "";
             string type = (string)cell.Attribute("t");
             if (type == "s") return shared[int.Parse(value, CultureInfo.InvariantCulture)];
